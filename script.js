@@ -30,7 +30,7 @@ function switchPage(page) {
   // Nav colour — transparent on dark tutor hero
   document.getElementById('main-nav').dataset.page = page;
 
-  window.scrollTo({top:0, behavior:'instant'});
+  window.scrollTo({top:0, behavior:'auto'});
 }
 
 function updateSlider() {

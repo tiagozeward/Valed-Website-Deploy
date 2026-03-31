@@ -1,0 +1,12 @@
+{
+  "name": "website-valed",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Valed website served by Node for Railway",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
