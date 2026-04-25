@@ -4,7 +4,8 @@
   "private": true,
   "description": "Static Valed website served by Node for Railway",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:3001": "PORT=3001 node server.js"
   },
   "engines": {
     "node": ">=18"

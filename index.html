@@ -6,8 +6,11 @@
 <title>Valed - Transforma a tua aprendizagem</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=13">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
 </head>
 <body data-scrolling-started="false" data-scrolling-direction="up">
@@ -45,9 +48,7 @@
 <section id="hero">
 
   <div class="hero-photo" aria-hidden="true">
-    <video class="hero-video" autoplay loop muted playsinline>
-      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4">
-    </video>
+    <img class="hero-media" src="backgroundb.png" alt="" decoding="async">
   </div>
 
   <!-- Main headline — centred in the scene -->
@@ -527,50 +528,49 @@
     <h2 class="stories-h">Alunos que transformaram os seus resultados.</h2>
   </div>
 
-  <div class="stories-carousel stories-carousel--static" aria-label="Histórias de alunos">
-    <div class="carousel-viewport carousel-viewport--static">
-      <div class="carousel-track carousel-track--static">
-      <!-- Story 1 — lime -->
-      <div class="carousel-slide"><div class="story-card sc-lime">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat dark">+4</div>
-            <div class="story-body dark">valores na nota de exame após 6 semanas de prática diária com o Valed.</div>
-            <div class="story-attribution dark">
-              Maria Ferreira
-            </div>
-          </div>
-        </div>
-      </div></div>
-
-      <!-- Story 2 — teal -->
-      <div class="carousel-slide"><div class="story-card sc-teal">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">3×</div>
-            <div class="story-body light">mais eficazes as sessões com os alunos depois de ter acesso aos dados do Valed — sei exatamente onde focar.</div>
-            <div class="story-attribution light">
-              Prof.ª Maria Matos
-            </div>
-          </div>
-        </div>
-      </div></div>
-
-      <!-- Story 3 — dark -->
-      <div class="carousel-slide"><div class="story-card sc-dark">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">18</div>
-            <div class="story-body light">valores no exame nacional. O Valed ajudou-me a identificar os meus pontos fracos a tempo de os corrigir.</div>
-            <div class="story-attribution light">
-              Tomás Mendes
-            </div>
-          </div>
-        </div>
-      </div></div>
-
+  <div class="cards" aria-label="Histórias de alunos">
+    <article class="card story-card card--lime">
+      <div class="card-top">
+        <div class="stat">+4<span class="stat-suffix">val</span></div>
+        <p class="card-body">valores na nota de exame após 6 semanas de prática diária com o Valed.</p>
       </div>
-    </div>
+      <div class="card-bottom">
+        <div class="card-divider"></div>
+        <div class="card-attribution">
+          <span class="card-name">Maria Ferreira</span>
+          <span class="card-role">Estudante, 12.º ano</span>
+        </div>
+      </div>
+      <div class="card-bg-num" aria-hidden="true">4</div>
+    </article>
+    <article class="card story-card card--offwhite">
+      <div class="card-top">
+        <div class="stat">3<span class="stat-suffix">×</span></div>
+        <p class="card-body">mais eficazes as sessões com os alunos depois de ter acesso aos dados do Valed — sei exatamente onde focar.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-divider"></div>
+        <div class="card-attribution">
+          <span class="card-name">Prof.ª Maria Matos</span>
+          <span class="card-role">Professora de Matemática</span>
+        </div>
+      </div>
+      <div class="card-bg-num" aria-hidden="true">3</div>
+    </article>
+    <article class="card story-card card--dark">
+      <div class="card-top">
+        <div class="stat">18</div>
+        <p class="card-body">valores no exame nacional. O Valed ajudou-me a identificar os meus pontos fracos a tempo de os corrigir.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-divider"></div>
+        <div class="card-attribution">
+          <span class="card-name">Tomás Mendes</span>
+          <span class="card-role">Estudante, 11.º ano</span>
+        </div>
+      </div>
+      <div class="card-bg-num" aria-hidden="true">18</div>
+    </article>
   </div>
 </section>
 
@@ -628,9 +628,7 @@
 <!-- ── TUTOR HERO — same full-bleed scene + layout as #hero (students) ── -->
 <section id="t-hero">
   <div class="hero-photo" aria-hidden="true">
-    <video class="hero-video" autoplay loop muted playsinline>
-      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4">
-    </video>
+    <img class="hero-media" src="backgroundblurtutor.png" alt="" decoding="async">
   </div>
   <div class="hero-text">
     <h1 class="hero-h1">
@@ -651,31 +649,37 @@
 
 <!-- ── HOW IT WORKS ── -->
 <section id="t-how" class="t-content-section">
-  <div class="t-container">
+  <div class="t-how-head">
     <h2 class="t-section-h">Três passos para começar a ensinar com o Valed.</h2>
-    <div class="t-steps-row">
-      <div class="t-step">
-        <div class="t-step-num">01</div>
-        <div class="t-step-title">Cria o teu perfil</div>
-        <div class="t-step-body">Define a tua disponibilidade, preço por hora e matérias. O teu perfil fica visível para alunos que precisam de tutoria na tua área.</div>
+  </div>
+  <div class="t-step-stack" aria-label="Passos para começar a ensinar">
+    <article class="t-step-card t-step-card--profile">
+      <div class="t-step-card-num">01</div>
+      <div class="t-step-card-content">
+        <span class="t-step-card-kicker">Primeiro passo</span>
+        <h3 class="t-step-card-title">Cria o teu perfil.</h3>
+        <p class="t-step-card-body">Define a tua disponibilidade, preço por hora e matérias. O teu perfil fica visível para alunos que precisam de tutoria na tua área.</p>
       </div>
-      <div class="t-step-arrow">
-        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      <div class="t-step-card-pill">Perfil</div>
+    </article>
+    <article class="t-step-card t-step-card--request">
+      <div class="t-step-card-num">02</div>
+      <div class="t-step-card-content">
+        <span class="t-step-card-kicker">Segundo passo</span>
+        <h3 class="t-step-card-title">Aceita um pedido.</h3>
+        <p class="t-step-card-body">Recebe pedidos de sessão de alunos com perfil detalhado: historial de prática, domínio por tópico, erros frequentes. Decides tu se aceitas.</p>
       </div>
-      <div class="t-step">
-        <div class="t-step-num">02</div>
-        <div class="t-step-title">Aceita um pedido</div>
-        <div class="t-step-body">Recebe pedidos de sessão de alunos com perfil detalhado: historial de prática, domínio por tópico, erros frequentes. Decides tu se aceitas.</div>
+      <div class="t-step-card-pill">Pedido</div>
+    </article>
+    <article class="t-step-card t-step-card--teach">
+      <div class="t-step-card-num">03</div>
+      <div class="t-step-card-content">
+        <span class="t-step-card-kicker">Terceiro passo</span>
+        <h3 class="t-step-card-title">Ensina com dados.</h3>
+        <p class="t-step-card-body">Durante a sessão, o Valed dá-te acesso ao trabalho do aluno em tempo real e sugestões da IA sobre o que fazer a seguir. Zero tempo perdido a diagnosticar.</p>
       </div>
-      <div class="t-step-arrow">
-        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-      </div>
-      <div class="t-step">
-        <div class="t-step-num">03</div>
-        <div class="t-step-title">Ensina com dados</div>
-        <div class="t-step-body">Durante a sessão, o Valed dá-te acesso ao trabalho do aluno em tempo real e sugestões da IA sobre o que fazer a seguir. Zero tempo perdido a diagnosticar.</div>
-      </div>
-    </div>
+      <div class="t-step-card-pill">Dados</div>
+    </article>
   </div>
 </section>
 
@@ -885,48 +889,49 @@
   <div class="t-stories-head-inner">
     <h2 class="t-section-h" style="text-align:center;max-width:520px;margin:0 auto;">O que dizem os tutores que já estão na plataforma.</h2>
   </div>
-  <div class="stories-carousel stories-carousel--static" aria-label="Depoimentos de tutores">
-    <div class="carousel-viewport carousel-viewport--static">
-      <div class="carousel-track carousel-track--static">
-      <!-- Card 1 — lime (same structure as #stories) -->
-      <div class="carousel-slide"><div class="story-card sc-lime">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat dark">3×</div>
-            <div class="story-body dark">mais sessões por semana desde que passei a usar as aulas de grupo com o dashboard do Valed.</div>
-            <div class="story-attribution dark">
-              Prof.ª Maria Matos
-            </div>
-          </div>
-        </div>
-      </div></div>
-      <!-- Card 2 — teal -->
-      <div class="carousel-slide"><div class="story-card sc-teal">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">+40 min</div>
-            <div class="story-body light">poupados por sessão por não ter de diagnosticar do zero. O briefing diz-me exatamente onde focar.</div>
-            <div class="story-attribution light">
-              Ana Costa
-            </div>
-          </div>
-        </div>
-      </div></div>
-      <!-- Card 3 — dark -->
-      <div class="carousel-slide"><div class="story-card sc-dark">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">€ 1.2k</div>
-            <div class="story-body light">por mês com apenas 10 horas semanais, graças às sessões de grupo com 8 alunos em simultâneo.</div>
-            <div class="story-attribution light">
-              Diogo Marques
-            </div>
-          </div>
-        </div>
-      </div></div>
-
+  <div class="cards" aria-label="Depoimentos de tutores">
+    <article class="card story-card card--lime">
+      <div class="card-top">
+        <div class="stat">3<span class="stat-suffix">×</span></div>
+        <p class="card-body">mais sessões por semana desde que passei a usar as aulas de grupo com o dashboard do Valed.</p>
       </div>
-    </div>
+      <div class="card-bottom">
+        <div class="card-divider"></div>
+        <div class="card-attribution">
+          <span class="card-name">Prof.ª Maria Matos</span>
+          <span class="card-role">Tutora de Matemática A</span>
+        </div>
+      </div>
+      <div class="card-bg-num" aria-hidden="true">3</div>
+    </article>
+    <article class="card story-card card--offwhite">
+      <div class="card-top">
+        <div class="stat">+40<span class="stat-suffix">min</span></div>
+        <p class="card-body">poupados por sessão por não ter de diagnosticar do zero. O briefing diz-me exatamente onde focar.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-divider"></div>
+        <div class="card-attribution">
+          <span class="card-name">Ana Costa</span>
+          <span class="card-role">Tutora, explicações 1.º ciclo a secundário</span>
+        </div>
+      </div>
+      <div class="card-bg-num" aria-hidden="true">40</div>
+    </article>
+    <article class="card story-card card--dark">
+      <div class="card-top">
+        <div class="stat"><span class="stat-currency">€</span>1,2<span class="stat-suffix">k</span></div>
+        <p class="card-body">por mês com apenas 10 horas semanais, graças às sessões de grupo com 8 alunos em simultâneo.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-divider"></div>
+        <div class="card-attribution">
+          <span class="card-name">Diogo Marques</span>
+          <span class="card-role">Tutor, Matemática e Física</span>
+        </div>
+      </div>
+      <div class="card-bg-num" aria-hidden="true">1.2</div>
+    </article>
   </div>
 </section>
 
