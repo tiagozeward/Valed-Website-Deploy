@@ -105,22 +105,22 @@
   background:#131312;
   border-color:#242422;
 }
-.stage--dark .aurora{ opacity:.32; }
+.stage--dark .aurora{ opacity:.20; }
 
-/* ─────────── Aurora (shared) ─────────── */
+/* ─────────── Aurora (shared) — a hint of lime light, never a wash ─────────── */
 .aurora{
   position:absolute;
   inset:-20%;
   pointer-events:none;
-  filter:blur(60px);
+  filter:blur(72px);
   z-index:0;
-  opacity:.5;
+  opacity:.30;
 }
 .aurora-blob{ position:absolute; border-radius:50%; }
-.aurora-blob.b1{ background:rgba(var(--g-lime), .30); width:50%; height:50%; top:5%;  left:-10%; }
-.aurora-blob.b2{ background:rgba(var(--g-lime), .40); width:55%; height:55%; top:-10%; right:-10%; }
-.aurora-blob.b3{ background:rgba(var(--g-lime), .50); width:60%; height:60%; bottom:-15%; right:-5%; }
-.aurora-blob.b4{ background:rgba(var(--g-lime), .25); width:45%; height:45%; bottom:-10%; left:-10%; }
+.aurora-blob.b1{ background:rgba(var(--g-lime), .16); width:46%; height:46%; top:8%;   left:-12%; }
+.aurora-blob.b2{ background:rgba(var(--g-lime), .20); width:48%; height:48%; top:-12%; right:-12%; }
+.aurora-blob.b3{ background:rgba(var(--g-lime), .30); width:54%; height:54%; bottom:-16%; right:-8%; }
+.aurora-blob.b4{ background:rgba(var(--g-lime), .12); width:40%; height:40%; bottom:-12%; left:-12%; }
 
 /* ─────────── Stage viewport + restart (shared) ─────────── */
 .stage .viewport{
@@ -295,8 +295,8 @@ html.js .rv.in{ opacity:1; transform:translateY(0); }
   opacity:0;
   transition:opacity 1.4s ease;
 }
-#feat-cov .stage.aurora-on .aurora{ opacity:.5; }
-#feat-cov .stage.aurora-bright .aurora{ opacity:.85; }
+#feat-cov .stage.aurora-on .aurora{ opacity:.28; }
+#feat-cov .stage.aurora-bright .aurora{ opacity:.45; }
 
 /* ═══════════════════════════════════════════════════════════════
    02 · COMO ENSINAMOS  (#feat-lab)
@@ -600,33 +600,35 @@ html.js .rv.in{ opacity:1; transform:translateY(0); }
   transition:none !important;
   animation:none !important;
 }
+/* Close-up stays centred (no cut-off card): blur clears, then the camera
+   pulls back in one motion to the resting scale. */
 #feat-ai .scene{
   position:absolute;
   left:50%;
   top:50%;
   width:560px;
   transform-origin:center center;
-  transform:translate(35%, -50%) scale(1.7);
+  transform:translate(-50%, -50%) scale(1.45);
   filter:blur(7px);
   transition:transform 1.0s cubic-bezier(.22,1,.36,1), filter .7s ease;
 }
 #feat-ai .stage.s-focus .scene{
   filter:blur(0);
-  transform:translate(35%, -50%) scale(1.7);
+  transform:translate(-50%, -50%) scale(1.45);
 }
 #feat-ai .stage.s-typing .scene{
   filter:blur(0);
-  transform:translate(-50%, -25%) scale(.68);
+  transform:translate(-50%, -32%) scale(.8);
   transition:transform 2.5s cubic-bezier(.4,0,.2,1), filter .7s ease;
 }
 #feat-ai .stage.s-sending .scene{
   filter:blur(0);
-  transform:translate(-50%, -25%) scale(.68);
+  transform:translate(-50%, -32%) scale(.8);
   transition:transform .4s cubic-bezier(.4,0,.2,1);
 }
 #feat-ai .stage.s-response .scene{
   filter:blur(0);
-  transform:translate(-50%, -50%) scale(.68);
+  transform:translate(-50%, -50%) scale(.8);
   transition:transform .8s cubic-bezier(.22,1,.36,1);
 }
 
@@ -963,6 +965,11 @@ html.js .rv.in{ opacity:1; transform:translateY(0); }
   .chapter-p{ font-size:15px; }
   .chapter-stage-wrap{ max-width:560px; width:100%; margin:0 auto; }
   #feat-ai .scene{ width:460px; }
+  #feat-ai .scene,
+  #feat-ai .stage.s-focus .scene{ transform:translate(-50%, -50%) scale(1.15); }
+  #feat-ai .stage.s-typing .scene,
+  #feat-ai .stage.s-sending .scene{ transform:translate(-50%, -32%) scale(.64); }
+  #feat-ai .stage.s-response .scene{ transform:translate(-50%, -50%) scale(.64); }
 }
 
 @media (prefers-reduced-motion:reduce){

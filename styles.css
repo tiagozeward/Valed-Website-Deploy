@@ -322,9 +322,9 @@ section{padding:100px 40px;}
   position:absolute;
   inset:-6% -14% 0;
   background:
-    radial-gradient(55% 55% at 30% 38%, rgba(189,253,80,.34) 0%, transparent 70%),
-    radial-gradient(50% 60% at 75% 55%, rgba(189,253,80,.24) 0%, transparent 72%);
-  filter:blur(52px);
+    radial-gradient(55% 55% at 30% 38%, rgba(189,253,80,.22) 0%, transparent 70%),
+    radial-gradient(50% 60% at 75% 55%, rgba(189,253,80,.15) 0%, transparent 72%);
+  filter:blur(56px);
   pointer-events:none;
   z-index:0;
 }
@@ -594,9 +594,9 @@ section{padding:100px 40px;}
   --valed-text:#111110;
   --valed-text-2:#6B6B67;
   --valed-text-3:#A8A8A4;
-  --valed-lime:#AAFF00;
-  --valed-lime-dark:#7ACC00;
-  --valed-lime-bg:#F2FFD9;
+  --valed-lime:#BDFD50;
+  --valed-lime-dark:#5A8200;
+  --valed-lime-bg:#F2FBDC;
   --valed-teal:#0ABFB0;
   --valed-orange:#FF6B2B;
   padding:0 8px 8px;
@@ -636,9 +636,9 @@ section{padding:100px 40px;}
   box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
 }
 .dash-valed-skills .valed-skill-tile.valed-skill-tile--mastered{
-  background:linear-gradient(145deg,rgba(190,255,80,.42) 0%,var(--valed-lime-bg) 42%,rgba(170,255,0,.22) 100%);
-  border-color:rgba(90,150,0,.55);
-  box-shadow:0 4px 18px rgba(122,204,0,.18),inset 0 1px 0 rgba(255,255,255,.65);
+  background:linear-gradient(145deg,rgba(189,253,80,.30) 0%,var(--valed-lime-bg) 42%,rgba(189,253,80,.14) 100%);
+  border-color:rgba(90,130,0,.40);
+  box-shadow:0 4px 18px rgba(189,253,80,.14),inset 0 1px 0 rgba(255,255,255,.65);
 }
 .dash-valed-skills .valed-skill-tile.valed-skill-tile--mastered .valed-skill-name{
   font-weight:600;
@@ -3265,8 +3265,9 @@ nav.scrolled:not(.nav-in-hero){
   font-size:clamp(16px,1.8vw,18px);
   color:var(--t2);
   line-height:1.55;
-  max-width:560px;
+  max-width:660px;
   margin:16px auto 0;
+  text-wrap:balance;
 }
 
 /* Stories — three quiet paper cards */
