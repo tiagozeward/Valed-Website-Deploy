@@ -50,20 +50,15 @@ function applyPageSwitchUI(page) {
   }
 }
 
+/* Student ↔ tutor: quiet crossfade through the shared overlay (no GSAP) */
 function switchPage(page) {
   const nav = document.getElementById('main-nav');
   if (!nav || nav.dataset.page === page) return;
 
-  const isStudents = page === 'students';
-  const heroS = document.getElementById('hero');
-  const heroT = document.getElementById('t-hero');
-  const useGsap =
-    typeof gsap !== 'undefined' &&
-    heroS &&
-    heroT &&
-    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const overlay = document.getElementById('hero-lights-overlay');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (!useGsap) {
+  if (!overlay || reduced) {
     applyPageSwitchUI(page);
     return;
   }
@@ -71,106 +66,26 @@ function switchPage(page) {
   if (heroSwitchLocked) return;
   heroSwitchLocked = true;
 
-  const overlay = document.getElementById('hero-lights-overlay');
-  if (!overlay) {
-    applyPageSwitchUI(page);
-    return;
-  }
-
-  if (heroSwitchTimeline) {
-    heroSwitchTimeline.kill();
-    heroSwitchTimeline = null;
-  }
-
+  overlay.style.transition = 'opacity .34s ease';
+  overlay.style.visibility = 'visible';
+  overlay.style.opacity = '0';
   document.body.classList.add('hero-page-switching');
 
-  gsap.set(overlay, { autoAlpha: 0 });
-
-  const incomingHero = isStudents ? heroS : heroT;
-  const outgoingHero = nav.dataset.page === 'students' ? heroS : heroT;
-  const incomingPhoto = incomingHero.querySelector('.hero-photo');
-  const outgoingPhoto = outgoingHero.querySelector('.hero-photo');
-  const incomingText = incomingHero.querySelector('.hero-text');
-  const incomingCta = incomingHero.querySelector('.hero-cta-float');
-  if (!incomingPhoto || !outgoingPhoto || !incomingText || !incomingCta) {
-    document.body.classList.remove('hero-page-switching');
-    heroSwitchLocked = false;
-    applyPageSwitchUI(page);
-    return;
-  }
-
-  gsap.set(outgoingPhoto, { filter: 'brightness(1)' });
-
-  /* Dark floor for both directions (single shared value = no mismatch at swap) */
-  const darkPhoto = 0.08;
-  const tFall = 0.52;
-  const tBlackHold = 0.14;
-  const tRise = 0.58;
-
-  /* While incoming page is still hidden: match end state of outgoing so the first
-     painted frame after swap is never full brightness (avoids a flash / double dip). */
-  gsap.set(incomingPhoto, { filter: `brightness(${darkPhoto})` });
-  gsap.set(incomingText, { opacity: 0 });
-  gsap.set(incomingCta, { opacity: 0 });
-
-  function resetHeroRevealLayers() {
-    [heroS, heroT].forEach((section) => {
-      if (!section) return;
-      const ph = section.querySelector('.hero-photo');
-      const tx = section.querySelector('.hero-text');
-      const ct = section.querySelector('.hero-cta-float');
-      if (ph) gsap.set(ph, { clearProps: 'filter' });
-      if (tx) gsap.set(tx, { clearProps: 'opacity' });
-      if (ct) gsap.set(ct, { clearProps: 'opacity' });
-    });
-  }
-
-  heroSwitchTimeline = gsap.timeline({
-    onComplete: () => {
-      gsap.set(overlay, { autoAlpha: 0 });
-      gsap.set(incomingPhoto, { clearProps: 'filter' });
-      gsap.set(incomingText, { clearProps: 'opacity' });
-      gsap.set(incomingCta, { clearProps: 'opacity' });
-      document.body.classList.remove('hero-page-switching');
-      heroSwitchLocked = false;
-      heroSwitchTimeline = null;
-      syncNavInHero();
-    },
-    onKill: () => {
-      gsap.set(overlay, { autoAlpha: 0 });
-      resetHeroRevealLayers();
-      document.body.classList.remove('hero-page-switching');
-      heroSwitchLocked = false;
-    },
-  });
-
-  heroSwitchTimeline
-    /* Down: one smooth curve (no mid brightness plateau on the photo) */
-    .to(overlay, {
-      autoAlpha: 1,
-      duration: tFall,
-      ease: 'power3.in',
-    })
-    .to(outgoingPhoto, { filter: `brightness(${darkPhoto})`, duration: tFall, ease: 'power3.in' }, '<')
-    .add(() => {
+  requestAnimationFrame(() => {
+    overlay.style.opacity = '1';
+    window.setTimeout(() => {
       applyPageSwitchUI(page);
-      gsap.set(outgoingPhoto, { clearProps: 'filter' });
-      /* Re-sync after layout in case paint reordered with Lenis / display toggles */
-      gsap.set(incomingPhoto, { filter: `brightness(${darkPhoto})` });
-      gsap.set(incomingText, { opacity: 0 });
-      gsap.set(incomingCta, { opacity: 0 });
-    })
-    /* Hold at full black briefly — registers “lights off” before the reveal */
-    .to({}, { duration: tBlackHold })
-    /* Up: single ease out — overlay lifts and photo brightens in one motion (no duplicate “dim” stop) */
-    .to(overlay, {
-      autoAlpha: 0,
-      duration: tRise,
-      ease: 'power3.out',
-    })
-    .to(incomingPhoto, { filter: 'brightness(1)', duration: tRise, ease: 'power3.out' }, '<')
-    .to(incomingText, { opacity: 1, duration: tRise, ease: 'power3.out' }, '<')
-    .to(incomingCta, { opacity: 1, duration: tRise, ease: 'power3.out' }, '<');
+      window.setTimeout(() => {
+        overlay.style.opacity = '0';
+        window.setTimeout(() => {
+          overlay.style.visibility = 'hidden';
+          document.body.classList.remove('hero-page-switching');
+          heroSwitchLocked = false;
+          syncNavInHero();
+        }, 360);
+      }, 120);
+    }, 360);
+  });
 }
 
 function updateSlider() {
@@ -443,18 +358,14 @@ if (tiltCard && (('ontouchstart' in window) || navigator.maxTouchPoints > 0)) {
 ══════════════════════════════ */
 const navEl = document.getElementById('main-nav');
 
-/** Light nav while students’ #hero or tutors’ #t-hero is in view */
+/** Light-on-dark nav only while a dark hero (data-nav-theme="dark") is in view */
 function syncNavInHero() {
   if (!navEl) return;
   const page = navEl.dataset.page;
   let hero = null;
   if (page === 'students') hero = document.getElementById('hero');
   else if (page === 'tutors') hero = document.getElementById('t-hero');
-  else {
-    navEl.classList.remove('nav-in-hero');
-    return;
-  }
-  if (!hero) {
+  if (!hero || hero.dataset.navTheme !== 'dark') {
     navEl.classList.remove('nav-in-hero');
     return;
   }
@@ -600,15 +511,14 @@ const obs = new IntersectionObserver((entries) => {
   });
 }, {threshold: 0.08});
 
-document.querySelectorAll('.story-card, .t-step, .t-mockup-card, .t-earn-card, .t-group-mock').forEach((el, i) => {
+/* Students page uses the .rv reveal system (sections.js); tutors keeps this one */
+document.querySelectorAll('.t-step, .t-mockup-card, .t-earn-card, .t-group-mock').forEach((el, i) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity .65s ease, transform .65s ease';
   obs.observe(el);
 });
 
-/* .feature-stack-card excluded — transform breaks position:sticky stacking (Website_v2 preview) */
-document.querySelectorAll('.story-card').forEach((el, i) => el.style.transitionDelay = (i * 0.08) + 's');
 document.querySelectorAll('.t-step').forEach((el, i) => el.style.transitionDelay = (i * 0.15) + 's');
 
 /* ══════════════════════════════

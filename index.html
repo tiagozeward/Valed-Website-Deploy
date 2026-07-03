@@ -4,10 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valed - Transforma a tua aprendizagem</title>
+<meta name="description" content="A melhor forma de preparar o exame nacional de Matemática A. Lições interativas, prática ao teu nível e um tutor sempre disponível.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="sections.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
 </head>
 <body data-scrolling-started="false" data-scrolling-direction="up">
@@ -41,47 +44,24 @@
 ══════════════════════════════════════ -->
 <div id="page-students">
 
-<!-- ══════ 1. HERO — full-bleed scene ══════ -->
+<!-- ══════ HERO — quiet, editorial, paper ══════ -->
 <section id="hero">
-
-  <div class="hero-photo" aria-hidden="true">
-    <video class="hero-video" autoplay loop muted playsinline>
-      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <!-- Main headline — centred in the scene -->
-  <div class="hero-text">
-    <h1 class="hero-h1">
-      Transforma a tua<br><span class="hl">aprendizagem.</span>
-    </h1>
-    <p class="hero-sub">A melhor forma de arrasar no exame de Matemática A.</p>
-  </div>
-
-  <!-- Single CTA pinned to bottom -->
-  <div class="hero-cta-float">
-    <div>
-      <a href="https://valed.ai" class="btn-primary">
+  <div class="hero-inner">
+    <div class="hero-eyebrow rv in">Preparação para o exame nacional de Matemática A</div>
+    <h1 class="hero-h1 rv in">Transforma a tua<br><em>aprendizagem.</em></h1>
+    <p class="hero-sub rv in rv-d1">A melhor forma de arrasar no exame de Matemática A.</p>
+    <div class="hero-ctas rv in rv-d2">
+      <a href="https://valed.ai/auth/register" class="btn-ink">
         Começar grátis
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
+      <a href="#method" class="btn-quiet">Ver como funciona</a>
     </div>
   </div>
 
-</section>
-
-<!-- ══════ APP SHOWCASE — interactive tilt ══════ -->
-<section id="app-showcase">
-
-  <header class="showcase-intro">
-    <h2 class="showcase-intro-title">Prática Personalizada</h2>
-    <p class="showcase-intro-text">Exercícios adaptados ao teu nível, com dificuldade que aumenta à medida que evoluis. Nunca demasiado fácil, nunca impossível.</p>
-  </header>
-
-  <!-- Custom cursor -->
-  <div class="tilt-cursor" id="tiltCursor"></div>
-
-  <!-- Tilt scene -->
+  <!-- The app, framed like a window on the desk -->
+  <div class="hero-app rv in rv-d3" id="app-showcase">
+    <div class="hero-app-glow" aria-hidden="true"></div>
   <div class="tilt-scene" id="tiltScene">
     <div class="tilt-card" id="tiltCard">
       <!-- Browser chrome -->
@@ -204,25 +184,326 @@
       </div>
     </div>
   </div>
-
+  </div>
 </section>
 
-<!-- ══════ 2. FEATURES — sticky stacking cards (Website_v2 section_preview / .preview_card) ══════ -->
-<section id="features">
-  <div class="features-header">
-    <h2 class="features-h">Tudo o que precisas para dominar a Matemática A.</h2>
-    <p class="features-sub">Prática guiada, tutoria em tempo real e o teu progresso num só sítio.</p>
+<!-- ══════ MÉTODO — chapter index ══════ -->
+<section id="method">
+  <div class="method-inner">
+    <h2 class="method-h rv">Tudo o que precisas para dominar a Matemática A.</h2>
+    <p class="method-sub rv rv-d1">Prática guiada, tutoria a qualquer hora e o teu progresso — num só sítio.</p>
   </div>
-  <div class="feature-stack">
-      <!-- Card 1: Practice -->
-      <article class="feature-stack-card fc1 feature-stack-card--is2">
-        <div class="feat-stack-left">
-          <h3 class="feat-stack-h">Exercícios adaptados ao teu nível.</h3>
-          <p class="feat-stack-lead">Com feedback imediato e tutor Valed disponível a qualquer momento.</p>
+</section>
+
+<!-- ══════ 01 · COBERTURA TOTAL ══════ -->
+<section class="chapter" id="feat-cov">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-num">01</span>Cobertura total</div>
+    <h2 class="chapter-h rv rv-d1"><em>Tudo</em> o que vai sair no exame.</h2>
+    <p class="chapter-p rv rv-d2">
+      Onze domínios. 203 competências. Cada conceito do programa de
+      Matemática A com lição, exercícios e tutoria — construído a partir
+      dos exames nacionais, pergunta a pergunta.
+    </p>
+    <p class="chapter-p chapter-p--muted rv rv-d3">
+      Não importa onde estás. Importa para onde vais.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="fade-top" aria-hidden="true"></div>
+      <div class="fade-bottom" aria-hidden="true"></div>
+      <div class="viewport">
+        <div class="cov-list"></div>
+      </div>
+      <button class="stage-restart" aria-label="Reiniciar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 02 · COMO ENSINAMOS ══════ -->
+<section class="chapter chapter--flip" id="feat-lab">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-num">02</span>Como ensinamos</div>
+    <h2 class="chapter-h rv rv-d1">Ver é entender. <em>Mexer é dominar.</em></h2>
+    <p class="chapter-p rv rv-d2">
+      Cada conceito tem uma representação interativa. Arrasta a tangente
+      ao longo da curva. Vê o limite a aproximar-se. Move um ponto no
+      plano complexo e sente a geometria por trás dos números.
+    </p>
+    <p class="chapter-p chapter-p--muted rv rv-d3">
+      Menos fórmulas decoradas. Mais intuição que fica.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="viewport">
+
+        <!-- Card 1: limites -->
+        <article class="card c1">
+          <div class="check-badge">
+          <svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg>
         </div>
-        <div class="feat-stack-right">
-        <!-- MVP_V10: ValedPractice.js + valed-naled-theme (.valed-ex-*) -->
-        <div class="fc-ui fc-ui--mvp fc-ui--mvp-practice">
+          <div class="canvas">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
+              <line class="axis reveal-line" x1="20" y1="240" x2="390" y2="240"/>
+              <line class="axis reveal-line" x1="30" y1="20" x2="30" y2="250"/>
+              <line class="asym reveal-line" x1="30" y1="75" x2="390" y2="75" style="animation-delay: 0.3s"/>
+              <path class="curve reveal-curve" d="M 30 240 Q 100 200, 180 130 T 380 75"/>
+              <line class="limit-guide-v guide reveal-fade" x1="0" y1="0" x2="0" y2="200"/>
+              <circle class="dot-target reveal-pop" cx="385" cy="75" r="3"/>
+              <circle class="limit-dot dot reveal-fade" r="6"/>
+              <g class="svg-cursor c1-cursor">
+                <g class="cursor-shape">
+                  <path d="M 0 0
+                         L 1.2 17.5
+                         Q 1.4 19.5 3.4 19.0
+                         L 7.5 18.0
+                         L 10.5 24.0
+                         Q 11.3 25.4 12.6 24.7
+                         L 14.0 24.0
+                         Q 15.3 23.3 14.6 21.9
+                         L 11.7 16.0
+                         L 16.0 14.8
+                         Q 17.8 14.3 16.4 12.7
+                         Z"
+                        fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Card 2: derivada / tangente -->
+        <article class="card c2">
+          <div class="check-badge">
+          <svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg>
+        </div>
+          <div class="canvas">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
+              <line class="axis reveal-line" x1="20" y1="240" x2="390" y2="240"/>
+              <line class="axis reveal-line" x1="30" y1="20" x2="30" y2="250"/>
+              <path class="curve reveal-curve" d="M 30 220 C 120 220, 140 60, 200 60 S 280 220, 370 220"/>
+              <g class="deriv-dot reveal-fade">
+                <line class="tangent" x1="-80" y1="0" x2="80" y2="0"/>
+                <circle class="dot" cx="0" cy="0" r="6"/>
+              </g>
+              <g class="svg-cursor c2-cursor">
+                <g class="cursor-shape">
+                  <path d="M 0 0
+                         L 1.2 17.5
+                         Q 1.4 19.5 3.4 19.0
+                         L 7.5 18.0
+                         L 10.5 24.0
+                         Q 11.3 25.4 12.6 24.7
+                         L 14.0 24.0
+                         Q 15.3 23.3 14.6 21.9
+                         L 11.7 16.0
+                         L 16.0 14.8
+                         Q 17.8 14.3 16.4 12.7
+                         Z"
+                        fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Card 3: plano complexo (Argand) -->
+        <article class="card c3">
+          <div class="check-badge">
+          <svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg>
+        </div>
+          <div class="canvas">
+            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+              <g opacity="0.5" class="reveal-fade" style="animation-delay: 0s !important">
+                <line class="grid-line" x1="40" y1="150" x2="360" y2="150"/>
+                <line class="grid-line" x1="200" y1="30" x2="200" y2="270"/>
+                <line class="grid-line" x1="100" y1="50" x2="100" y2="250"/>
+                <line class="grid-line" x1="300" y1="50" x2="300" y2="250"/>
+                <line class="grid-line" x1="60" y1="80" x2="340" y2="80"/>
+                <line class="grid-line" x1="60" y1="220" x2="340" y2="220"/>
+              </g>
+              <line class="argand-axis reveal-line" x1="40" y1="150" x2="360" y2="150" style="animation-delay: 0.3s"/>
+              <line class="argand-axis reveal-line" x1="200" y1="30" x2="200" y2="270" style="animation-delay: 0.3s"/>
+              <circle cx="200" cy="150" r="2.5" class="dot-target reveal-pop"/>
+              <circle class="argand-trail reveal-fade" cx="200" cy="150" r="90"/>
+              <path class="angle-arc" d="M 230 150 A 30 30 0 0 1 185 176"/>
+              <g class="argand-vector reveal-fade">
+                <line class="vector" x1="200" y1="150" x2="290" y2="150"/>
+                <circle class="dot" cx="290" cy="150" r="6"/>
+                <g class="svg-cursor c3-cursor">
+                  <g class="cursor-shape c3-cursor-shape">
+                    <path d="M 290 150
+                             L 291.2 167.5
+                             Q 291.4 169.5 293.4 169.0
+                             L 297.5 168.0
+                             L 300.5 174.0
+                             Q 301.3 175.4 302.6 174.7
+                             L 304.0 174.0
+                             Q 305.3 173.3 304.6 171.9
+                             L 301.7 166.0
+                             L 306.0 164.8
+                             Q 307.8 164.3 306.4 162.7
+                             Z"
+                          fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </article>
+
+      </div>
+      <button class="stage-restart" aria-label="Reiniciar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 03 · TUTOR IA ══════ -->
+<section class="chapter" id="feat-ai">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-num">03</span>Tutor IA</div>
+    <h2 class="chapter-h rv rv-d1">Um tutor que <em>nunca dorme</em>.</h2>
+    <p class="chapter-p rv rv-d2">
+      Treinado especificamente em Matemática A. Explica como o melhor
+      professor que já tiveste — e nunca te dá a resposta: faz-te as
+      perguntas certas até seres tu a chegar lá.
+    </p>
+    <p class="chapter-p chapter-p--muted rv rv-d3">
+      Disponível 24 horas. Nenhuma pergunta é julgada.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="viewport">
+        <div class="scene">
+
+          <div class="prompt-card">
+            <div class="prompt-text">
+              <span class="placeholder">Pergunta-me qualquer coisa…</span><span class="input-text"></span><span class="caret"></span>
+            </div>
+            <div class="prompt-toolbar">
+              <div class="send-btn">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+            <div class="ai-response-inline">
+              <div class="inline-wrap">
+                <div class="ai-title">Regra da cadeia</div>
+                <div class="ai-step ai-step-1">
+                  <div class="ai-step-label">Caixas dentro de caixas</div>
+                  <div class="nested-boxes">
+                    <span class="box box-outer">f<span class="paren">(</span>
+                      <span class="box box-inner">g<span class="paren">(</span>x<span class="paren">)</span></span>
+                    <span class="paren">)</span></span>
+                  </div>
+                </div>
+                <div class="ai-step ai-step-2">
+                  <div class="ai-step-label">A regra</div>
+                  <div class="rule-eq">
+                    <span class="eq-part">derivada de fora</span>
+                    <span class="eq-times">×</span>
+                    <span class="eq-part">derivada de dentro</span>
+                  </div>
+                </div>
+                <div class="ai-step ai-step-3">
+                  <div class="ai-step-label">Exemplo</div>
+                  <div class="example">
+                    <div class="ex-line">
+                      <span class="ex-fn">sin<span class="paren">(</span>x²<span class="paren">)</span></span>
+                      <span class="ex-prime">′</span>
+                      <span class="ex-eq">=</span>
+                      <div class="ex-stack">
+                        <span class="ex-piece ex-outer">cos<span class="paren">(</span>x²<span class="paren">)</span></span>
+                        <span class="ex-tag">de fora</span>
+                      </div>
+                      <span class="ex-mul">·</span>
+                      <div class="ex-stack">
+                        <span class="ex-piece ex-inner">2x</span>
+                        <span class="ex-tag">de dentro</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cursor" aria-hidden="true">
+            <div class="cursor-shape">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 0
+                         L 1.2 17.5
+                         Q 1.4 19.5 3.4 19.0
+                         L 7.5 18.0
+                         L 10.5 24.0
+                         Q 11.3 25.4 12.6 24.7
+                         L 14.0 24.0
+                         Q 15.3 23.3 14.6 21.9
+                         L 11.7 16.0
+                         L 16.0 14.8
+                         Q 17.8 14.3 16.4 12.7
+                         Z"
+                      fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="stage-restart" aria-label="Reiniciar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 04 · PRÁTICA ══════ -->
+<section class="chapter chapter--wide" id="feat-practice">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-num">04</span>Prática</div>
+    <h2 class="chapter-h rv rv-d1">Exercícios que crescem <em>contigo</em>.</h2>
+    <p class="chapter-p rv rv-d2">
+      Adaptados ao teu nível, com dificuldade que aumenta à medida que
+      evoluis. Escreves a resolução, recebes feedback imediato — e o tutor
+      está mesmo ao lado, se precisares.
+    </p>
+    <p class="chapter-p chapter-p--muted rv rv-d3">
+      Nunca demasiado fácil. Nunca impossível.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage stage--band">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="band-inner fc-ui--mvp-practice">
           <div class="mvp-practice">
             <div class="mvp-ex-top">
               <span class="mvp-back" aria-hidden="true">
@@ -287,90 +568,34 @@
               </aside>
             </div>
           </div>
-        </div>
-        </div>
-      </article>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Card 2: Lições guiadas — showcase (pedido + Argand animado) -->
-      <article class="feature-stack-card fc-lesson feature-stack-card--is2">
-        <div class="feat-stack-left">
-          <h3 class="feat-stack-h">Prática Personalizada.</h3>
-          <p class="feat-stack-lead">Explicações à tua medida, no tom e no formato que preferes. O Valed adapta-se à tua forma de aprender e ajusta-se a cada passo.</p>
-        </div>
-        <div class="feat-stack-right">
-        <div class="fc-ui fc-ui--lesson-showcase">
-          <div class="lesson-showcase lesson-phase--typing" id="lesson-showcase">
-            <figure class="lesson-argand-wrap" aria-label="Animação: plano de Argand-Gauss com o ponto 2 mais 3 i">
-              <figcaption class="lesson-argand-caption">
-                <span class="lesson-argand-caption-kicker">A construir em tempo real</span>
-                <span class="lesson-argand-caption-text">Plano de Argand-Gauss</span>
-              </figcaption>
-              <svg class="lesson-argand-svg" viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                <defs>
-                  <marker id="lesson-arr-re" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#C5C5C0"/></marker>
-                  <marker id="lesson-arr-im" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#C5C5C0"/></marker>
-                  <linearGradient id="lesson-plane-shine" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-                    <stop offset="55%" stop-color="#f5f5f2" stop-opacity="0.35"/>
-                    <stop offset="100%" stop-color="#e8faf8" stop-opacity="0.5"/>
-                  </linearGradient>
-                </defs>
-                <rect class="lesson-argand-shine" x="12" y="8" width="336" height="184" rx="18" fill="url(#lesson-plane-shine)" stroke="#E8E8E4" stroke-width="1"/>
-                <g class="lesson-argand-grid" opacity="0">
-                  <line x1="32" y1="40" x2="328" y2="40" stroke="#EFEFEB" stroke-width="1"/>
-                  <line x1="32" y1="80" x2="328" y2="80" stroke="#EFEFEB" stroke-width="1"/>
-                  <line x1="32" y1="120" x2="328" y2="120" stroke="#EFEFEB" stroke-width="1"/>
-                  <line x1="32" y1="160" x2="328" y2="160" stroke="#EFEFEB" stroke-width="1"/>
-                  <line x1="80" y1="24" x2="80" y2="188" stroke="#EFEFEB" stroke-width="1"/>
-                  <line x1="140" y1="24" x2="140" y2="188" stroke="#EFEFEB" stroke-width="1"/>
-                  <line x1="200" y1="24" x2="200" y2="188" stroke="#EFEFEB" stroke-width="1"/>
-                  <line x1="260" y1="24" x2="260" y2="188" stroke="#EFEFEB" stroke-width="1"/>
-                </g>
-                <line class="lesson-axis-re" pathLength="100" x1="28" y1="160" x2="220" y2="160" stroke="#A8A8A4" stroke-width="2.1" stroke-linecap="round" marker-end="url(#lesson-arr-re)" fill="none"/>
-                <line class="lesson-axis-im" pathLength="100" x1="80" y1="182" x2="80" y2="28" stroke="#A8A8A4" stroke-width="2.1" stroke-linecap="round" marker-end="url(#lesson-arr-im)" fill="none"/>
-                <g class="lesson-argand-labels" opacity="0">
-                  <text x="224" y="174" font-size="13" fill="#6B6B67" font-family="DM Sans, sans-serif" font-weight="600">Re</text>
-                  <text x="86" y="24" font-size="13" fill="#6B6B67" font-family="DM Sans, sans-serif" font-weight="600">Im</text>
-                  <text x="66" y="172" font-size="12" fill="#A8A8A4" font-family="DM Sans, sans-serif">O</text>
-                  <text x="132" y="176" font-size="12" fill="#0ABFB0" font-family="DM Sans, sans-serif" font-weight="600">2</text>
-                  <text x="62" y="76" font-size="12" fill="#0ABFB0" font-family="DM Sans, sans-serif" font-weight="600">3</text>
-                </g>
-                <line class="lesson-proj-v" pathLength="100" x1="140" y1="70" x2="140" y2="160" stroke="#0ABFB0" stroke-width="1.75" stroke-dasharray="5 4" fill="none" opacity="0"/>
-                <line class="lesson-proj-h" pathLength="100" x1="140" y1="70" x2="80" y2="70" stroke="#0ABFB0" stroke-width="1.75" stroke-dasharray="5 4" fill="none" opacity="0"/>
-                <g class="lesson-argand-point" opacity="0">
-                  <circle class="lesson-point-ring" cx="140" cy="70" r="16" fill="none" stroke="#0ABFB0" stroke-width="1.75" opacity="0.35"/>
-                  <circle cx="140" cy="70" r="7" fill="#111110" stroke="#fff" stroke-width="2"/>
-                  <text x="152" y="63" font-size="14" font-weight="700" fill="#111110" font-family="DM Sans, sans-serif">2 + 3i</text>
-                </g>
-              </svg>
-            </figure>
-            <div class="lesson-showcase-prompt" id="lesson-showcase-prompt">
-              <div class="lesson-chat-bar" role="group" aria-label="Mensagem ao tutor">
-                <div class="lesson-chat-field">
-                  <span class="lesson-chat-placeholder">Pergunte qualquer coisa</span>
-                  <p class="lesson-showcase-quote">
-                    <span id="lesson-typewriter" class="lesson-typewriter" aria-live="polite"></span><span class="lesson-type-cursor" aria-hidden="true">|</span>
-                  </p>
-                </div>
-                <button type="button" class="lesson-send-btn" id="lesson-send-btn" disabled aria-label="Enviar pedido">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </article>
-
-      <!-- Card 3: Live session (v2 .preview_card.is-2 — column stack) -->
-      <article class="feature-stack-card fc2 feature-stack-card--is2">
-        <div class="feat-stack-left">
-          <h3 class="feat-stack-h">A melhor forma de ter explicações.</h3>
-          <p class="feat-stack-lead">Explicações com os melhores professores do país e com tecnologia IA integrada para sessões mais produtivas.</p>
-        </div>
-        <div class="feat-stack-right">
-        <!-- MVP_V10: LiveSession.js (aluno) + liveSessionStyles.css — Sessão | Chat, vídeo tutor + self -->
-        <div class="fc-ui fc-ui--mvp fc-ui--mvp-live">
+<!-- ══════ 05 · EXPLICAÇÕES AO VIVO ══════ -->
+<section class="chapter chapter--wide" id="feat-live">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-num">05</span>Explicações ao vivo</div>
+    <h2 class="chapter-h rv rv-d1">Professores a sério, <em>quando precisares</em>.</h2>
+    <p class="chapter-p rv rv-d2">
+      Sessões com os melhores professores do país — com a IA integrada.
+      O professor vê o teu trabalho em tempo real e sabe exatamente onde
+      focar. Zero tempo perdido a diagnosticar.
+    </p>
+    <p class="chapter-p chapter-p--muted rv rv-d3">
+      Individuais ou em grupo. Tu escolhes.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage stage--band stage--dark">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="band-inner">
           <div class="live-mini live-mini--student">
             <div class="live-sbar">
               <span class="live-sbar-back">← Voltar</span>
@@ -435,26 +660,47 @@
               </aside>
             </div>
           </div>
-        </div>
-        </div>
-      </article>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Card 4: Progress -->
-      <article class="feature-stack-card fc3 feature-stack-card--is2">
-        <div class="feat-stack-left">
-          <h3 class="feat-stack-h feat-stack-h--dark">Sabe quando estás pronto.</h3>
-          <p class="feat-stack-lead feat-stack-lead--dark">O ecrã de progresso mostra o teu domínio por competência e cobertura do exame.</p>
-        </div>
-        <div class="feat-stack-right">
-        <!-- MVP_V10: ValedProgress.js -->
-        <div class="fc-ui fc-ui--mvp fc-ui--mvp-progress">
+<!-- ══════ 06 · PROGRESSO ══════ -->
+<section class="chapter chapter--flip" id="feat-prog">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-num">06</span>O teu progresso</div>
+    <h2 class="chapter-h rv rv-d1">Sabe quando estás <em>pronto</em>.</h2>
+    <p class="chapter-p rv rv-d2">
+      Domínio por competência, cobertura do exame e uma nota esperada
+      que sobe contigo. Sem surpresas no dia do exame.
+    </p>
+    <p class="chapter-p chapter-p--muted rv rv-d3">
+      Começa com um diagnóstico: descobrimos o que já sabes, sem nota e
+      sem julgamentos.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="prog-frame">
           <div class="vprog-inner">
-            <div class="vprog-kpi-row vprog-kpi-row--single">
+            <div class="vprog-kpi-row">
               <div class="vprog-kpi-card">
                 <div class="vprog-kpi-label">Progresso global</div>
                 <div class="vprog-kpi-num">42%</div>
-                <div class="vprog-kpi-sub">8 de 203 competências</div>
+                <div class="vprog-kpi-sub">86 de 203 competências</div>
                 <div class="vprog-bar vprog-bar--kpi"><div class="vprog-bar-fill" style="width:42%"></div></div>
+              </div>
+              <div class="vprog-kpi-card">
+                <div class="vprog-kpi-label">Nota esperada</div>
+                <div class="vprog-kpi-num">15 <span class="vprog-kpi-denom">/ 20</span></div>
+                <div class="vprog-kpi-sub">+3 desde o diagnóstico</div>
+                <div class="vprog-bar vprog-bar--kpi"><div class="vprog-bar-fill" style="width:75%"></div></div>
               </div>
             </div>
             <div class="vprog-section-head">
@@ -465,126 +711,99 @@
             <div class="vprog-domain-list">
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
-                  <span class="vprog-domain-name">Números e operações</span>
-                  <span class="vprog-domain-count">4 / 12</span>
+                  <span class="vprog-domain-name">Números Reais e Equações</span>
+                  <span class="vprog-domain-count">28 / 42</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:33%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:67%"></div></div>
               </div>
               <div class="vprog-domain-card vprog-domain-card--done">
                 <div class="vprog-domain-top">
-                  <span class="vprog-domain-name">Geometria no plano</span>
-                  <span class="vprog-domain-count">13 / 13</span>
+                  <span class="vprog-domain-name">Trigonometria e Geometria no Plano</span>
+                  <span class="vprog-domain-count">23 / 23</span>
                 </div>
                 <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill" style="width:100%"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
-                  <span class="vprog-domain-name">Funções reais</span>
-                  <span class="vprog-domain-count">6 / 18</span>
+                  <span class="vprog-domain-name">Geometria e Espaço</span>
+                  <span class="vprog-domain-count">12 / 23</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:33%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:52%"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
-                  <span class="vprog-domain-name">Trigonometria</span>
-                  <span class="vprog-domain-count">7 / 15</span>
+                  <span class="vprog-domain-name">Estatística</span>
+                  <span class="vprog-domain-count">9 / 24</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:47%"></div></div>
-              </div>
-              <div class="vprog-domain-card">
-                <div class="vprog-domain-top">
-                  <span class="vprog-domain-name">Estatística e probabilidades</span>
-                  <span class="vprog-domain-count">2 / 8</span>
-                </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:25%"></div></div>
-              </div>
-              <div class="vprog-domain-card">
-                <div class="vprog-domain-top">
-                  <span class="vprog-domain-name">Geometria analítica</span>
-                  <span class="vprog-domain-count">5 / 10</span>
-                </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:50%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:38%"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Sucessões</span>
-                  <span class="vprog-domain-count">3 / 9</span>
+                  <span class="vprog-domain-count">8 / 23</span>
+                </div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:35%"></div></div>
+              </div>
+              <div class="vprog-domain-card">
+                <div class="vprog-domain-top">
+                  <span class="vprog-domain-name">Derivadas</span>
+                  <span class="vprog-domain-count">4 / 12</span>
                 </div>
                 <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:33%"></div></div>
+              </div>
+              <div class="vprog-domain-card">
+                <div class="vprog-domain-top">
+                  <span class="vprog-domain-name">Números Complexos</span>
+                  <span class="vprog-domain-count">2 / 19</span>
+                </div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:11%"></div></div>
               </div>
             </div>
             </div>
           </div>
-        </div>
-        </div>
-      </article>
-  </div>
-</section>
-
-<!-- ══════ 3. STUDENT STORIES ══════ -->
-<section id="stories">
-  <div class="stories-header">
-    <h2 class="stories-h">Alunos que transformaram os seus resultados.</h2>
-  </div>
-
-  <div class="stories-carousel stories-carousel--static" aria-label="Histórias de alunos">
-    <div class="carousel-viewport carousel-viewport--static">
-      <div class="carousel-track carousel-track--static">
-      <!-- Story 1 — lime -->
-      <div class="carousel-slide"><div class="story-card sc-lime">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat dark">+4</div>
-            <div class="story-body dark">valores na nota de exame após 6 semanas de prática diária com o Valed.</div>
-            <div class="story-attribution dark">
-              Maria Ferreira
-            </div>
-          </div>
-        </div>
-      </div></div>
-
-      <!-- Story 2 — teal -->
-      <div class="carousel-slide"><div class="story-card sc-teal">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">3×</div>
-            <div class="story-body light">mais eficazes as sessões com os alunos depois de ter acesso aos dados do Valed — sei exatamente onde focar.</div>
-            <div class="story-attribution light">
-              Prof.ª Maria Matos
-            </div>
-          </div>
-        </div>
-      </div></div>
-
-      <!-- Story 3 — dark -->
-      <div class="carousel-slide"><div class="story-card sc-dark">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">18</div>
-            <div class="story-body light">valores no exame nacional. O Valed ajudou-me a identificar os meus pontos fracos a tempo de os corrigir.</div>
-            <div class="story-attribution light">
-              Tomás Mendes
-            </div>
-          </div>
-        </div>
-      </div></div>
-
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ 4. FINAL CTA ══════ -->
+<!-- ══════ HISTÓRIAS ══════ -->
+<section id="stories">
+  <div class="stories-header">
+    <div class="eyebrow rv">Histórias</div>
+    <h2 class="stories-h rv rv-d1">Alunos que transformaram os seus resultados.</h2>
+  </div>
+
+  <div class="stories-row" aria-label="Histórias de alunos">
+    <div class="story-card sc-paper rv">
+      <div class="story-stat">+4</div>
+      <div class="story-body">valores na nota de exame após 6 semanas de prática diária com o Valed.</div>
+      <div class="story-attribution">Maria Ferreira · 12.º ano</div>
+    </div>
+    <div class="story-card sc-paper rv rv-d1">
+      <div class="story-stat">12&nbsp;→&nbsp;17</div>
+      <div class="story-body">O diagnóstico mostrou-me exatamente o que não sabia. Três meses depois, a nota falou por si.</div>
+      <div class="story-attribution">Beatriz Lopes · 12.º ano</div>
+    </div>
+    <div class="story-card sc-paper rv rv-d2">
+      <div class="story-stat">18</div>
+      <div class="story-body">valores no exame nacional. O Valed ajudou-me a identificar os meus pontos fracos a tempo de os corrigir.</div>
+      <div class="story-attribution">Tomás Mendes · 12.º ano</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA FINAL ══════ -->
 <section id="cta">
   <div class="container">
-    <h2 class="cta-h">Começa a aprender<br>de forma <em>diferente.</em></h2>
-    <a href="https://valed.ai/auth/register" class="btn-lime">
+    <h2 class="cta-h rv">Começa a aprender<br>de forma <em>diferente.</em></h2>
+    <a href="https://valed.ai/auth/register" class="btn-lime rv rv-d1">
       Começar grátis
       <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
     </a>
   </div>
 </section>
 
+<!-- ══════ FOOTER ══════ -->
 <!-- ══════ FOOTER ══════ -->
 <footer>
   <div class="footer-inner">
@@ -625,29 +844,21 @@
 ══════════════════════════════════════ -->
 <div id="page-tutors" style="display:none;">
 
-<!-- ── TUTOR HERO — same full-bleed scene + layout as #hero (students) ── -->
-<section id="t-hero">
-  <div class="hero-photo" aria-hidden="true">
-    <video class="hero-video" autoplay loop muted playsinline>
-      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="hero-text">
-    <h1 class="hero-h1">
-      Ensina melhor.<br><span class="hl">Ganha mais.</span>
-    </h1>
-    <p class="hero-sub">Dados reais sobre cada aluno, sessões mais eficazes e mais rendimento por hora.</p>
-  </div>
-
-  <div class="hero-cta-float">
-    <div>
-      <a href="#" class="btn-primary">
+<!-- ── TUTOR HERO — quiet, editorial, ink ── -->
+<section id="t-hero" data-nav-theme="dark">
+  <div class="t-hero-inner">
+    <div class="hero-eyebrow hero-eyebrow--dark">Para professores e explicadores</div>
+    <h1 class="hero-h1 hero-h1--dark">Ensina melhor.<br><em>Ganha mais.</em></h1>
+    <p class="hero-sub hero-sub--dark">Dados reais sobre cada aluno, sessões mais eficazes e mais rendimento por hora.</p>
+    <div class="hero-ctas">
+      <a href="#t-how" class="btn-paper">
         Candidatar-me como tutor
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
     </div>
   </div>
 </section>
+
 
 <!-- ── HOW IT WORKS ── -->
 <section id="t-how" class="t-content-section">
@@ -976,38 +1187,24 @@
 
 </div><!-- /page-tutors -->
 
-<!-- Website_v2: Lenis + GSAP ticker + ScrollTrigger.update (same pattern as v2 index) -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<!-- Lenis smooth scroll (no GSAP needed) -->
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 <script>
-(function initLenisLikeV2() {
+(function initLenis() {
   window.lenis = null;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined' || typeof Lenis === 'undefined') return;
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const lenis = new Lenis({
-    lerp: 0.08,
-    wheelMultiplier: 1,
-    smoothWheel: true,
-  });
+  if (typeof Lenis === 'undefined') return;
+  const lenis = new Lenis({ lerp: 0.08, wheelMultiplier: 1, smoothWheel: true });
   window.lenis = lenis;
-
-  lenis.on('scroll', ScrollTrigger.update);
-
-  gsap.ticker.add(function (time) {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
-
-  window.addEventListener('load', function () {
-    ScrollTrigger.refresh();
-  });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 })();
 </script>
 <script src="script.js"></script>
+<script src="sections.js"></script>
 
 </body>
 </html>
