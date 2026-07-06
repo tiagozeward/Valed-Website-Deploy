@@ -28,8 +28,8 @@ function applyPageSwitchUI(page) {
   if (cta) {
     const full = cta.querySelector('.nav-cta-full');
     const short = cta.querySelector('.nav-cta-short');
-    if (full) full.textContent = isStudents ? 'Começar grátis' : 'Candidatar-me';
-    if (short) short.textContent = isStudents ? 'Começar' : 'Candidatar';
+    if (full) full.textContent = 'Começar grátis';
+    if (short) short.textContent = 'Começar';
   }
 
   document.getElementById('main-nav').dataset.page = page;
@@ -99,259 +99,6 @@ function updateSlider() {
 
 window.addEventListener('load', updateSlider);
 window.addEventListener('resize', updateSlider);
-
-/* ══════════════════════════════
-   APP SHOWCASE — static mock (no mouse tilt / custom cursor)
-══════════════════════════════ */
-const tiltCard = document.getElementById('tiltCard');
-if (tiltCard && (('ontouchstart' in window) || navigator.maxTouchPoints > 0)) {
-  tiltCard.style.transform = 'none';
-}
-
-/* ══════════════════════════════
-   APP SHOWCASE — rotating student names (dashboard mock)
-══════════════════════════════ */
-(function initDashNameCarousel() {
-  const layout = document.querySelector('.dash-layout');
-  if (!layout) return;
-
-  const students = [
-    { first: 'Maria', full: 'Maria Ferreira', initials: 'MF' },
-    { first: 'Tomás', full: 'Tomás Mendes', initials: 'TM' },
-    { first: 'Ana', full: 'Ana Costa', initials: 'AC' },
-    { first: 'Diogo', full: 'Diogo Marques', initials: 'DM' },
-    { first: 'Rita', full: 'Rita Santos', initials: 'RS' },
-    { first: 'Luís', full: 'Luís Pereira', initials: 'LP' },
-    { first: 'Inês', full: 'Inês Rodrigues', initials: 'IR' },
-    { first: 'Pedro', full: 'Pedro Alves', initials: 'PA' },
-    { first: 'João', full: 'João Silva', initials: 'JS' },
-    { first: 'Beatriz', full: 'Beatriz Lopes', initials: 'BL' },
-  ];
-
-  const firstEl = layout.querySelector('.dash-name-em');
-  const fullEl = layout.querySelector('.dash-sb-user-name');
-  const iniEl = layout.querySelector('.dash-sb-user-ini');
-  if (!firstEl || !fullEl || !iniEl) return;
-
-  let idx = 0;
-  const STEP_MS = 2800;
-  const OUT_MS = 300;
-
-  function applyProfile(s) {
-    firstEl.textContent = s.first + '.';
-    fullEl.textContent = s.full;
-    iniEl.textContent = s.initials;
-  }
-
-  function goNext() {
-    idx = (idx + 1) % students.length;
-    const s = students[idx];
-    firstEl.classList.add('dash-name-em--out');
-    window.setTimeout(() => {
-      applyProfile(s);
-      firstEl.classList.remove('dash-name-em--out');
-      firstEl.classList.add('dash-name-em--in');
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          firstEl.classList.remove('dash-name-em--in');
-        });
-      });
-    }, OUT_MS);
-  }
-
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    applyProfile(students[0]);
-    return;
-  }
-
-  let timer = null;
-  const showcase = document.getElementById('app-showcase');
-  const start = () => {
-    if (!timer) timer = window.setInterval(goNext, STEP_MS);
-  };
-  const stop = () => {
-    if (timer) {
-      window.clearInterval(timer);
-      timer = null;
-    }
-  };
-
-  if (showcase && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) start();
-          else stop();
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -5% 0px' }
-    );
-    io.observe(showcase);
-  } else {
-    start();
-  }
-})();
-
-/* ══════════════════════════════
-   APP SHOWCASE — domínios + competências (MVP_V10 mat_a_knowledge_graph.json)
-   Denominadores = |skills| por domínio; total = soma. Numeradores = demo estático coerente.
-══════════════════════════════ */
-(function initDashKnowledgeGraph() {
-  const listEl = document.getElementById('dash-domain-list');
-  const t5Tpl = document.getElementById('dash-t5-expanded');
-  const masteredEl = document.getElementById('dash-comp-mastered');
-  const totalEl = document.getElementById('dash-comp-total');
-  const fillEl = document.getElementById('dash-comp-fill');
-  if (!listEl || !masteredEl || !totalEl || !fillEl) return;
-
-  /** Landing mock: only first five KG domains (T1–T5); hide T6–T11 on the showcase. */
-  const SHOWCASE_DOMAIN_IDS = ['T1', 'T2', 'T3', 'T4', 'T5'];
-  const showcaseDomainSet = new Set(SHOWCASE_DOMAIN_IDS);
-
-  function filterShowcaseDomains(domains) {
-    return (domains || []).filter((d) => showcaseDomainSet.has(d.domain_id));
-  }
-
-  /** Demo mastery rate per domain_id (site estático; na app vêm do /valed/progress/dashboard). */
-  const DEMO_MASTERY_PCT = {
-    T1: 0.67,
-    T2: 0.12,
-    T3: 0.12,
-    T4: 0.12,
-    T5: 0.17,
-    T6: 0.12,
-    T7: 0.33,
-    T8: 0.12,
-    T9: 0.15,
-    T10: 0.5,
-    T11: 0.25,
-  };
-
-  const ACCENTS = ['dash-dc-lime', 'dash-dc-teal', 'dash-dc-orange'];
-  const FILL_MOD = ['', ' dash-mini-track-fill--teal', ' dash-mini-track-fill--orange'];
-
-  /**
-   * Same totals as data/mat_a_knowledge_graph.json (MVP_V10). Used when fetch is unavailable (file://).
-   */
-  const KG_STATIC_DOMAINS = [
-    { domain_id: 'T1', domain_name: 'Números Reais e Equações', skillCount: 42 },
-    { domain_id: 'T2', domain_name: 'Probabilidades e Combinatória', skillCount: 12 },
-    { domain_id: 'T3', domain_name: 'Estatística', skillCount: 24 },
-    { domain_id: 'T4', domain_name: 'Geometria e Espaço', skillCount: 23 },
-    { domain_id: 'T5', domain_name: 'Trigonometria e Geometria no Plano', skillCount: 23 },
-    { domain_id: 'T6', domain_name: 'Números Complexos', skillCount: 19 },
-    { domain_id: 'T7', domain_name: 'Limites', skillCount: 15 },
-    { domain_id: 'T8', domain_name: 'Sucessões', skillCount: 23 },
-    { domain_id: 'T9', domain_name: 'Derivadas', skillCount: 12 },
-    { domain_id: 'T10', domain_name: 'Teorema de Bolzano', skillCount: 6 },
-    { domain_id: 'T11', domain_name: 'Calculadora', skillCount: 4 },
-  ];
-
-  function domainSkillTotal(d) {
-    if (typeof d.skillCount === 'number') return d.skillCount;
-    return Array.isArray(d.skills) ? d.skills.length : 0;
-  }
-
-  function renderValedDomains(domains) {
-    if (!Array.isArray(domains) || domains.length === 0) return;
-    let totalSkills = 0;
-    let demoMastered = 0;
-    const parts = [];
-
-    domains.forEach((d, i) => {
-      const total = domainSkillTotal(d);
-      totalSkills += total;
-      const rate = DEMO_MASTERY_PCT[d.domain_id] ?? 0.12;
-      let mastered = total > 0 ? Math.min(total, Math.round(total * rate)) : 0;
-      demoMastered += mastered;
-      const pct = total > 0 ? Math.round((mastered / total) * 100) : 0;
-      const barW = total > 0 ? Math.round((mastered / total) * 100) : 0;
-      const accent = ACCENTS[i % ACCENTS.length];
-      const fillMod = FILL_MOD[i % FILL_MOD.length];
-      const open = d.domain_id === 'T5' ? ' dash-domain-card--open' : '';
-
-      let block = `<div class="dash-domain-card ${accent}${open}" data-domain-id="${d.domain_id}"><div class="dash-domain-row">
-                  <div class="dash-domain-emoji">${domainEmojiHtml(d.domain_id)}</div>
-                  <div class="dash-domain-info">
-                    <div class="dash-domain-name">${d.domain_name}</div>
-                  </div>
-                  <div class="dash-domain-tail">
-                    <div class="dash-prog-text"><strong>${mastered}</strong> / ${total}</div>
-                    <div class="dash-mini-track"><div class="dash-mini-track-fill${fillMod}" style="width:${barW}%;"></div></div>
-                    <div class="dash-pct-label">${pct}%</div>
-                    <div class="dash-chevron" aria-hidden="true">▾</div>
-                  </div>
-                </div>`;
-      if (d.domain_id === 'T5' && t5Tpl) {
-        block += t5Tpl.innerHTML;
-      }
-      block += '</div>';
-      parts.push(block);
-    });
-
-    listEl.innerHTML = parts.join('');
-    masteredEl.textContent = String(demoMastered);
-    totalEl.textContent = String(totalSkills);
-    const overallPct = totalSkills > 0 ? Math.round((demoMastered / totalSkills) * 100) : 0;
-    fillEl.style.width = `${overallPct}%`;
-  }
-
-  function domainEmojiHtml(domainId) {
-    const m = (domainId || '').match(/T(\d+)/i);
-    const n = m ? parseInt(m[1], 10) : 0;
-    const svg = (inner, strokeW) =>
-      `<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#000" stroke-width="${strokeW ?? 1.5}">${inner}</svg>`;
-    switch (n) {
-      case 1:
-        return svg('<path d="M4 7h16M4 12h14M4 17h12"/><path d="M20 14l-2 2 2 2"/>');
-      case 2:
-        return svg(
-          '<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8" cy="8" r="1.2" fill="#000"/><circle cx="16" cy="8" r="1.2" fill="#000"/><circle cx="8" cy="16" r="1.2" fill="#000"/><circle cx="16" cy="16" r="1.2" fill="#000"/><circle cx="12" cy="12" r="1.2" fill="#000"/>'
-        );
-      case 3:
-        return svg('<path d="M6 16v-6M10 16v-3M14 16v-8M18 16v-5"/><path d="M5 17h14"/>');
-      case 4:
-        return svg('<path d="M12 3v14M12 17l-7 4M12 17l7 4"/><path d="M5 7l7-4 7 4" stroke-width="1.5"/>');
-      case 5:
-        return svg('<path d="M2 12c2-4 6-4 10 0s8 4 12 0"/>', 1.8);
-      case 6:
-        return '<span style="font:700 12px Georgia,serif;font-style:italic;color:#000;">i</span>';
-      case 7:
-        return svg('<path d="M4 12h12M14 9l3 3-3 3"/><path d="M20 7v10" stroke-width="1.5"/>');
-      case 8:
-        return svg(
-          '<circle cx="5" cy="12" r="2" fill="#000"/><circle cx="12" cy="12" r="2" fill="#000"/><circle cx="19" cy="12" r="2" fill="#000"/><path d="M7 12h3M14 12h3" stroke-width="1.2"/>'
-        );
-      case 9:
-        return '<span style="font:600 12px Fraunces,Georgia,serif;color:#000;">∂</span>';
-      case 10:
-        return svg('<path d="M3 12h18" stroke-width="1"/><path d="M4 16 Q8 4 12 12 Q16 20 20 8"/>');
-      case 11:
-        return svg(
-          '<rect x="5" y="2" width="14" height="20" rx="2"/><rect x="8" y="5" width="8" height="3" rx="1" fill="#000"/><circle cx="9" cy="12" r="1" fill="#000"/><circle cx="12" cy="12" r="1" fill="#000"/><circle cx="15" cy="12" r="1" fill="#000"/><circle cx="9" cy="16" r="1" fill="#000"/><circle cx="12" cy="16" r="1" fill="#000"/><circle cx="15" cy="16" r="1" fill="#000"/>'
-        );
-      default:
-        return svg('<path d="M4 7h16M4 12h16M4 17h10"/>');
-    }
-  }
-
-  renderValedDomains(filterShowcaseDomains(KG_STATIC_DOMAINS));
-
-  fetch('data/mat_a_knowledge_graph.json')
-    .then((r) => {
-      if (!r.ok) throw new Error(String(r.status));
-      return r.json();
-    })
-    .then((kg) => {
-      const domains = filterShowcaseDomains(kg.domains);
-      if (domains.length > 0) {
-        renderValedDomains(domains);
-      }
-    })
-    .catch(() => {
-      /* Static embed already shown (file:// or missing JSON). */
-    });
-})();
 
 /* ══════════════════════════════
    NAV — scroll opacity + show/hide on direction (Website_v2)
@@ -511,15 +258,14 @@ const obs = new IntersectionObserver((entries) => {
   });
 }, {threshold: 0.08});
 
-/* Students page uses the .rv reveal system (sections.js); tutors keeps this one */
-document.querySelectorAll('.t-step, .t-mockup-card, .t-earn-card, .t-group-mock').forEach((el, i) => {
+/* Both pages now use the .rv reveal system (sections.js) for chapters + stages.
+   Keep this observer available for any legacy elements that opt in via .js-reveal. */
+document.querySelectorAll('.js-reveal').forEach((el) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity .65s ease, transform .65s ease';
   obs.observe(el);
 });
-
-document.querySelectorAll('.t-step').forEach((el, i) => el.style.transitionDelay = (i * 0.15) + 's');
 
 /* ══════════════════════════════
    Lições guiadas — compose ⇄ graph: FLIP translate on #lesson-showcase-prompt only

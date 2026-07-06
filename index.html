@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valed - Transforma a tua aprendizagem</title>
+<title>Valed - Aprende como os melhores</title>
 <meta name="description" content="A melhor forma de preparar o exame nacional de Matemática A. Lições interativas, prática ao teu nível e um tutor sempre disponível.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="sections.css">
@@ -47,166 +49,54 @@
 <!-- ══════ HERO — quiet, editorial, paper ══════ -->
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow rv in">Preparação para o exame nacional de Matemática A</div>
-    <h1 class="hero-h1 rv in">Transforma a tua<br><em>aprendizagem.</em></h1>
-    <p class="hero-sub rv in rv-d1">A melhor forma de arrasar no exame de Matemática A.</p>
+    <h1 class="hero-h1 rv in">Aprende como<br><em>os melhores.</em></h1>
+    <p class="hero-sub rv in rv-d1">Chega onde quiseres no exame de Matemática A.</p>
     <div class="hero-ctas rv in rv-d2">
       <a href="https://valed.ai/auth/register" class="btn-ink">
         Começar grátis
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
-      <a href="#method" class="btn-quiet">Ver como funciona</a>
     </div>
   </div>
-
-  <!-- The app, framed like a window on the desk -->
-  <div class="hero-app rv in rv-d3" id="app-showcase">
-    <div class="hero-app-glow" aria-hidden="true"></div>
-  <div class="tilt-scene" id="tiltScene">
-    <div class="tilt-card" id="tiltCard">
-      <!-- Browser chrome -->
-      <div class="mock-chrome">
-        <div class="chrome-dot" style="background:#FF5F57;"></div>
-        <div class="chrome-dot" style="background:#FEBC2E;"></div>
-        <div class="chrome-dot" style="background:#28C840;"></div>
-        <div style="flex:1;background:var(--border);border-radius:6px;height:22px;margin:0 12px;display:flex;align-items:center;padding:0 12px;">
-          <span style="font-size:11px;color:var(--t3);">Valed-app</span>
-        </div>
-      </div>
-      <!-- Dashboard — mirrors live app: ValedDashboard + valed-naled-theme. Competência totals: data/mat_a_knowledge_graph.json (copy from MVP_V10 cognitiva-backend). -->
-      <div class="mock-body">
-        <div class="dash-layout">
-          <aside class="dash-sidebar">
-            <div class="dash-sb-logo"><img src="assets/valed-logo.svg" alt="Valed" class="dash-sb-logo-img"></div>
-            <div class="dash-sb-section">Menu</div>
-            <div class="dash-sb-item active">
-              <span class="dash-sb-ic" aria-hidden="true"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="5" height="10" rx="2"/><path d="M8 12h8"/><rect x="16" y="7" width="5" height="10" rx="2"/></svg></span>
-              Prática
-            </div>
-            <div class="dash-sb-item">
-              <span class="dash-sb-ic" aria-hidden="true"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
-              Tutores
-            </div>
-            <div class="dash-sb-item">
-              <span class="dash-sb-ic" aria-hidden="true"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3"/></svg></span>
-              Aulas
-            </div>
-            <div class="dash-sb-bottom">
-              <div class="dash-sb-user-av"><span class="dash-sb-user-ini">MF</span></div>
-              <div class="dash-sb-user-meta">
-                <div class="dash-sb-user-name">Maria Ferreira</div>
-                <div class="dash-sb-user-role">Estudante</div>
-              </div>
-            </div>
-          </aside>
-          <div class="dash-main">
-            <div class="dash-greeting">
-              <h1 class="dash-greeting-h1">Olá, <span class="dash-name-slot" aria-live="polite"><em class="dash-name-em">Maria.</em></span></h1>
-            </div>
-
-            <div class="dash-stats-row">
-              <div class="dash-stat-card">
-                <div class="dash-stat-label">
-                  <span class="dash-stat-icon" style="background:var(--limebg);">
-                    <svg width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="var(--limed)" stroke-width="2.2"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                  </span>
-                  Competências
-                </div>
-                <div class="dash-stat-value"><span id="dash-comp-mastered">—</span> <span class="dash-stat-denom">/ <span id="dash-comp-total">—</span></span></div>
-                <div class="dash-stat-track"><div id="dash-comp-fill" class="dash-stat-fill" style="width:0%;background:var(--limed);"></div></div>
-              </div>
-              <div class="dash-next-card">
-                <div class="dash-next-eyebrow">
-                  <svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="rgba(17,17,16,0.5)" stroke-width="2.5" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                  Próximo sugerido
-                </div>
-                <div class="dash-next-title">Derivadas — Regra da cadeia</div>
-                <div class="dash-next-sub">Clica para escolheres entre a lição e os exercícios</div>
-                <div class="dash-next-arrow" aria-hidden="true">→</div>
-              </div>
-            </div>
-
-            <div class="dash-section-head">
-              <div>
-                <span class="dash-section-title">Domínios</span>
-                <span class="dash-section-meta">Clica para expandir as competências</span>
-              </div>
-            </div>
-            <!-- Domínios: totais alinhados com data/mat_a_knowledge_graph.json (MVP_V10 cognitiva-backend) -->
-            <template id="dash-t5-expanded">
-                <div class="dash-valed-skills">
-                  <div class="valed-skills-sep"></div>
-                  <div class="valed-skills-grid">
-                    <div class="valed-skill-tile active valed-skill-tile--mastered">
-                      <div class="valed-skill-main">
-                        <div class="valed-skill-top">
-                          <div class="valed-skill-name">Converter graus para radianos</div>
-                          <span class="valed-skill-badge valed-sb-done">Dominado</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="valed-skill-tile active valed-skill-tile--mastered">
-                      <div class="valed-skill-main">
-                        <div class="valed-skill-top">
-                          <div class="valed-skill-name">Localizar ângulos na circunferência trigonométrica</div>
-                          <span class="valed-skill-badge valed-sb-done">Dominado</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="valed-skill-tile active valed-skill-lesson-due">
-                      <div class="valed-skill-main">
-                        <div class="valed-skill-top">
-                          <div class="valed-skill-name">Determinar equação da reta</div>
-                        </div>
-                        <div class="valed-skill-status">
-                          <div class="valed-skill-status-phase">Fase: lição</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="valed-skill-tile active">
-                      <div class="valed-skill-main">
-                        <div class="valed-skill-top">
-                          <div class="valed-skill-name">Determinar equações de retas em diferentes condições geométricas</div>
-                        </div>
-                        <div class="valed-skill-status">
-                          <div class="valed-skill-status-phase">Fase: exercícios</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </template>
-            <div class="dash-domain-list" id="dash-domain-list">
-              <p class="dash-domain-loading" style="margin:0;font-size:13px;color:var(--t3);">A carregar domínios…</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Right-half hero photo: student studying at a tablet -->
+  <div class="hero-art rv in rv-d2" aria-hidden="true">
+    <img class="hero-art-img" src="assets/hero-student.png" alt="Estudante a estudar num tablet na secretária" loading="eager" decoding="async">
   </div>
 </section>
 
-<!-- ══════ MÉTODO — chapter index ══════ -->
-<section id="method">
-  <div class="method-inner">
-    <h2 class="method-h rv">Tudo o que precisas para dominar a Matemática A.</h2>
-    <p class="method-sub rv rv-d1">Prática guiada, tutoria a qualquer hora e o teu progresso — num só sítio.</p>
+<!-- ══════ 04 · PRÁTICA ══════ -->
+<section class="chapter chapter--wide" id="feat-practice">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <circle class="ti-line" cx="30" cy="34" r="18"/>
+      <circle class="ti-line" cx="30" cy="34" r="10"/>
+      <circle class="ti-fill" cx="30" cy="34" r="3.5"/><circle class="ti-line" cx="30" cy="34" r="3.5"/>
+      <path class="ti-lime" d="M30 34 L50 14"/>
+      <path class="ti-lime" d="M44 14 L50 14 L50 20"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Prepara-te para o exame com a confiança de quem <em>compreende a matéria</em>.</h2>
   </div>
 </section>
 
 <!-- ══════ 01 · COBERTURA TOTAL ══════ -->
 <section class="chapter" id="feat-cov">
   <div class="chapter-copy">
-    <div class="eyebrow rv"><span class="eyebrow-num">01</span>Cobertura total</div>
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <circle class="ti-fill" cx="18" cy="18" r="5"/><circle class="ti-line" cx="18" cy="18" r="5"/>
+      <circle class="ti-fill" cx="32" cy="18" r="5"/><circle class="ti-line" cx="32" cy="18" r="5"/>
+      <circle class="ti-fill" cx="46" cy="18" r="5"/><circle class="ti-line" cx="46" cy="18" r="5"/>
+      <circle class="ti-fill" cx="18" cy="32" r="5"/><circle class="ti-line" cx="18" cy="32" r="5"/>
+      <circle class="ti-fill" cx="46" cy="32" r="5"/><circle class="ti-line" cx="46" cy="32" r="5"/>
+      <circle class="ti-fill" cx="18" cy="46" r="5"/><circle class="ti-line" cx="18" cy="46" r="5"/>
+      <circle class="ti-fill" cx="32" cy="46" r="5"/><circle class="ti-line" cx="32" cy="46" r="5"/>
+      <circle class="ti-fill" cx="46" cy="46" r="5"/><circle class="ti-line" cx="46" cy="46" r="5"/>
+      <path class="ti-lime" d="M27 32 L31 36 L38 27"/>
+    </svg></span></div>
     <h2 class="chapter-h rv rv-d1"><em>Tudo</em> o que vai sair no exame.</h2>
     <p class="chapter-p rv rv-d2">
-      Onze domínios. 203 competências. Cada conceito do programa de
-      Matemática A com lição, exercícios e tutoria — construído a partir
-      dos exames nacionais, pergunta a pergunta.
-    </p>
-    <p class="chapter-p chapter-p--muted rv rv-d3">
-      Não importa onde estás. Importa para onde vais.
+      Do zero absoluto ao preparado para o exame. Cada conceito do
+      programa de Matemática A com lições, exercícios e tutoria,
+      construído a partir dos exames nacionais, pergunta a pergunta.
     </p>
   </div>
   <div class="chapter-stage-wrap rv rv-d2">
@@ -229,18 +119,124 @@
   </div>
 </section>
 
-<!-- ══════ 02 · COMO ENSINAMOS ══════ -->
-<section class="chapter chapter--flip" id="feat-lab">
+<!-- ══════ 03 · TUTOR IA ══════ -->
+<section class="chapter" id="feat-ai">
   <div class="chapter-copy">
-    <div class="eyebrow rv"><span class="eyebrow-num">02</span>Como ensinamos</div>
-    <h2 class="chapter-h rv rv-d1">Ver é entender. <em>Mexer é dominar.</em></h2>
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <path class="ti-fill" d="M14 20 Q14 15 19 15 L45 15 Q50 15 50 20 L50 36 Q50 41 45 41 L26 41 L18 48 L18 41 Q14 41 14 36 Z"/>
+      <path class="ti-line" d="M14 20 Q14 15 19 15 L45 15 Q50 15 50 20 L50 36 Q50 41 45 41 L26 41 L18 48 L18 41 Q14 41 14 36 Z"/>
+      <path class="ti-lime" d="M32 21 L34 27 L40 28 L34 29 L32 35 L30 29 L24 28 L30 27 Z"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Um tutor que <em>nunca dorme</em>.</h2>
     <p class="chapter-p rv rv-d2">
-      Cada conceito tem uma representação interativa. Arrasta a tangente
-      ao longo da curva. Vê o limite a aproximar-se. Move um ponto no
-      plano complexo e sente a geometria por trás dos números.
+      Treinado especificamente em Matemática A. Explica como o melhor
+      professor que já tiveste — e nunca te dá a resposta: faz-te as
+      perguntas certas até seres tu a chegar lá.
     </p>
-    <p class="chapter-p chapter-p--muted rv rv-d3">
-      Menos fórmulas decoradas. Mais intuição que fica.
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="viewport">
+        <div class="scene">
+
+          <div class="prompt-card">
+            <div class="prompt-text">
+              <span class="placeholder">Pergunta-me qualquer coisa…</span><span class="input-text"></span><span class="caret"></span>
+            </div>
+            <div class="prompt-toolbar">
+              <div class="send-btn">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+            <div class="ai-response-inline">
+              <div class="inline-wrap">
+                <div class="ai-title">Regra da cadeia</div>
+                <div class="ai-step ai-step-1">
+                  <div class="ai-step-label">Caixas dentro de caixas</div>
+                  <div class="nested-boxes">
+                    <span class="box box-outer">f<span class="paren">(</span>
+                      <span class="box box-inner">g<span class="paren">(</span>x<span class="paren">)</span></span>
+                    <span class="paren">)</span></span>
+                  </div>
+                </div>
+                <div class="ai-step ai-step-2">
+                  <div class="ai-step-label">A regra</div>
+                  <div class="rule-eq">
+                    <span class="eq-part">derivada de fora</span>
+                    <span class="eq-times">×</span>
+                    <span class="eq-part">derivada de dentro</span>
+                  </div>
+                </div>
+                <div class="ai-step ai-step-3">
+                  <div class="ai-step-label">Exemplo</div>
+                  <div class="example">
+                    <div class="ex-line">
+                      <span class="ex-fn">sin<span class="paren">(</span>x²<span class="paren">)</span></span>
+                      <span class="ex-prime">′</span>
+                      <span class="ex-eq">=</span>
+                      <div class="ex-stack">
+                        <span class="ex-piece ex-outer">cos<span class="paren">(</span>x²<span class="paren">)</span></span>
+                        <span class="ex-tag">de fora</span>
+                      </div>
+                      <span class="ex-mul">·</span>
+                      <div class="ex-stack">
+                        <span class="ex-piece ex-inner">2x</span>
+                        <span class="ex-tag">de dentro</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cursor" aria-hidden="true">
+            <div class="cursor-shape">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 0
+                         L 1.2 17.5
+                         Q 1.4 19.5 3.4 19.0
+                         L 7.5 18.0
+                         L 10.5 24.0
+                         Q 11.3 25.4 12.6 24.7
+                         L 14.0 24.0
+                         Q 15.3 23.3 14.6 21.9
+                         L 11.7 16.0
+                         L 16.0 14.8
+                         Q 17.8 14.3 16.4 12.7
+                         Z"
+                      fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="stage-restart" aria-label="Reiniciar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 02 · COMO ENSINAMOS ══════ -->
+<section class="chapter" id="feat-lab">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <path class="ti-fill" d="M32 18 Q24 13 14 15 L14 46 Q24 44 32 49 Q40 44 50 46 L50 15 Q40 13 32 18 Z"/>
+      <path class="ti-line" d="M32 18 Q24 13 14 15 L14 46 Q24 44 32 49 Q40 44 50 46 L50 15 Q40 13 32 18 Z"/>
+      <path class="ti-line" d="M32 18 L32 49"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Matemática que se vê <em>e entende.</em></h2>
+    <p class="chapter-p rv rv-d2">
+      Arrasta a tangente ao longo da curva. Vê o limite a aproximar-se.
+      Roda um ponto no plano complexo.
     </p>
   </div>
   <div class="chapter-stage-wrap rv rv-d2">
@@ -376,307 +372,122 @@
   </div>
 </section>
 
-<!-- ══════ 03 · TUTOR IA ══════ -->
-<section class="chapter" id="feat-ai">
-  <div class="chapter-copy">
-    <div class="eyebrow rv"><span class="eyebrow-num">03</span>Tutor IA</div>
-    <h2 class="chapter-h rv rv-d1">Um tutor que <em>nunca dorme</em>.</h2>
-    <p class="chapter-p rv rv-d2">
-      Treinado especificamente em Matemática A. Explica como o melhor
-      professor que já tiveste — e nunca te dá a resposta: faz-te as
-      perguntas certas até seres tu a chegar lá.
-    </p>
-    <p class="chapter-p chapter-p--muted rv rv-d3">
-      Disponível 24 horas. Nenhuma pergunta é julgada.
-    </p>
-  </div>
-  <div class="chapter-stage-wrap rv rv-d2">
-    <div class="stage">
-      <div class="aurora" aria-hidden="true">
-        <div class="aurora-blob b1"></div>
-        <div class="aurora-blob b2"></div>
-        <div class="aurora-blob b3"></div>
-        <div class="aurora-blob b4"></div>
-      </div>
-      <div class="viewport">
-        <div class="scene">
-
-          <div class="prompt-card">
-            <div class="prompt-text">
-              <span class="placeholder">Pergunta-me qualquer coisa…</span><span class="input-text"></span><span class="caret"></span>
-            </div>
-            <div class="prompt-toolbar">
-              <div class="send-btn">
-                <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </div>
-            </div>
-            <div class="ai-response-inline">
-              <div class="inline-wrap">
-                <div class="ai-title">Regra da cadeia</div>
-                <div class="ai-step ai-step-1">
-                  <div class="ai-step-label">Caixas dentro de caixas</div>
-                  <div class="nested-boxes">
-                    <span class="box box-outer">f<span class="paren">(</span>
-                      <span class="box box-inner">g<span class="paren">(</span>x<span class="paren">)</span></span>
-                    <span class="paren">)</span></span>
-                  </div>
-                </div>
-                <div class="ai-step ai-step-2">
-                  <div class="ai-step-label">A regra</div>
-                  <div class="rule-eq">
-                    <span class="eq-part">derivada de fora</span>
-                    <span class="eq-times">×</span>
-                    <span class="eq-part">derivada de dentro</span>
-                  </div>
-                </div>
-                <div class="ai-step ai-step-3">
-                  <div class="ai-step-label">Exemplo</div>
-                  <div class="example">
-                    <div class="ex-line">
-                      <span class="ex-fn">sin<span class="paren">(</span>x²<span class="paren">)</span></span>
-                      <span class="ex-prime">′</span>
-                      <span class="ex-eq">=</span>
-                      <div class="ex-stack">
-                        <span class="ex-piece ex-outer">cos<span class="paren">(</span>x²<span class="paren">)</span></span>
-                        <span class="ex-tag">de fora</span>
-                      </div>
-                      <span class="ex-mul">·</span>
-                      <div class="ex-stack">
-                        <span class="ex-piece ex-inner">2x</span>
-                        <span class="ex-tag">de dentro</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cursor" aria-hidden="true">
-            <div class="cursor-shape">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 0 0
-                         L 1.2 17.5
-                         Q 1.4 19.5 3.4 19.0
-                         L 7.5 18.0
-                         L 10.5 24.0
-                         Q 11.3 25.4 12.6 24.7
-                         L 14.0 24.0
-                         Q 15.3 23.3 14.6 21.9
-                         L 11.7 16.0
-                         L 16.0 14.8
-                         Q 17.8 14.3 16.4 12.7
-                         Z"
-                      fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
-              </svg>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <button class="stage-restart" aria-label="Reiniciar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ 04 · PRÁTICA ══════ -->
-<section class="chapter chapter--wide" id="feat-practice">
-  <div class="chapter-copy">
-    <div class="eyebrow rv"><span class="eyebrow-num">04</span>Prática</div>
-    <h2 class="chapter-h rv rv-d1">Exercícios que crescem <em>contigo</em>.</h2>
-    <p class="chapter-p rv rv-d2">
-      Adaptados ao teu nível, com dificuldade que aumenta à medida que
-      evoluis. Escreves a resolução, recebes feedback imediato — e o tutor
-      está mesmo ao lado, se precisares.
-    </p>
-    <p class="chapter-p chapter-p--muted rv rv-d3">
-      Nunca demasiado fácil. Nunca impossível.
-    </p>
-  </div>
-  <div class="chapter-stage-wrap rv rv-d2">
-    <div class="stage stage--band">
-      <div class="aurora" aria-hidden="true">
-        <div class="aurora-blob b1"></div>
-        <div class="aurora-blob b2"></div>
-        <div class="aurora-blob b3"></div>
-        <div class="aurora-blob b4"></div>
-      </div>
-      <div class="band-inner fc-ui--mvp-practice">
-          <div class="mvp-practice">
-            <div class="mvp-ex-top">
-              <span class="mvp-back" aria-hidden="true">
-                <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5m7-7-7 7 7 7"/></svg>
-                Voltar
-              </span>
-              <div class="mvp-ex-title">Regra da cadeia</div>
-              <div class="mvp-ex-counter">Exercício 3 de 5</div>
-            </div>
-            <div class="mvp-ex-progress" role="img" aria-label="Progresso no conjunto de exercícios">
-              <span class="mvp-prog-dot done"></span>
-              <span class="mvp-prog-dot done"></span>
-              <span class="mvp-prog-dot active"></span>
-              <span class="mvp-prog-dot"></span>
-              <span class="mvp-prog-dot"></span>
-            </div>
-            <div class="mvp-ex-body">
-              <div class="mvp-ex-left">
-                <div class="mvp-problem-box">
-                  <div class="mvp-problem-eyebrow">Problema</div>
-                  <div class="mvp-problem-text">Calcula a derivada de <em>f(x) = (2x² + 1)³</em> usando a regra da cadeia.</div>
-                </div>
-                <div class="mvp-canvas-box">
-                  <div class="mvp-canvas-surface">
-                    <div class="mvp-ink-work" aria-label="Resolução escrita no quadro">
-                      <div class="mvp-ink-line">f'(x) = 3(2x² + 1)² · 4x</div>
-                      <div class="mvp-ink-line mvp-ink-line--sub">= 12x(2x² + 1)²</div>
-                    </div>
-                  </div>
-                  <div class="mvp-canvas-foot">
-                    <div class="mvp-canvas-actions">
-                      <span class="mvp-ghost">↩ Desfazer</span>
-                      <span class="mvp-ghost">Limpar</span>
-                      <span class="mvp-ghost">Não sei</span>
-                    </div>
-                    <button type="button" class="mvp-verify-btn">
-                      Verificar
-                      <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <aside class="mvp-tutor-panel">
-                <div class="mvp-tutor-head">
-                  <div class="mvp-tutor-av" aria-hidden="true">
-                    <svg class="mvp-tutor-av-img" xmlns="http://www.w3.org/2000/svg" viewBox="54 205 207 173" fill="none" width="16" height="16" focusable="false" aria-hidden="true">
-                      <path fill="#ffffff" d="M177.005157,371.172485 C165.749588,365.157013 158.630432,355.776917 153.490631,344.930756 C141.653580,319.951965 130.149475,294.815247 118.543053,269.727417 C114.375359,260.718781 109.259232,252.738739 98.825317,249.963516 C96.685440,249.394333 94.559082,249.301971 92.397385,249.298889 C83.067482,249.285599 73.736031,249.390411 64.408165,249.250443 C58.060131,249.155197 54.827023,245.921234 54.724392,239.662186 C54.596027,231.833801 54.598980,224.000381 54.718166,216.171783 C54.803326,210.578384 57.433044,206.912766 62.470924,206.917389 C79.599525,206.933075 96.817963,205.223221 113.838448,208.087967 C131.916763,211.130768 143.211548,222.852936 150.625427,238.777725 C161.307510,261.722534 171.714996,284.795074 182.304138,307.783417 C184.392380,312.316833 186.500748,316.879852 189.073517,321.143372 C194.880280,330.766144 203.569122,334.856415 214.790421,334.005005 C218.478683,333.725159 218.480927,331.597687 218.482681,328.896423 C218.502884,297.741974 218.576645,266.587555 218.627991,235.433121 C218.638428,229.102142 218.552719,222.770401 218.624069,216.440292 C218.697662,209.913422 221.544937,206.895615 228.028946,206.757431 C235.522842,206.597748 243.024109,206.625885 250.519455,206.744217 C256.669220,206.841309 259.577881,209.741577 260.087616,215.925812 C260.169525,216.919617 260.137756,217.923843 260.137482,218.923248 C260.123291,266.739227 260.107819,314.555176 260.086395,362.371155 C260.085663,364.036530 260.115601,365.709839 259.973389,367.365906 C259.438660,373.593079 257.253906,376.109650 250.957260,376.500549 C237.483475,377.336945 223.984283,376.890198 210.495041,376.720032 C206.666092,376.671753 202.836792,376.367615 199.010910,376.419678 C191.346725,376.524017 184.176102,374.689270 177.005157,371.172485 z"/>
-                    </svg>
-                  </div>
-                  <div class="mvp-tutor-label">Valed</div>
-                </div>
-                <div class="mvp-tutor-body">
-                <div class="mvp-tutor-msgs">
-                  <div class="mvp-msg user">Fiz: 3(2x²+1)² * 4x</div>
-                  <div class="mvp-msg tutor">Boa! Está correta. Falta só simplificar. Sabem como chegar lá?</div>
-                </div>
-                </div>
-                <div class="mvp-tutor-input-row">
-                  <div class="mvp-tutor-input-fake">Alguma dúvida?</div>
-                  <div class="mvp-send-btn" aria-hidden="true">→</div>
-                </div>
-              </aside>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════ 05 · EXPLICAÇÕES AO VIVO ══════ -->
 <section class="chapter chapter--wide" id="feat-live">
   <div class="chapter-copy">
-    <div class="eyebrow rv"><span class="eyebrow-num">05</span>Explicações ao vivo</div>
-    <h2 class="chapter-h rv rv-d1">Professores a sério, <em>quando precisares</em>.</h2>
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <circle class="ti-line" cx="32" cy="32" r="18"/>
+      <path class="ti-fill" d="M27 24 L42 32 L27 40 Z"/>
+      <path class="ti-line" d="M27 24 L42 32 L27 40 Z"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Os melhores professores, <em>quando precisares</em>.</h2>
     <p class="chapter-p rv rv-d2">
-      Sessões com os melhores professores do país — com a IA integrada.
-      O professor vê o teu trabalho em tempo real e sabe exatamente onde
-      focar. Zero tempo perdido a diagnosticar.
-    </p>
-    <p class="chapter-p chapter-p--muted rv rv-d3">
-      Individuais ou em grupo. Tu escolhes.
+      Sessões com os melhores professores do país. O professor sabe onde
+      falhas, o que já dominas e onde se deve focar. Zero tempo perdido a
+      diagnosticar, foco total no teu crescimento.
     </p>
   </div>
-  <div class="chapter-stage-wrap rv rv-d2">
-    <div class="stage stage--band stage--dark">
-      <div class="aurora" aria-hidden="true">
-        <div class="aurora-blob b1"></div>
-        <div class="aurora-blob b2"></div>
-        <div class="aurora-blob b3"></div>
-        <div class="aurora-blob b4"></div>
+  <div class="chapter-stage-wrap chapter-stage-wrap--live rv rv-d2">
+    <!-- one single squared-paper surface: prompt, worked solution and the tutor's camera live on the same page -->
+    <div class="ls" aria-label="Quadro partilhado com a resolução do aluno e a correção da professora">
+
+      <!-- cameras, floating in the corner like a picture-in-picture on the page -->
+      <div class="ls-cams">
+        <figure class="ls-cam ls-cam--tutor">
+          <img src="assets/live-tutor-maria.png" alt="Prof.ª Maria Matos em videochamada" class="ls-cam-img" width="360" height="240" loading="lazy" decoding="async">
+          <figcaption class="ls-cam-name">Prof.ª Maria Matos</figcaption>
+        </figure>
+        <figure class="ls-cam ls-cam--student">
+          <img src="assets/live-student-tu.png" alt="A tua câmara" class="ls-cam-img" width="360" height="240" loading="lazy" decoding="async">
+          <figcaption class="ls-cam-name">Tu</figcaption>
+        </figure>
       </div>
-      <div class="band-inner">
-          <div class="live-mini live-mini--student">
-            <div class="live-sbar">
-              <span class="live-sbar-back">← Voltar</span>
-              <div class="live-sbar-right">
-                <span class="live-end-btn">Terminar sessão</span>
-              </div>
-            </div>
-            <div class="live-body">
-              <div class="live-canvas-panel">
-                <div class="live-problem-strip">
-                  <div class="live-prob-badge">Problema</div>
-                  <div class="live-prob-content">
-                    <div class="live-prob-title">Ex. 1 — Equações quadráticas</div>
-                    <div class="live-prob-text">Determina o conjunto solução de <em>2x² − 5x + 2 = 0</em> em ℝ.</div>
-                  </div>
-                </div>
-                <div class="live-canvas-wrap live-canvas-wrap--ink" aria-hidden="true">
-                  <div class="live-ink-work">
-                    <div class="live-ink-block live-ink-block--tutor">
-                      <div class="live-ink-line">Δ = 25 − 16 = 9</div>
-                      <div class="live-ink-line live-ink-line--sm">√Δ = 3</div>
-                    </div>
-                    <div class="live-ink-block live-ink-block--student">
-                      <div class="live-ink-line">x = (5 ± 3) / 4</div>
-                      <div class="live-ink-line">x = 2 ∨ x = ½</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="live-canvas-toolbar">
-                  <button type="button" class="live-tb-btn" disabled>Desfazer</button>
-                  <button type="button" class="live-tb-btn" disabled>Limpar</button>
-                  <span class="live-tb-sep" aria-hidden="true"></span>
-                  <span class="live-color-swatch live-color-swatch--active" style="background:#111110" title="Cor"></span>
-                  <span class="live-color-swatch" style="background:#EF4444"></span>
-                  <span class="live-color-swatch" style="background:#0ABFB0"></span>
-                  <span class="live-color-swatch" style="background:#7ACC00"></span>
-                  <span class="live-color-swatch" style="background:#F97316"></span>
-                  <span class="live-color-swatch" style="background:#8B5CF6"></span>
-                </div>
-              </div>
-              <aside class="live-right-panel live-right-panel--student">
-                <div class="live-ptabs">
-                  <span class="live-ptab active">Sessão</span>
-                  <span class="live-ptab">Chat</span>
-                </div>
-                <div class="live-panel-body live-panel-body--session">
-                  <div class="live-video-pane">
-                    <div class="live-video-main">
-                      <img src="assets/live-session-tutor.png" alt="Professora em vídeo (câmara web)" class="live-video-img live-video-img--webcam" width="320" height="200" loading="lazy" decoding="async">
-                      <div class="live-vid-tag">Prof.ª Maria Matos</div>
-                    </div>
-                    <div class="live-video-self">
-                      <img src="assets/live-session-student.png" alt="Aluna em vídeo (câmara web)" class="live-video-img live-video-img--webcam" width="320" height="200" loading="lazy" decoding="async">
-                      <div class="live-vid-tag">Tu</div>
-                    </div>
-                    <div class="live-vid-controls">
-                      <span class="live-av-pill" title="Microfone"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 14a3 3 0 003-3V5a3 3 0 00-6 0v6a3 3 0 003 3z"/><path d="M19 10v1a7 7 0 01-14 0v-1M12 19v3M8 23h8"/></svg> Mic</span>
-                      <span class="live-av-pill live-av-pill--on" title="Câmara"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Vídeo</span>
-                    </div>
-                  </div>
-                </div>
-              </aside>
-            </div>
-          </div>
+
+      <div class="ls-prompt">
+        <span class="ls-prompt-text">Determina o conjunto solução de <em>2x² − 5x + 2 = 0</em> em ℝ.</span>
+      </div>
+
+      <!-- student's work — black ink, with a real mistake the tutor corrects in red -->
+      <div class="ls-work">
+        <div class="ls-line ls-hand ls-ink-black">a = 2,&nbsp; b = −5,&nbsp; c = 2</div>
+        <div class="ls-line ls-hand ls-ink-black">Δ = b² − 4ac = 25 − 16 = 9</div>
+        <div class="ls-line ls-hand ls-ink-black">√Δ = 3</div>
+
+        <div class="ls-line ls-hand ls-ink-black ls-line--err">
+          x =
+          <span class="ls-frac">
+            <span class="ls-frac-top">−b ± √Δ</span>
+            <span class="ls-frac-bar"></span>
+            <span class="ls-frac-bot">
+              <span class="ls-mistake">2<span class="ls-strike" aria-hidden="true"></span></span>
+            </span>
+          </span>
+          <span class="ls-eq">= <span class="ls-mistake-2">(5 ± 3) / 2</span></span>
+        </div>
+
+        <div class="ls-correction ls-hand ls-ink-red">
+          <span class="ls-arrow" aria-hidden="true">↑</span>
+          é <b>2a = 4</b>, não 2!
+        </div>
+
+        <div class="ls-line ls-hand ls-ink-red ls-fix">
+          x =
+          <span class="ls-frac ls-frac--red">
+            <span class="ls-frac-top">5 ± 3</span>
+            <span class="ls-frac-bar"></span>
+            <span class="ls-frac-bot">4</span>
+          </span>
+          <span class="ls-eq ls-eq--red">→ x = 2 &nbsp;∨&nbsp; x = ½</span>
+        </div>
+
+        <div class="ls-check ls-hand ls-ink-red" aria-hidden="true">✓ S = {½ , 2}</div>
+      </div>
+
+      <!-- drawing toolbar, like a real quadro tool -->
+      <div class="ls-toolbar" aria-hidden="true">
+        <button class="ls-tool ls-tool--active" type="button">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 20l4-1L19 8a2 2 0 0 0-3-3L5 16l-1 4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          Desenhar
+        </button>
+        <button class="ls-tool" type="button">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 18h9M9 18l-4-4a2 2 0 0 1 0-3l7-7a2 2 0 0 1 3 0l3 3a2 2 0 0 1 0 3l-8 8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          Apagar
+        </button>
+        <button class="ls-tool" type="button">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 7 4 12l5 5M4 12h10a5 5 0 0 1 0 10h-1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Desfazer
+        </button>
+        <button class="ls-tool" type="button">Limpar</button>
+        <span class="ls-tool-sep" aria-hidden="true"></span>
+        <span class="ls-swatches">
+          <span class="ls-swatch ls-swatch--active" style="--c:#1C1B18"></span>
+          <span class="ls-swatch" style="--c:#D6262B"></span>
+          <span class="ls-swatch" style="--c:#0ABFB0"></span>
+          <span class="ls-swatch" style="--c:#8BCB2A"></span>
+          <span class="ls-swatch" style="--c:#FF6B2B"></span>
+          <span class="ls-swatch" style="--c:#8B5CF6"></span>
+        </span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ══════ 06 · PROGRESSO ══════ -->
-<section class="chapter chapter--flip" id="feat-prog">
+<section class="chapter" id="feat-prog">
   <div class="chapter-copy">
-    <div class="eyebrow rv"><span class="eyebrow-num">06</span>O teu progresso</div>
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <path class="ti-line" d="M14 48 L14 16"/>
+      <path class="ti-line" d="M14 48 L50 48"/>
+      <path class="ti-fill" d="M22 48 L22 40 L28 40 L28 48 Z"/><path class="ti-line" d="M22 48 L22 40 L28 40 L28 48"/>
+      <path class="ti-fill" d="M31 48 L31 32 L37 32 L37 48 Z"/><path class="ti-line" d="M31 48 L31 32 L37 32 L37 48"/>
+      <path class="ti-fill" d="M40 48 L40 24 L46 24 L46 48 Z"/><path class="ti-line" d="M40 48 L40 24 L46 24 L46 48"/>
+      <path class="ti-lime" d="M20 34 L30 26 L38 30 L50 16"/>
+      <path class="ti-lime" d="M44 16 L50 16 L50 22"/>
+    </svg></span></div>
     <h2 class="chapter-h rv rv-d1">Sabe quando estás <em>pronto</em>.</h2>
     <p class="chapter-p rv rv-d2">
       Domínio por competência, cobertura do exame e uma nota esperada
       que sobe contigo. Sem surpresas no dia do exame.
-    </p>
-    <p class="chapter-p chapter-p--muted rv rv-d3">
-      Começa com um diagnóstico: descobrimos o que já sabes, sem nota e
-      sem julgamentos.
     </p>
   </div>
   <div class="chapter-stage-wrap rv rv-d2">
@@ -692,19 +503,16 @@
             <div class="vprog-kpi-row">
               <div class="vprog-kpi-card">
                 <div class="vprog-kpi-label">Progresso global</div>
-                <div class="vprog-kpi-num">42%</div>
-                <div class="vprog-kpi-sub">86 de 203 competências</div>
-                <div class="vprog-bar vprog-bar--kpi"><div class="vprog-bar-fill" style="width:42%"></div></div>
+                <div class="vprog-kpi-num" data-count="42" data-suffix="%">42%</div>
+                <div class="vprog-bar vprog-bar--kpi"><div class="vprog-bar-fill" data-target="42"></div></div>
               </div>
               <div class="vprog-kpi-card">
                 <div class="vprog-kpi-label">Nota esperada</div>
-                <div class="vprog-kpi-num">15 <span class="vprog-kpi-denom">/ 20</span></div>
-                <div class="vprog-kpi-sub">+3 desde o diagnóstico</div>
-                <div class="vprog-bar vprog-bar--kpi"><div class="vprog-bar-fill" style="width:75%"></div></div>
+                <div class="vprog-kpi-num"><span data-count="17">17</span> <span class="vprog-kpi-denom">/ 20</span></div>
+                <div class="vprog-bar vprog-bar--kpi"><div class="vprog-bar-fill" data-target="85"></div></div>
               </div>
             </div>
             <div class="vprog-section-head">
-              <span class="vprog-section-eyebrow">Competências</span>
               <div class="vprog-section-title">Progresso por domínio</div>
             </div>
             <div class="vprog-domain-list-wrap">
@@ -712,82 +520,52 @@
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Números Reais e Equações</span>
-                  <span class="vprog-domain-count">28 / 42</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:67%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" data-target="67"></div></div>
               </div>
-              <div class="vprog-domain-card vprog-domain-card--done">
+              <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Trigonometria e Geometria no Plano</span>
-                  <span class="vprog-domain-count">23 / 23</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill" style="width:100%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill" data-target="100"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Geometria e Espaço</span>
-                  <span class="vprog-domain-count">12 / 23</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:52%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" data-target="52"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Estatística</span>
-                  <span class="vprog-domain-count">9 / 24</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:38%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" data-target="38"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Sucessões</span>
-                  <span class="vprog-domain-count">8 / 23</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:35%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" data-target="35"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Derivadas</span>
-                  <span class="vprog-domain-count">4 / 12</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:33%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" data-target="33"></div></div>
               </div>
               <div class="vprog-domain-card">
                 <div class="vprog-domain-top">
                   <span class="vprog-domain-name">Números Complexos</span>
-                  <span class="vprog-domain-count">2 / 19</span>
                 </div>
-                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" style="width:11%"></div></div>
+                <div class="vprog-bar vprog-bar--sm"><div class="vprog-bar-fill vprog-bar-fill--info" data-target="11"></div></div>
               </div>
             </div>
             </div>
           </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════ HISTÓRIAS ══════ -->
-<section id="stories">
-  <div class="stories-header">
-    <div class="eyebrow rv">Histórias</div>
-    <h2 class="stories-h rv rv-d1">Alunos que transformaram os seus resultados.</h2>
-  </div>
-
-  <div class="stories-row" aria-label="Histórias de alunos">
-    <div class="story-card sc-paper rv">
-      <div class="story-stat">+4</div>
-      <div class="story-body">valores na nota de exame após 6 semanas de prática diária com o Valed.</div>
-      <div class="story-attribution">Maria Ferreira · 12.º ano</div>
-    </div>
-    <div class="story-card sc-paper rv rv-d1">
-      <div class="story-stat">12&nbsp;→&nbsp;17</div>
-      <div class="story-body">O diagnóstico mostrou-me exatamente o que não sabia. Três meses depois, a nota falou por si.</div>
-      <div class="story-attribution">Beatriz Lopes · 12.º ano</div>
-    </div>
-    <div class="story-card sc-paper rv rv-d2">
-      <div class="story-stat">18</div>
-      <div class="story-body">valores no exame nacional. O Valed ajudou-me a identificar os meus pontos fracos a tempo de os corrigir.</div>
-      <div class="story-attribution">Tomás Mendes · 12.º ano</div>
+      <button class="stage-restart" aria-label="Reiniciar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -813,13 +591,12 @@
     </div>
     <div>
       <div class="footer-col-title">Produto</div>
-      <a href="#" class="footer-link">Preços</a>
+      <a href="#" class="footer-link">Para alunos</a>
       <a href="#" class="footer-link">Para professores</a>
     </div>
     <div>
       <div class="footer-col-title">Empresa</div>
       <a href="#" class="footer-link">Sobre nós</a>
-      <a href="#" class="footer-link">Blog</a>
       <a href="#" class="footer-link">Carreiras</a>
       <a href="#" class="footer-link">Contacto</a>
     </div>
@@ -832,7 +609,6 @@
   </div>
   <div class="footer-bottom">
     <span>© 2025 Valed. Todos os direitos reservados.</span>
-    <span>Feito em Portugal 🇵🇹</span>
   </div>
 </footer>
 
@@ -844,299 +620,370 @@
 ══════════════════════════════════════ -->
 <div id="page-tutors" style="display:none;">
 
-<!-- ── TUTOR HERO — quiet, editorial, ink ── -->
-<section id="t-hero" data-nav-theme="dark">
-  <div class="t-hero-inner">
-    <div class="hero-eyebrow hero-eyebrow--dark">Para professores e explicadores</div>
-    <h1 class="hero-h1 hero-h1--dark">Ensina melhor.<br><em>Ganha mais.</em></h1>
-    <p class="hero-sub hero-sub--dark">Dados reais sobre cada aluno, sessões mais eficazes e mais rendimento por hora.</p>
-    <div class="hero-ctas">
-      <a href="#t-how" class="btn-paper">
-        Candidatar-me como tutor
+<!-- ── TUTOR HERO — same layout as the student hero (paper, split text/photo) ── -->
+<section id="t-hero">
+  <div class="hero-inner">
+    <h1 class="hero-h1 rv in">Ensina melhor.<br><em>Ganha mais.</em></h1>
+    <p class="hero-sub rv in rv-d1">Dados reais sobre cada aluno, sessões mais eficazes e mais rendimento por hora.</p>
+    <div class="hero-ctas rv in rv-d2">
+      <a href="#t-briefing" class="btn-ink">
+        Começar grátis
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
     </div>
   </div>
-</section>
-
-
-<!-- ── HOW IT WORKS ── -->
-<section id="t-how" class="t-content-section">
-  <div class="t-container">
-    <h2 class="t-section-h">Três passos para começar a ensinar com o Valed.</h2>
-    <div class="t-steps-row">
-      <div class="t-step">
-        <div class="t-step-num">01</div>
-        <div class="t-step-title">Cria o teu perfil</div>
-        <div class="t-step-body">Define a tua disponibilidade, preço por hora e matérias. O teu perfil fica visível para alunos que precisam de tutoria na tua área.</div>
-      </div>
-      <div class="t-step-arrow">
-        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-      </div>
-      <div class="t-step">
-        <div class="t-step-num">02</div>
-        <div class="t-step-title">Aceita um pedido</div>
-        <div class="t-step-body">Recebe pedidos de sessão de alunos com perfil detalhado: historial de prática, domínio por tópico, erros frequentes. Decides tu se aceitas.</div>
-      </div>
-      <div class="t-step-arrow">
-        <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-      </div>
-      <div class="t-step">
-        <div class="t-step-num">03</div>
-        <div class="t-step-title">Ensina com dados</div>
-        <div class="t-step-body">Durante a sessão, o Valed dá-te acesso ao trabalho do aluno em tempo real e sugestões da IA sobre o que fazer a seguir. Zero tempo perdido a diagnosticar.</div>
-      </div>
-    </div>
+  <!-- Right-half hero photo: dedicated tutor-side image, cropped to the hero aspect ratio -->
+  <div class="hero-art rv in rv-d2" aria-hidden="true">
+    <img class="hero-art-img" src="assets/hero-tutor.png" alt="Tutor a acompanhar um aluno num tablet" loading="eager" decoding="async">
   </div>
 </section>
 
-<!-- ── FEATURE 1: STUDENT BRIEFING ── -->
-<section id="t-briefing" class="t-content-section">
-  <div class="t-two-col">
-    <div>
-      <div class="t-section-ey teal">Antes da sessão</div>
-      <h2 class="t-section-h" style="margin-bottom:20px;">Conheces o aluno<br>antes de dizer olá.</h2>
-      <p class="t-section-body">O Valed prepara automaticamente um briefing completo para cada sessão: o que o aluno praticou, onde tem mais dificuldades, quais os erros mais comuns e qual o seu nível atual por tópico.</p>
-      <p class="t-section-body" style="margin-top:12px;">Em vez de desperdiçar os primeiros 10 minutos a perceber onde o aluno está, começas a sessão já a trabalhar os pontos certos.</p>
-      <div class="t-feature-list">
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--lime);"></div>Frequência de prática das últimas semanas</div>
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--teal);"></div>Domínio por tópico com percentagem</div>
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--orange);"></div>Erros recorrentes identificados pela IA</div>
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--lime);"></div>Último exercício que o aluno tentou</div>
-      </div>
-    </div>
-    <!-- Briefing mockup -->
-    <div class="t-mockup-card">
-      <div class="t-mock-header">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div class="t-student-av" style="background:linear-gradient(135deg,#0ABFB0,#0891B2);">TM</div>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:var(--white);">Tomás Mendes</div>
-            <div style="font-size:11px;color:rgba(255,255,255,.35);">Sessão em 15 min · Equações 2.º grau</div>
-          </div>
-        </div>
-        <div style="font-size:10px;font-weight:700;padding:4px 10px;border-radius:100px;background:rgba(249,115,22,.15);color:#FB923C;border:1px solid rgba(249,115,22,.25);">Briefing pronto</div>
-      </div>
-      <div style="padding:16px;display:flex;flex-direction:column;gap:10px;">
-        <!-- Mastery bars -->
-        <div style="font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:4px;">Domínio por tópico</div>
-        <div class="t-bar-row"><span class="t-bar-label">Equações 1.º grau</span><div class="t-bar-track"><div class="t-bar-fill" style="width:92%;background:var(--limed);"></div></div><span class="t-bar-pct" style="color:var(--limed);">92%</span></div>
-        <div class="t-bar-row"><span class="t-bar-label">Bhaskara</span><div class="t-bar-track"><div class="t-bar-fill" style="width:61%;background:var(--teal);"></div></div><span class="t-bar-pct" style="color:var(--teal);">61%</span></div>
-        <div class="t-bar-row"><span class="t-bar-label">Δ = 0 (raíz dupla)</span><div class="t-bar-track"><div class="t-bar-fill" style="width:18%;background:var(--orange);"></div></div><span class="t-bar-pct" style="color:var(--orange);">18%</span></div>
-        <div class="t-bar-row"><span class="t-bar-label">Limites</span><div class="t-bar-track"><div class="t-bar-fill" style="width:38%;background:var(--orange);"></div></div><span class="t-bar-pct" style="color:var(--orange);">38%</span></div>
-        <!-- Error list -->
-        <div style="height:1px;background:rgba(255,255,255,.06);margin:4px 0;"></div>
-        <div style="font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:4px;">Erros recorrentes</div>
-        <div class="t-error-row"><div class="t-error-badge" style="background:rgba(239,68,68,.15);color:#F87171;">8×</div><div style="font-size:12px;color:rgba(255,255,255,.55);">Esquecer dividir por 2a na fórmula</div></div>
-        <div class="t-error-row"><div class="t-error-badge" style="background:rgba(249,115,22,.15);color:#FB923C;">4×</div><div style="font-size:12px;color:rgba(255,255,255,.55);">Sinal errado no discriminante</div></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ── FEATURE 2: LIVE SESSION + AI ── -->
-<section id="t-live" class="t-content-section">
-  <div class="t-two-col">
-    <!-- Live session mockup -->
-    <div class="t-mockup-card" style="padding:0;overflow:hidden;">
-      <!-- Video feed -->
-      <div class="t-live-video-strip">
-        <img src="assets/live-session-student.png" alt="Aluno em vídeo (câmara web)" class="t-live-vid-main" width="320" height="200" loading="lazy" decoding="async">
-        <div class="t-live-vid-tag t-live-vid-tag--name">Tomás Mendes</div>
-        <div class="t-live-vid-pip">
-          <img src="assets/live-session-tutor.png" alt="Professora em vídeo (pré-visualização)" class="t-live-vid-pip-img" width="320" height="200" loading="lazy" decoding="async">
-        </div>
-      </div>
-      <!-- AI panel -->
-      <div class="t-ai-panel">
-        <div class="t-ai-panel-eyebrow">IA em tempo real</div>
-        <div class="t-ai-card urgent">
-          <div class="t-ai-card-head">
-            <div class="t-ai-card-label">⚠ Reforço necessário</div>
-            <button type="button" class="t-ai-action-btn">Explicar agora →</button>
-          </div>
-          <p class="t-ai-card-body">Tomás pausou <strong>3×</strong> ao identificar a função interior — bloqueio na <strong>regra da cadeia.</strong></p>
-        </div>
-        <div class="t-ai-card next">
-          <div class="t-ai-card-head">
-            <div class="t-ai-card-label">★ Próximo exercício</div>
-            <button type="button" class="t-ai-action-btn lime">Enviar ao aluno →</button>
-          </div>
-          <p class="t-ai-card-body"><span class="t-ai-card-kicker">Ficha 7B</span> Identifica f e g antes de derivar. Nível adequado ao aluno.</p>
-        </div>
-        <div class="t-ai-card info">
-          <div class="t-ai-card-head">
-            <div class="t-ai-card-label">↩ Padrão histórico</div>
-            <button type="button" class="t-ai-action-btn teal">Ver sessão anterior →</button>
-          </div>
-          <p class="t-ai-card-body">Mesmo erro em <strong>14 jan.</strong> Resolvido com <strong>exemplo visual com cores.</strong></p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="t-section-ey lime">Durante a sessão</div>
-      <h2 class="t-section-h" style="margin-bottom:20px;">A IA trabalha<br>contigo, em tempo real.</h2>
-      <p class="t-section-body">Enquanto o aluno resolve, o Valed analisa o que está a acontecer e dá-te sugestões contextuais: quando intervir, que exercício propor a seguir, que conceito reforçar.</p>
-      <p class="t-section-body" style="margin-top:12px;">Deixas de depender da intuição para perceber onde o aluno está. A informação está à tua frente, em tempo real.</p>
-      <div class="t-feature-list">
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--orange);"></div>Alertas quando o aluno está bloqueado</div>
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--lime);"></div>Sugestão do próximo exercício baseada no nível atual</div>
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--teal);"></div>Acesso ao historial de sessões anteriores ao instante</div>
-        <div class="t-feat-item"><div class="t-feat-dot" style="background:var(--lime);"></div>Material sugerido adaptado ao ponto fraco do momento</div>
-      </div>
-    </div>
+<!-- ══════ BRIEFING DO ALUNO — chapter + stage ══════ -->
+<section class="chapter" id="t-briefing">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <path class="ti-fill" d="M20 12 L44 12 Q48 12 48 16 L48 52 Q48 56 44 56 L20 56 Q16 56 16 52 L16 16 Q16 12 20 12 Z"/>
+      <path class="ti-line" d="M20 12 L44 12 Q48 12 48 16 L48 52 Q48 56 44 56 L20 56 Q16 56 16 52 L16 16 Q16 12 20 12 Z"/>
+      <path class="ti-line" d="M24 26 L40 26"/><path class="ti-line" d="M24 34 L40 34"/>
+      <path class="ti-lime" d="M24 42 L32 42"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Conheces o aluno <em>antes de dizer olá</em>.</h2>
+    <p class="chapter-p rv rv-d2">
+      O Valed prepara um briefing completo para cada sessão: o que o aluno
+      praticou, onde tem mais dificuldades, os erros mais comuns e o nível
+      atual por tópico.
+    </p>
   </div>
-</section>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="viewport">
+        <div class="t-brief-scene">
 
-<!-- ── FEATURE 3: GROUP SESSION ── -->
-<section id="t-group" class="t-content-section">
-  <div class="t-group-inner">
-    <div class="t-group-intro">
-      <div class="t-section-ey teal">Aulas de grupo</div>
-      <h2 class="t-section-h">Mais alunos ao mesmo tempo.<br>Atenção individual para cada um.</h2>
-    </div>
-    <!-- Group grid mockup -->
-    <div class="t-group-mock">
-      <div class="t-group-header">
-        <div class="t-group-header-title">Aula de grupo · Derivadas</div>
-        <div class="t-group-header-meta">8 alunos · Em curso — 1h 03min</div>
-      </div>
-      <div class="t-student-grid">
-        <!-- Alert student -->
-        <div class="t-sc alert">
-          <div class="t-sc-top"><div class="t-sc-av" style="background:linear-gradient(135deg,#F97316,#DC2626);">AF</div><div><div class="t-sc-name">Ana F.</div><div class="t-sc-topic" style="color:#F87171;">Parada há 4 min</div></div><div class="t-sc-warn">!</div></div>
-          <div class="t-sc-bar-row"><span>Velocidade</span><div class="t-sc-track"><div style="width:18%;height:100%;background:#EF4444;border-radius:99px;"></div></div><span style="color:#F87171;">18%</span></div>
-          <div class="t-sc-bar-row"><span>Precisão</span><div class="t-sc-track"><div style="width:42%;height:100%;background:var(--orange);border-radius:99px;"></div></div><span style="color:var(--orange);">42%</span></div>
-        </div>
-        <!-- Great student -->
-        <div class="t-sc great">
-          <div class="t-sc-top"><div class="t-sc-av" style="background:linear-gradient(135deg,#0ABFB0,#0891B2);">TM</div><div><div class="t-sc-name">Tomás M.</div><div class="t-sc-topic">Ex. 4 / 5</div></div></div>
-          <div class="t-sc-bar-row"><span>Velocidade</span><div class="t-sc-track"><div style="width:88%;height:100%;background:var(--limed);border-radius:99px;"></div></div><span style="color:var(--limed);">88%</span></div>
-          <div class="t-sc-bar-row"><span>Precisão</span><div class="t-sc-track"><div style="width:92%;height:100%;background:var(--limed);border-radius:99px;"></div></div><span style="color:var(--limed);">92%</span></div>
-        </div>
-        <!-- Normal student -->
-        <div class="t-sc">
-          <div class="t-sc-top"><div class="t-sc-av" style="background:linear-gradient(135deg,#7ACC00,#3D7A00);">MR</div><div><div class="t-sc-name">Miguel R.</div><div class="t-sc-topic">Ex. 3 / 5</div></div></div>
-          <div class="t-sc-bar-row"><span>Velocidade</span><div class="t-sc-track"><div style="width:62%;height:100%;background:var(--teal);border-radius:99px;"></div></div><span style="color:var(--teal);">62%</span></div>
-          <div class="t-sc-bar-row"><span>Precisão</span><div class="t-sc-track"><div style="width:75%;height:100%;background:var(--limed);border-radius:99px;"></div></div><span style="color:var(--limed);">75%</span></div>
-        </div>
-        <!-- Normal student 2 -->
-        <div class="t-sc">
-          <div class="t-sc-top"><div class="t-sc-av" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9);">RS</div><div><div class="t-sc-name">Rita S.</div><div class="t-sc-topic">Ex. 2 / 5</div></div></div>
-          <div class="t-sc-bar-row"><span>Velocidade</span><div class="t-sc-track"><div style="width:45%;height:100%;background:var(--orange);border-radius:99px;"></div></div><span style="color:var(--orange);">45%</span></div>
-          <div class="t-sc-bar-row"><span>Precisão</span><div class="t-sc-track"><div style="width:68%;height:100%;background:var(--teal);border-radius:99px;"></div></div><span style="color:var(--teal);">68%</span></div>
-        </div>
-      </div>
-      <!-- Alert bar -->
-      <div class="t-alert-bar">
-        <span class="t-alert-dot" aria-hidden="true"></span>
-        <span class="t-alert-text"><strong>Ana Figueiredo</strong> está parada há 4 min — bloqueio na regra da cadeia.</span>
-        <button class="t-intervene-btn">Intervir agora →</button>
-      </div>
-    </div>
-  </div>
-</section>
+          <!-- ACT 0 · a paper-plane notification flies in from the right,
+               then opens only when the cursor clicks it -->
+          <div class="t-brief-notif" aria-hidden="true">
+            <div class="t-brief-notif-pill">
+              <div class="t-brief-notif-plane">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2.5 11 13"/>
+                  <path d="M21.5 2.5 15 21l-4-8-8-4 18.5-6.5Z"/>
+                </svg>
+              </div>
+              <div class="t-brief-notif-text">
+                <span class="t-brief-notif-title">Novo pedido de sessão</span>
+                <span class="t-brief-notif-sub">Toca para abrir</span>
+              </div>
+            </div>
+          </div>
 
-<!-- ── EARNINGS ── -->
-<section id="t-earn" class="t-content-section">
-  <div class="t-two-col t-two-col--earn">
-    <div>
-      <h2 class="t-section-h" style="margin-bottom:20px;">Tu defines o teu preço.<br>Nós tratamos do resto.</h2>
-      <p class="t-section-body">Define a tua disponibilidade e o teu valor por hora. O Valed liga-te aos alunos certos, trata dos pagamentos e disponibiliza todas as ferramentas. Tu concentras-te em ensinar.</p>
-      <div class="t-earn-rows">
-        <div class="t-earn-row">
-          <div class="t-earn-icon t-earn-icon--pay" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.75"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.75"/><path d="M6 12h.01M18 12h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div><div class="t-earn-title">Pagamento automático</div><div class="t-earn-body">Recebimento semanal, sem conversas sobre dinheiro com os alunos.</div></div>
-        </div>
-        <div class="t-earn-row">
-          <div class="t-earn-icon t-earn-icon--calendar" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M8 14h.01M12 14h.01M8 18h.01M12 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div><div class="t-earn-title">Tu geres a agenda</div><div class="t-earn-body">Aceitas só os pedidos que queres. Sem compromissos fixos.</div></div>
-        </div>
-        <div class="t-earn-row">
-          <div class="t-earn-icon t-earn-icon--chart" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3v18h18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 16l4-4 3 3 5-6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="16" r="1.25" fill="currentColor"/><circle cx="11" cy="12" r="1.25" fill="currentColor"/><circle cx="14" cy="15" r="1.25" fill="currentColor"/><circle cx="19" cy="9" r="1.25" fill="currentColor"/></svg>
-          </div>
-          <div><div class="t-earn-title">Cresce com a reputação</div><div class="t-earn-body">Avaliações dos alunos aumentam a tua visibilidade e permitem cobrar mais.</div></div>
-        </div>
-      </div>
-    </div>
-    <!-- Earnings card -->
-    <div class="t-earn-card">
-      <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px;">Exemplo de ganhos</div>
-      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
-        <div class="t-earn-line">
-          <span>Sessões individuais (4 × 1h)</span>
-          <span style="color:var(--white);font-weight:600;">€ 160</span>
-        </div>
-        <div class="t-earn-line">
-          <span>Aulas de grupo (2 × 8 alunos)</span>
-          <span style="color:var(--white);font-weight:600;">€ 240</span>
-        </div>
-        <div style="height:1px;background:rgba(255,255,255,.08);margin:4px 0;"></div>
-        <div class="t-earn-line" style="font-size:13.5px;">
-          <span style="color:rgba(255,255,255,.7);">Comissão Valed (15%)</span>
-          <span style="color:rgba(255,255,255,.5);">− € 60</span>
-        </div>
-      </div>
-      <div style="background:rgba(170,255,0,.08);border:1px solid rgba(170,255,0,.2);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;">
-        <span style="font-size:13px;color:rgba(255,255,255,.6);">Total semanal</span>
-        <span style="font-family:'Fraunces',serif;font-size:28px;font-weight:300;color:var(--lime);">€ 340</span>
-      </div>
-      <div style="font-size:11px;color:rgba(255,255,255,.25);text-align:center;margin-top:12px;">Exemplo para €40/h individual · €15/aluno em grupo</div>
-    </div>
-  </div>
-</section>
+          <div class="t-brief">
 
-<!-- ── TUTOR STORIES ── -->
-<section id="t-stories" class="t-content-section t-content-section--stories">
-  <div class="t-stories-head-inner">
-    <h2 class="t-section-h" style="text-align:center;max-width:520px;margin:0 auto;">O que dizem os tutores que já estão na plataforma.</h2>
-  </div>
-  <div class="stories-carousel stories-carousel--static" aria-label="Depoimentos de tutores">
-    <div class="carousel-viewport carousel-viewport--static">
-      <div class="carousel-track carousel-track--static">
-      <!-- Card 1 — lime (same structure as #stories) -->
-      <div class="carousel-slide"><div class="story-card sc-lime">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat dark">3×</div>
-            <div class="story-body dark">mais sessões por semana desde que passei a usar as aulas de grupo com o dashboard do Valed.</div>
-            <div class="story-attribution dark">
-              Prof.ª Maria Matos
+            <!-- ACT 1 · Pedido de sessão — the incoming request -->
+            <div class="t-brief-request">
+              <div class="t-brief-req-price">
+                <span class="t-brief-req-amount">€ 40</span>
+                <span class="t-brief-req-unit">/ hora</span>
+              </div>
+              <div class="t-brief-req-actions">
+                <button type="button" class="t-brief-btn t-brief-btn--ghost" tabindex="-1">Recusar</button>
+                <button type="button" class="t-brief-btn t-brief-btn--accept" tabindex="-1">
+                  <span class="t-brief-btn-label">Aceitar pedido</span>
+                  <svg class="t-brief-btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-11"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- ACT 2 · confirmed name, then a clickable list of domains -->
+            <div class="t-brief-confirmed">
+              <div class="t-avatar t-avatar--sm">TM</div>
+              <div class="t-brief-conf-name">Tomás Mendes</div>
+            </div>
+
+            <div class="t-brief-body">
+              <div class="t-brief-body-inner">
+                <!-- Domain list (default briefing view) -->
+                <div class="t-brief-domains">
+                  <button type="button" class="t-brief-domain t-r is-target" tabindex="-1">
+                    <span class="t-brief-domain-name">Equações 2.º grau</span>
+                    <span class="t-brief-domain-hint">Ver detalhe</span>
+                    <svg class="t-brief-domain-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                  <button type="button" class="t-brief-domain t-r" tabindex="-1">
+                    <span class="t-brief-domain-name">Funções</span>
+                    <svg class="t-brief-domain-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                  <button type="button" class="t-brief-domain t-r" tabindex="-1">
+                    <span class="t-brief-domain-name">Trigonometria</span>
+                    <svg class="t-brief-domain-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                  <button type="button" class="t-brief-domain t-r" tabindex="-1">
+                    <span class="t-brief-domain-name">Limites</span>
+                    <svg class="t-brief-domain-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                </div>
+
+                <!-- Detail panel — appears only after a domain is clicked -->
+                <div class="t-brief-detail">
+                  <div class="t-brief-detail-inner">
+                    <button type="button" class="t-brief-detail-back" tabindex="-1" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+                      Equações 2.º grau
+                    </button>
+                    <div class="t-brief-section-label t-d">Domínio por subtópico</div>
+                    <div class="t-brief-bars">
+                      <div class="t-mrow t-d"><span class="t-mrow-label">Equações 1.º grau</span><div class="t-mtrack"><div class="t-mfill" data-target="92"></div></div><span class="t-mrow-pct" data-count="92" data-suffix="%">0%</span></div>
+                      <div class="t-mrow t-d"><span class="t-mrow-label">Bhaskara</span><div class="t-mtrack"><div class="t-mfill" data-target="61"></div></div><span class="t-mrow-pct" data-count="61" data-suffix="%">0%</span></div>
+                      <div class="t-mrow t-mrow--low t-d"><span class="t-mrow-label">Δ = 0 (raíz dupla)</span><div class="t-mtrack"><div class="t-mfill" data-target="18"></div></div><span class="t-mrow-pct" data-count="18" data-suffix="%">0%</span></div>
+                      <div class="t-mrow t-mrow--low t-d"><span class="t-mrow-label">Limites</span><div class="t-mtrack"><div class="t-mfill" data-target="38"></div></div><span class="t-mrow-pct" data-count="38" data-suffix="%">0%</span></div>
+                    </div>
+                    <div class="t-brief-divider t-d"></div>
+                    <div class="t-brief-section-label t-d">Erros recorrentes</div>
+                    <div class="t-err-row t-d"><div class="t-err-badge">8×</div><div class="t-err-text">Esquecer dividir por 2a na fórmula</div></div>
+                    <div class="t-err-row t-d"><div class="t-err-badge">4×</div><div class="t-err-text">Sinal errado no discriminante</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Cursor that presses "Aceitar" then clicks a domain -->
+          <div class="t-brief-cursor" aria-hidden="true">
+            <div class="cursor-shape">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 0 L 1.2 17.5 Q 1.4 19.5 3.4 19.0 L 7.5 18.0 L 10.5 24.0 Q 11.3 25.4 12.6 24.7 L 14.0 24.0 Q 15.3 23.3 14.6 21.9 L 11.7 16.0 L 16.0 14.8 Q 17.8 14.3 16.4 12.7 Z" fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
             </div>
           </div>
         </div>
-      </div></div>
-      <!-- Card 2 — teal -->
-      <div class="carousel-slide"><div class="story-card sc-teal">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">+40 min</div>
-            <div class="story-body light">poupados por sessão por não ter de diagnosticar do zero. O briefing diz-me exatamente onde focar.</div>
-            <div class="story-attribution light">
-              Ana Costa
-            </div>
-          </div>
-        </div>
-      </div></div>
-      <!-- Card 3 — dark -->
-      <div class="carousel-slide"><div class="story-card sc-dark">
-        <div class="story-inner">
-          <div class="story-stack">
-            <div class="story-stat light">€ 1.2k</div>
-            <div class="story-body light">por mês com apenas 10 horas semanais, graças às sessões de grupo com 8 alunos em simultâneo.</div>
-            <div class="story-attribution light">
-              Diogo Marques
-            </div>
-          </div>
-        </div>
-      </div></div>
-
       </div>
+      <button class="stage-restart" type="button" aria-label="Repetir animação" title="Repetir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TUDO NA MESMA JANELA — chapter (flipped) + stage ══════ -->
+<section class="chapter chapter--flip" id="t-live">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <path class="ti-fill" d="M14 20 Q14 15 19 15 L45 15 Q50 15 50 20 L50 36 Q50 41 45 41 L26 41 L18 48 L18 41 Q14 41 14 36 Z"/>
+      <path class="ti-line" d="M14 20 Q14 15 19 15 L45 15 Q50 15 50 20 L50 36 Q50 41 45 41 L26 41 L18 48 L18 41 Q14 41 14 36 Z"/>
+      <path class="ti-lime" d="M32 21 L34 27 L40 28 L34 29 L32 35 L30 29 L24 28 L30 27 Z"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Tudo o que precisas, <em>na mesma janela</em>.</h2>
+    <p class="chapter-p rv rv-d2">
+      A videochamada, o quadro partilhado e o histórico de exercícios do
+      aluno vivem na mesma página. Vês logo o que já tentou e o que
+      falhou — e envias o próximo exercício sem sair da sessão.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="viewport t-stage-pad">
+        <div class="t-live">
+          <div class="t-live-video t-r">
+            <img src="assets/live-student-tu.png" alt="Aluno em vídeo (câmara web)" class="t-live-video-main" width="320" height="200" loading="lazy" decoding="async">
+            <div class="t-live-rec"><span class="t-live-rec-dot" aria-hidden="true"></span>AO VIVO</div>
+            <div class="t-live-video-tag">Tomás Mendes</div>
+            <div class="t-live-video-pip">
+              <img src="assets/live-tutor-maria.png" alt="Tutora em vídeo (pré-visualização)" width="320" height="200" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="t-live-label t-r">Banco de exercícios · Regra da cadeia</div>
+          <div class="t-ai-card t-ai-card--alert t-r t-ai-arrive">
+            <div class="t-live-ex-row">
+              <span class="t-live-ex-num">Ex. 4</span>
+              <span class="t-live-ex-title">Derivada de uma composta simples</span>
+              <span class="t-live-ex-badge t-live-ex-badge--wrong">✗ · há 2 dias</span>
+            </div>
+            <div class="t-live-ex-row">
+              <span class="t-live-ex-num">Ex. 5</span>
+              <span class="t-live-ex-title">Identifica f e g antes de derivar</span>
+              <span class="t-live-ex-badge t-live-ex-badge--none">— sem tentativas</span>
+            </div>
+          </div>
+          <div class="t-ai-card t-ai-card--next t-r t-ai-arrive">
+            <div class="t-ai-head">
+              <div class="t-ai-tag">A enviar agora</div>
+            </div>
+            <p class="t-ai-body"><span class="t-ai-kicker">Ex. 5</span> Identifica f e g antes de derivar. Nível adequado ao aluno.</p>
+            <button type="button" class="t-live-send-btn" tabindex="-1">
+              <span class="t-live-send-label">Enviar ao aluno →</span>
+              <span class="t-live-send-done" aria-hidden="true">Enviado ✓</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="stage-restart" type="button" aria-label="Repetir animação" title="Repetir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ AULAS DE GRUPO — wide chapter + full-width stage ══════ -->
+<section class="chapter chapter--wide" id="t-group">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <circle class="ti-fill" cx="22" cy="24" r="7"/><circle class="ti-line" cx="22" cy="24" r="7"/>
+      <circle class="ti-fill" cx="42" cy="24" r="7"/><circle class="ti-line" cx="42" cy="24" r="7"/>
+      <path class="ti-line" d="M12 48 Q12 36 22 36 Q32 36 32 48"/>
+      <path class="ti-line" d="M32 48 Q32 36 42 36 Q52 36 52 48"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Mais alunos ao mesmo tempo. <em>Atenção para cada um.</em></h2>
+    <p class="chapter-p rv rv-d2">
+      Cada aluno com o seu ritmo à vista. O Valed avisa-te no momento em
+      que alguém trava — para intervires antes de o aluno desistir.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage stage--wide">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="viewport t-stage-pad">
+        <div class="t-group">
+          <div class="t-group-head t-r">
+            <div class="t-group-title">Aula de grupo · Derivadas</div>
+          </div>
+          <div class="t-group-grid">
+            <!-- Ana: lands healthy, then quietly stalls and drains -->
+            <div class="t-scard t-r t-scard-stall">
+              <div class="t-scard-top">
+                <div class="t-avatar t-avatar--sm">AF</div>
+                <div>
+                  <div class="t-scard-name">Ana F.</div>
+                  <div class="t-scard-topic">
+                    <span class="t-topic-live" data-ex="3">Ex. 3 / 5</span>
+                    <span class="t-scard-topic--alert t-topic-alert">Parada há <span data-count="4" data-suffix=" min">0 min</span></span>
+                    <span class="t-topic-help">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2.5 11 13"/><path d="M21.5 2.5 15 21l-4-8-8-4 18.5-6.5Z"/></svg>
+                      Dica enviada
+                    </span>
+                  </div>
+                </div>
+                <div class="t-scard-warn t-stall-warn">!</div>
+              </div>
+              <div class="t-scard-row"><span>Velocidade</span><div class="t-mtrack"><div class="t-mfill t-mfill-drain" data-start="72" data-target="18"></div></div><span class="t-scard-pct" data-count="72" data-target-count="18" data-suffix="%">0%</span></div>
+              <div class="t-scard-row"><span>Precisão</span><div class="t-mtrack"><div class="t-mfill t-mfill-drain" data-start="74" data-target="42"></div></div><span class="t-scard-pct" data-count="74" data-target-count="42" data-suffix="%">0%</span></div>
+            </div>
+            <!-- Tomás: strong, holds steady -->
+            <div class="t-scard t-r">
+              <div class="t-scard-top"><div class="t-avatar t-avatar--sm">TM</div><div><div class="t-scard-name">Tomás M.</div><div class="t-scard-topic"><span class="t-topic-live" data-ex="4">Ex. 4 / 5</span></div></div></div>
+              <div class="t-scard-row"><span>Velocidade</span><div class="t-mtrack"><div class="t-mfill" data-start="88" data-target="88"></div></div><span class="t-scard-pct" data-count="88" data-target-count="88" data-suffix="%">0%</span></div>
+              <div class="t-scard-row"><span>Precisão</span><div class="t-mtrack"><div class="t-mfill" data-start="92" data-target="92"></div></div><span class="t-scard-pct" data-count="92" data-target-count="92" data-suffix="%">0%</span></div>
+            </div>
+            <!-- Miguel: steady -->
+            <div class="t-scard t-r">
+              <div class="t-scard-top"><div class="t-avatar t-avatar--sm">MR</div><div><div class="t-scard-name">Miguel R.</div><div class="t-scard-topic"><span class="t-topic-live" data-ex="3">Ex. 3 / 5</span></div></div></div>
+              <div class="t-scard-row"><span>Velocidade</span><div class="t-mtrack"><div class="t-mfill" data-start="62" data-target="62"></div></div><span class="t-scard-pct" data-count="62" data-target-count="62" data-suffix="%">0%</span></div>
+              <div class="t-scard-row"><span>Precisão</span><div class="t-mtrack"><div class="t-mfill" data-start="75" data-target="75"></div></div><span class="t-scard-pct" data-count="75" data-target-count="75" data-suffix="%">0%</span></div>
+            </div>
+            <!-- Rita: mid, steady -->
+            <div class="t-scard t-r">
+              <div class="t-scard-top"><div class="t-avatar t-avatar--sm">RS</div><div><div class="t-scard-name">Rita S.</div><div class="t-scard-topic"><span class="t-topic-live" data-ex="2">Ex. 2 / 5</span></div></div></div>
+              <div class="t-scard-row"><span>Velocidade</span><div class="t-mtrack"><div class="t-mfill" data-start="70" data-target="70"></div></div><span class="t-scard-pct" data-count="70" data-target-count="70" data-suffix="%">0%</span></div>
+              <div class="t-scard-row"><span>Precisão</span><div class="t-mtrack"><div class="t-mfill" data-start="68" data-target="68"></div></div><span class="t-scard-pct" data-count="68" data-target-count="68" data-suffix="%">0%</span></div>
+            </div>
+          </div>
+          <div class="t-group-alert t-group-alert-arrive">
+            <span class="t-group-alert-dot" aria-hidden="true"></span>
+            <span class="t-group-alert-text"><strong>Ana Figueiredo</strong> está parada há 4 min — bloqueio na regra da cadeia.</span>
+            <button type="button" class="t-group-alert-btn">
+              <span class="t-group-alert-btn-label">Intervir agora →</span>
+              <span class="t-group-alert-btn-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+            </button>
+          </div>
+          <!-- Cursor that presses "Intervir agora" -->
+          <div class="t-group-cursor" aria-hidden="true">
+            <div class="cursor-shape">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 0 L 1.2 17.5 Q 1.4 19.5 3.4 19.0 L 7.5 18.0 L 10.5 24.0 Q 11.3 25.4 12.6 24.7 L 14.0 24.0 Q 15.3 23.3 14.6 21.9 L 11.7 16.0 L 16.0 14.8 Q 17.8 14.3 16.4 12.7 Z" fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="stage-restart" type="button" aria-label="Repetir animação" title="Repetir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ GANHOS — chapter (flipped) + stage ══════ -->
+<section class="chapter chapter--flip" id="t-earn">
+  <div class="chapter-copy">
+    <div class="eyebrow rv"><span class="eyebrow-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none">
+      <circle class="ti-fill" cx="32" cy="32" r="18"/><circle class="ti-line" cx="32" cy="32" r="18"/>
+      <path class="ti-line" d="M32 22 L32 42"/>
+      <path class="ti-lime" d="M37 27 Q37 23 32 23 Q27 23 27 27 Q27 31 32 32 Q37 33 37 37 Q37 41 32 41 Q27 41 27 37"/>
+    </svg></span></div>
+    <h2 class="chapter-h rv rv-d1">Define o preço. <em>Nós tratamos do resto.</em></h2>
+    <p class="chapter-p rv rv-d2">
+      Define a disponibilidade e o valor por hora. O Valed liga-te aos
+      alunos certos, trata dos pagamentos e das ferramentas. Tu
+      concentras-te em ensinar.
+    </p>
+  </div>
+  <div class="chapter-stage-wrap rv rv-d2">
+    <div class="stage">
+      <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob b1"></div>
+        <div class="aurora-blob b2"></div>
+        <div class="aurora-blob b3"></div>
+        <div class="aurora-blob b4"></div>
+      </div>
+      <div class="viewport t-stage-pad">
+        <div class="t-earn">
+          <div class="t-earn-line t-r"><span>Sessões individuais</span><span class="t-earn-val" data-count="160" data-prefix="€ ">€ 0</span></div>
+          <div class="t-earn-line t-r"><span>Aulas de grupo</span><span class="t-earn-val" data-count="240" data-prefix="€ ">€ 0</span></div>
+          <div class="t-earn-total t-r t-earn-total-arrive">
+            <span class="t-earn-total-label">Total semanal</span>
+            <span class="t-earn-total-val" data-count="400" data-prefix="€ ">€ 0</span>
+          </div>
+          <div class="t-earn-pay t-r">
+            <button type="button" class="t-earn-pay-btn">
+              <span class="t-earn-pay-btn-label">Transferir para a conta →</span>
+              <span class="t-earn-pay-btn-done" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+                <span>Transferido</span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- Cursor that presses "Transferir" (same as the other tutor scenes) -->
+        <div class="t-earn-cursor" aria-hidden="true">
+          <div class="cursor-shape">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 0 0 L 1.2 17.5 Q 1.4 19.5 3.4 19.0 L 7.5 18.0 L 10.5 24.0 Q 11.3 25.4 12.6 24.7 L 14.0 24.0 Q 15.3 23.3 14.6 21.9 L 11.7 16.0 L 16.0 14.8 Q 17.8 14.3 16.4 12.7 Z" fill="#0b0b0c" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <button class="stage-restart" type="button" aria-label="Repetir animação" title="Repetir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -1146,7 +993,7 @@
   <div class="container">
     <h2 class="cta-h">Começa a ensinar<br>de forma <em>diferente.</em></h2>
     <a href="https://valed.ai/auth/register" class="btn-lime">
-      Candidatar-me como tutor
+      Começar grátis
       <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
     </a>
   </div>
@@ -1168,7 +1015,6 @@
     <div>
       <div class="footer-col-title">Empresa</div>
       <a href="#" class="footer-link">Sobre nós</a>
-      <a href="#" class="footer-link">Blog</a>
       <a href="#" class="footer-link">Carreiras</a>
       <a href="#" class="footer-link">Contacto</a>
     </div>
@@ -1181,7 +1027,6 @@
   </div>
   <div class="footer-bottom">
     <span>© 2025 Valed. Todos os direitos reservados.</span>
-    <span>Feito em Portugal 🇵🇹</span>
   </div>
 </footer>
 
