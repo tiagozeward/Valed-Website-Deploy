@@ -41,22 +41,32 @@ body{
 
 /* ══════════════════════════════════════
    TUTOR "COMING SOON" GATE
-   #t-soon reuses the exact tutor-hero layout/margins (it shares the
-   #hero,#t-hero,#t-soon rules + the .hero-inner/.hero-art structure), so
-   both sides of the picture line up identically. It just says "Em breve".
-   While #page-tutors has .tutors-soon, #t-soon is the only thing that
-   renders on the tutor side — every real tutor section and the tutor
-   footer are hidden. Remove .tutors-soon (in index.html) to launch the
-   full tutor experience; nothing here is deleted, so nothing is lost.
+   While #page-tutors has .tutors-soon, we show the REAL tutor hero
+   (#t-hero) exactly as it is and hide only what comes AFTER it — the
+   chapters and the tutor footer. The hero gains a small "Em breve" chip
+   and a short note; its live CTA is swapped for that note. Remove the
+   .tutors-soon class (in index.html) to launch the full tutor side —
+   nothing is deleted, so nothing is lost.
 ══════════════════════════════════════ */
-/* Off by default. Higher specificity than the shared #hero,#t-hero,#t-soon
-   flex rule (0,1,1 > 0,1,0) so #t-soon stays hidden once the gate is removed. */
-#page-tutors > #t-soon{ display:none; }
-/* When gated, #t-soon is the one visible tutor section (layout from the
-   shared #hero,#t-hero,#t-soon rule further down). */
-.tutors-soon > #t-soon{ display:flex; }
-/* Hide the whole real tutor page (sections + footer) behind the gate */
-.tutors-soon > *:not(#t-soon){ display:none !important; }
+/* Keep the hero; hide every following section + the tutor footer. */
+.tutors-soon > #t-hero ~ *{ display:none !important; }
+
+/* Coming-soon bits: chip + note visible only while gated; live CTA hidden. */
+.t-soon-chip,
+.t-soon-note{ display:none; }
+.tutors-soon .t-soon-chip{
+  display:inline-flex; align-items:center;
+  align-self:flex-start;
+  font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--limed);
+  background:var(--limebg); border:1px solid #DCF3B0;
+  padding:6px 13px; border-radius:999px;
+  margin-bottom:22px;
+}
+.tutors-soon .t-soon-note{
+  display:block; color:var(--t2); max-width:44ch;
+}
+.tutors-soon #t-hero .t-when-live{ display:none; }
 
 /* ── NAV ── */
 nav{
@@ -251,8 +261,7 @@ section{padding:100px 40px;}
    1. HERO — quiet, editorial, paper
 ══════════════════════════════ */
 #hero,
-#t-hero,
-#t-soon{
+#t-hero{
   padding:clamp(120px, 15vh, 168px) 56px clamp(60px,10vh,110px);
   position:relative;
   display:flex;
@@ -304,10 +313,9 @@ section{padding:100px 40px;}
   color:var(--text);
   margin:0 auto;
 }
-/* #hero / #t-hero / #t-soon: left-aligned Claude layout — neutralize the shared centering */
+/* #hero / #t-hero: left-aligned Claude layout — neutralize the shared centering */
 #hero .hero-h1,
-#t-hero .hero-h1,
-#t-soon .hero-h1{ margin:0; }
+#t-hero .hero-h1{ margin:0; }
 #hero .hero-sub,
 #t-hero .hero-sub{ margin:clamp(18px,2.5vw,26px) 0 0; text-align:left; }
 #hero .hero-ctas,
@@ -339,6 +347,91 @@ section{padding:100px 40px;}
   white-space:nowrap;
 }
 .btn-ink:hover{ background:#2a2a28; transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,.14); }
+
+/* ══════════════════════════════
+   HERO — LAUNCH EDITION (free-beta / exam countdown)
+   Additive theming for the student hero. Uses the same tokens (lime/olive,
+   paper, ink) and type as the rest of the site. Remove this block + the
+   markup in index.html to revert to the evergreen hero.
+══════════════════════════════ */
+.hero-badge{
+  display:inline-flex; align-items:center; gap:9px;
+  font-family:'DM Sans',sans-serif;
+  font-size:13px; font-weight:500; letter-spacing:-.005em;
+  color:var(--limed);
+  background:var(--limebg);
+  border:1px solid rgba(90,130,0,.18);
+  padding:7px 14px 7px 12px;
+  border-radius:999px;
+  margin:0 0 clamp(20px,3vh,30px);
+  width:max-content; max-width:100%;
+}
+.hero-badge strong{ font-weight:700; }
+.hero-badge-dot{
+  width:7px; height:7px; border-radius:50%;
+  background:var(--limed);
+  box-shadow:0 0 0 0 rgba(90,130,0,.45);
+  animation:heroBadgePulse 2.4s ease-out infinite;
+  flex:none;
+}
+@keyframes heroBadgePulse{
+  0%{ box-shadow:0 0 0 0 rgba(90,130,0,.45); }
+  70%{ box-shadow:0 0 0 7px rgba(90,130,0,0); }
+  100%{ box-shadow:0 0 0 0 rgba(90,130,0,0); }
+}
+
+/* Countdown — sits between the sub and the CTAs in the left stack */
+.hero-countdown{
+  margin:clamp(22px,3.2vh,32px) 0 0;
+  display:flex; flex-direction:column; gap:10px;
+  width:max-content; max-width:100%;
+}
+.hero-countdown-label{
+  font-family:'DM Sans',sans-serif;
+  font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--t3);
+}
+.hero-countdown-clock{
+  display:inline-flex; align-items:flex-end; gap:clamp(8px,1.2vw,14px);
+  color:var(--text);
+}
+.hcd-unit{
+  display:inline-flex; flex-direction:column; align-items:center; gap:2px;
+  min-width:clamp(46px,5vw,60px);
+}
+.hcd-num{
+  font-family:'Domine',serif;
+  font-size:clamp(30px,3.6vw,46px); font-weight:400; line-height:1;
+  letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums; font-feature-settings:"tnum";
+}
+.hcd-lbl{
+  font-family:'DM Sans',sans-serif;
+  font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--t3);
+}
+.hcd-sep{
+  font-family:'Domine',serif;
+  font-size:clamp(24px,3vw,38px); line-height:1;
+  color:var(--t3);
+  align-self:flex-start;
+  margin-top:2px;
+}
+/* Post-exam state: hide the clock, show the launch/good-luck line */
+.hero-countdown-done{ display:none; }
+.hero-countdown.is-done .hero-countdown-clock,
+.hero-countdown.is-done .hero-countdown-label{ display:none; }
+.hero-countdown.is-done .hero-countdown-done{
+  display:block;
+  font-family:'DM Sans',sans-serif;
+  font-size:clamp(16px,1.9vw,19px); font-weight:500; line-height:1.45;
+  color:var(--text);
+  max-width:440px;
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-badge-dot{ animation:none; }
+}
+
 .btn-quiet{
   color:var(--t2); font-size:15px; font-weight:500;
   padding:14px 22px; border-radius:8px;
@@ -1254,6 +1347,9 @@ section{padding:100px 40px;}
 @media(max-width:720px){
   .ls-cams{width:126px;top:16px;right:16px;gap:8px;}
   .ls-prompt{max-width:calc(100% - 142px);}
+  /* Pull the tutor's red correction note in so it stops being clipped on the
+     right once the board narrows (full stack of .ls rules kicks in at 520px). */
+  .ls-correction{margin-left:96px;}
 }
 @media(max-width:520px){
   .ls{padding:22px 18px 76px 30px;}
@@ -2834,17 +2930,43 @@ body.hero-page-switching #main-nav{
   #page-tutors #t-stories.t-content-section--stories{
     padding-bottom:clamp(10px,2.5vh,28px);
   }
-  /* ── HERO (students + tutors + coming-soon) — single column: text full-width, art slot hidden ── */
+  /* ── HERO (students + tutors) — single column: text on top, photo stacked
+     below it (same photo as desktop, just moved in-flow instead of the
+     absolute right-half slot). ── */
   #hero,
-  #t-hero,
-  #t-soon{padding:clamp(110px,16vh,150px) 20px clamp(48px,8vh,80px);min-height:auto;}
+  #t-hero{
+    padding:clamp(104px,15vh,140px) 20px clamp(40px,7vh,72px);
+    min-height:auto;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+  }
   #hero .hero-inner,
-  #t-hero .hero-inner,
-  #t-soon .hero-inner{width:100%;max-width:100%;}
-  .hero-art{display:none;}
+  #t-hero .hero-inner{width:100%;max-width:100%;}
+  /* Art slot: in-flow block under the text (was absolutely positioned + hidden) */
+  .hero-art{
+    position:static;
+    width:100%;
+    padding-right:0;
+    justify-content:center;
+    margin-top:clamp(32px,5vh,44px);
+  }
+  .hero-art-img{
+    width:100%;
+    max-height:min(52vh,420px);
+    object-fit:cover;
+    border-radius:18px;
+  }
   .hero-h1{font-size:clamp(40px,11vw,64px);}
   #hero .hero-ctas,
   #t-hero .hero-ctas{flex-direction:column;gap:8px;align-items:stretch;}
+  /* Launch hero: keep clock compact + comfortable on phones.
+     Fluid min-width + gap so the 4 units + 3 separators never exceed the
+     narrow hero column (was a hard 52px min-width that crowded at 320px). */
+  .hero-countdown-clock{gap:clamp(5px,2.2vw,10px);}
+  .hcd-unit{min-width:clamp(40px,13vw,52px);}
+  .hcd-num{font-size:clamp(26px,9vw,40px);}
+  .hcd-sep{font-size:clamp(20px,7vw,32px);}
 
   /* ── FEATURES — sticky stack (same deck as desktop; top clears fixed nav + safe area) ── */
   .feature-stack{
@@ -2932,8 +3054,7 @@ body.hero-page-switching #main-nav{
 
   /* ── HERO REFINEMENTS ── */
   #hero,
-  #t-hero,
-  #t-soon{min-height:auto;}
+  #t-hero{min-height:auto;}
   .hero-h1{font-size:clamp(32px,10vw,60px);}
 
   /* ── FEATURES ── */
@@ -2949,6 +3070,25 @@ body.hero-page-switching #main-nav{
   /* ── GROUP GRID SINGLE COL ── */
   .t-group-grid{grid-template-columns:1fr;}
 
+  /* ── NAV — tighten so logo · Aluno/Tutor pill · Começar fit on narrow phones.
+     Trim the pill's horizontal padding (keep 44px min-height for tap targets)
+     and let the pill shrink; drop the nav gap a touch. ── */
+  nav{padding:0 10px;gap:6px;}
+  .nav-pill{padding:2px;max-width:100%;}
+  .np-btn{padding:10px 14px;font-size:12.5px;min-width:0;}
+  .nav-cta{padding:8px 12px;}
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE — VERY NARROW PHONES (360px)
+   Last-resort tightening for 320–360px so nothing in the fixed nav clips.
+══════════════════════════════════════ */
+@media(max-width:360px){
+  nav{padding:0 8px;gap:5px;}
+  .np-btn{padding:10px 11px;font-size:12px;}
+  .nav-cta{padding:8px 10px;font-size:12px;}
+  /* Countdown: allow the clock to wrap rather than clip on the tiniest screens */
+  .hero-countdown-clock{flex-wrap:wrap;row-gap:6px;}
 }
 
 /* ══════════════════════════════════════════════════════════════

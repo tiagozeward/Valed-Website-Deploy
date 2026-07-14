@@ -46,14 +46,43 @@
 ══════════════════════════════════════ -->
 <div id="page-students">
 
-<!-- ══════ HERO — quiet, editorial, paper ══════ -->
+<!-- ══════ HERO — LAUNCH EDITION: free beta, 2nd-phase exam countdown ══════
+     Same split layout as the standard student hero (.hero-inner left / .hero-art
+     right). The launch theming is purely additive: a badge + countdown inside the
+     left stack. To revert after launch, restore the block in git (commit before
+     this one). The countdown auto-swaps to a launch message once the exam passes. -->
 <section id="hero">
   <div class="hero-inner">
-    <h1 class="hero-h1 rv in">Aprende como<br><em>os melhores.</em></h1>
-    <p class="hero-sub rv in rv-d1">Chega onde quiseres no exame de Matemática A.</p>
-    <div class="hero-ctas rv in rv-d2">
+    <p class="hero-badge rv in">
+      <span class="hero-badge-dot" aria-hidden="true"></span>
+      Beta aberta · <strong>totalmente grátis</strong>
+    </p>
+    <h1 class="hero-h1 rv in rv-d1">Arrasa no exame<br>de <em>Matemática A.</em></h1>
+    <p class="hero-sub rv in rv-d2">
+      Estamos a testar o futuro da educação e abrimos o Valed a toda a gente,
+      de graça, para a semana mais importante do ano. Toda a matéria, com tutoria
+      de IA, sem custo nenhum.
+    </p>
+
+    <!-- Countdown to the 2nd-phase exam (22 Jul). Populated by initExamCountdown()
+         in script.js; auto-swaps to .is-done copy at zero. -->
+    <div class="hero-countdown rv in rv-d2" id="exam-countdown" aria-live="polite">
+      <span class="hero-countdown-label">Faltam para o exame · 2.ª fase</span>
+      <div class="hero-countdown-clock" role="timer">
+        <span class="hcd-unit"><b class="hcd-num" data-cd="days">–</b><span class="hcd-lbl">dias</span></span>
+        <span class="hcd-sep" aria-hidden="true">:</span>
+        <span class="hcd-unit"><b class="hcd-num" data-cd="hours">–</b><span class="hcd-lbl">h</span></span>
+        <span class="hcd-sep" aria-hidden="true">:</span>
+        <span class="hcd-unit"><b class="hcd-num" data-cd="mins">–</b><span class="hcd-lbl">min</span></span>
+        <span class="hcd-sep" aria-hidden="true">:</span>
+        <span class="hcd-unit"><b class="hcd-num" data-cd="secs">–</b><span class="hcd-lbl">seg</span></span>
+      </div>
+      <span class="hero-countdown-done" aria-hidden="true">Boa sorte no exame. 🍀 O Valed fica aberto — e grátis.</span>
+    </div>
+
+    <div class="hero-ctas rv in rv-d3">
       <a href="https://valed.ai/auth/register" class="btn-ink">
-        Começar grátis
+        Entrar na beta grátis
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
     </div>
@@ -595,17 +624,10 @@
       <a href="#" class="footer-link">Para professores</a>
     </div>
     <div>
-      <div class="footer-col-title">Empresa</div>
-      <a href="#" class="footer-link">Sobre nós</a>
-      <a href="#" class="footer-link">Investidores</a>
-      <a href="#" class="footer-link">Carreiras</a>
-      <a href="#" class="footer-link">Contacto</a>
-    </div>
-    <div>
       <div class="footer-col-title">Legal</div>
-      <a href="#" class="footer-link">Termos de uso</a>
-      <a href="#" class="footer-link">Política de privacidade</a>
-      <a href="#" class="footer-link">Cookies</a>
+      <a href="termos.html" class="footer-link">Termos de uso</a>
+      <a href="privacidade.html" class="footer-link">Política de privacidade</a>
+      <a href="cookies.html" class="footer-link">Política de cookies</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -622,34 +644,28 @@
 <div id="page-tutors" class="tutors-soon" style="display:none;">
 
 <!-- ══════════════════════════════════════
-     TUTOR SIDE — "COMING SOON" GATE
-     Same layout/margins as the real tutor hero (#t-hero): shares the
-     #hero,#t-hero,#t-soon rules and the .hero-inner / .hero-art structure,
-     so both sides of the picture line up identically. Just says "Em breve".
-     While `.tutors-soon` is on #page-tutors, this screen shows and every
-     real tutor section is hidden (see styles.css). To launch the tutor
-     side, remove the `tutors-soon` class above — nothing here is lost.
+     TUTOR SIDE — gated with a "coming soon" state.
+     While `.tutors-soon` is on #page-tutors we show the REAL tutor hero
+     (#t-hero) unchanged, add a small "Em breve" card to it, and hide only
+     the sections below the hero + the tutor footer (see styles.css).
+     Remove the `tutors-soon` class above to launch the full tutor side —
+     nothing is deleted, so nothing is lost.
 ══════════════════════════════════════ -->
-<section id="t-soon" aria-label="Área de tutores — em breve">
-  <div class="hero-inner">
-    <h1 class="hero-h1"><em>Em breve.</em></h1>
-  </div>
-  <div class="hero-art" aria-hidden="true">
-    <img class="hero-art-img" src="assets/hero-tutor.png" alt="" loading="eager" decoding="async">
-  </div>
-</section>
-
 <!-- ── TUTOR HERO — same layout as the student hero (paper, split text/photo) ── -->
 <section id="t-hero">
   <div class="hero-inner">
+    <span class="t-soon-chip">Em breve</span>
     <h1 class="hero-h1 rv in">Ensina melhor.<br><em>Ganha mais.</em></h1>
     <p class="hero-sub rv in rv-d1">Dados reais sobre cada aluno, sessões mais eficazes e mais rendimento por hora.</p>
-    <div class="hero-ctas rv in rv-d2">
+    <!-- Full CTA — shown once the tutor side launches -->
+    <div class="hero-ctas rv in rv-d2 t-when-live">
       <a href="#t-briefing" class="btn-ink">
         Começar grátis
         <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
     </div>
+    <!-- Coming-soon note — shown only while gated -->
+    <p class="hero-sub t-soon-note rv in rv-d2">A área de tutores está quase pronta. Volta em breve.</p>
   </div>
   <!-- Right-half hero photo: dedicated tutor-side image, cropped to the hero aspect ratio -->
   <div class="hero-art rv in rv-d2" aria-hidden="true">
@@ -1032,17 +1048,10 @@
       <a href="#" class="footer-link">Candidatura</a>
     </div>
     <div>
-      <div class="footer-col-title">Empresa</div>
-      <a href="#" class="footer-link">Sobre nós</a>
-      <a href="#" class="footer-link">Investidores</a>
-      <a href="#" class="footer-link">Carreiras</a>
-      <a href="#" class="footer-link">Contacto</a>
-    </div>
-    <div>
       <div class="footer-col-title">Legal</div>
-      <a href="#" class="footer-link">Termos de uso</a>
-      <a href="#" class="footer-link">Política de privacidade</a>
-      <a href="#" class="footer-link">Cookies</a>
+      <a href="termos.html" class="footer-link">Termos de uso</a>
+      <a href="privacidade.html" class="footer-link">Política de privacidade</a>
+      <a href="cookies.html" class="footer-link">Política de cookies</a>
     </div>
   </div>
   <div class="footer-bottom">

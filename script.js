@@ -660,3 +660,56 @@ document.querySelectorAll('.js-reveal').forEach((el) => {
     beginMorphThenGenerate();
   });
 })();
+
+/* ══════════════════════════════
+   LAUNCH HERO — EXAM COUNTDOWN
+   Ticks down to the 2nd-phase Matemática A exam (22 Jul 2026, 09:30 local).
+   At zero it swaps the clock for a good-luck / "still free" launch line so the
+   hero never shows a negative timer. Self-contained; remove with the launch
+   hero markup/CSS to revert.
+══════════════════════════════ */
+(function initExamCountdown() {
+  const root = document.getElementById('exam-countdown');
+  if (!root) return;
+
+  // 2.ª fase — Matemática A (712), 22 July 2026, morning session.
+  // Local Portugal time; exam start ~09:30. Adjust here if the schedule moves.
+  const target = new Date(2026, 6, 22, 9, 30, 0).getTime(); // month is 0-indexed (6 = July)
+
+  const nums = {
+    days: root.querySelector('[data-cd="days"]'),
+    hours: root.querySelector('[data-cd="hours"]'),
+    mins: root.querySelector('[data-cd="mins"]'),
+    secs: root.querySelector('[data-cd="secs"]'),
+  };
+  const pad = (n) => String(n).padStart(2, '0');
+
+  let timer = null;
+
+  function tick() {
+    const diff = target - Date.now();
+
+    if (diff <= 0) {
+      root.classList.add('is-done');
+      if (timer) { clearInterval(timer); timer = null; }
+      return;
+    }
+
+    const totalSecs = Math.floor(diff / 1000);
+    const days = Math.floor(totalSecs / 86400);
+    const hours = Math.floor((totalSecs % 86400) / 3600);
+    const mins = Math.floor((totalSecs % 3600) / 60);
+    const secs = totalSecs % 60;
+
+    // Days shown un-padded (can exceed two digits far out); time units padded.
+    if (nums.days) nums.days.textContent = String(days);
+    if (nums.hours) nums.hours.textContent = pad(hours);
+    if (nums.mins) nums.mins.textContent = pad(mins);
+    if (nums.secs) nums.secs.textContent = pad(secs);
+  }
+
+  tick();
+  if (!root.classList.contains('is-done')) {
+    timer = setInterval(tick, 1000);
+  }
+})();
