@@ -4,8 +4,7 @@
   "private": true,
   "description": "Static Valed website served by Node for Railway",
   "scripts": {
-    "start": "node server.js",
-    "build:pdf": "node scripts/build-deck-pdf.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
