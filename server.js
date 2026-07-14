@@ -18,7 +18,8 @@ const contentTypes = {
   ".gif": "image/gif",
   ".ico": "image/x-icon",
   ".woff": "font/woff",
-  ".woff2": "font/woff2"
+  ".woff2": "font/woff2",
+  ".pdf": "application/pdf"
 };
 
 function sendFile(res, filePath) {
