@@ -619,7 +619,38 @@
 <!-- ══════════════════════════════════════
      TUTORS PAGE
 ══════════════════════════════════════ -->
-<div id="page-tutors" style="display:none;">
+<div id="page-tutors" class="tutors-soon" style="display:none;">
+
+<!-- ══════════════════════════════════════
+     TUTOR SIDE — "COMING SOON" GATE
+     The tutor experience is built but not yet live. While `.tutors-soon`
+     is on #page-tutors, this screen shows and every real tutor section is
+     hidden (see styles.css). To launch the tutor side, remove the
+     `tutors-soon` class above — no other change required.
+══════════════════════════════════════ -->
+<section id="t-soon" aria-label="Área de tutores — em breve">
+  <div class="t-soon-inner">
+    <div class="t-soon-copy">
+      <div class="eyebrow t-soon-eyebrow">Para tutores</div>
+      <h1 class="hero-h1 t-soon-h">Em breve para <em>tutores</em>.</h1>
+      <p class="hero-sub t-soon-sub">
+        Estamos a construir a área de tutores: briefings de cada aluno, dados
+        reais por tópico e sessões mais eficazes. Ainda não está disponível —
+        mas está quase.
+      </p>
+      <div class="t-soon-actions">
+        <button type="button" class="btn-ink" onclick="switchPage('students')">
+          Ver a área de alunos
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </button>
+        <span class="t-soon-badge"><span class="t-soon-dot" aria-hidden="true"></span>Disponível em breve</span>
+      </div>
+    </div>
+    <div class="t-soon-art" aria-hidden="true">
+      <img class="hero-art-img" src="assets/hero-tutor.png" alt="" loading="eager" decoding="async">
+    </div>
+  </div>
+</section>
 
 <!-- ── TUTOR HERO — same layout as the student hero (paper, split text/photo) ── -->
 <section id="t-hero">
