@@ -35,7 +35,7 @@
 - Página inicial (alunos): https://valed.ai/
 - Guia do Exame de Matemática A (todos os tópicos): https://valed.ai/guia-exame-matematica-a.html
 - Para tutores: https://valed.ai/para-tutores.html
-- Criar conta (beta grátis): https://valed.ai/auth/register
+- Criar conta (beta grátis): https://app.valed.ai/auth/register
 
 ## Factos
 
