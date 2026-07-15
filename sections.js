@@ -103,7 +103,6 @@
       { name: 'Sucessões', icon: icons.suc },
       { name: 'Derivadas', icon: icons.deriv },
       { name: 'Teorema de Bolzano', icon: icons.bolz },
-      { name: 'Calculadora', icon: icons.calc },
     ];
 
     const competencies = [

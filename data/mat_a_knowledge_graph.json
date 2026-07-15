@@ -3,270 +3,1174 @@
     {
       "domain_id": "T1",
       "domain_name": "Números Reais e Equações",
+      "display_name": "Números Reais",
       "skills": [
-        { "skill_id": "T1.S1",  "skill_name": "Somas e subtrações de números inteiros", "prerequisites": [] },
-        { "skill_id": "T1.S2",  "skill_name": "Multiplicação de números inteiros", "prerequisites": [] },
-        { "skill_id": "T1.S3",  "skill_name": "Transformar número racional em fração irredutível", "prerequisites": [] },
-        { "skill_id": "T1.S4",  "skill_name": "Transformar porcentagem em fração irredutível", "prerequisites": [] },
-        { "skill_id": "T1.S5",  "skill_name": "Transformar dízima finita em fração irredutível", "prerequisites": [] },
-        { "skill_id": "T1.S6",  "skill_name": "Transformação de número racional em dízima finita", "prerequisites": [] },
-        { "skill_id": "T1.S7",  "skill_name": "Soma e subtração de números racionais", "prerequisites": [] },
-        { "skill_id": "T1.S8",  "skill_name": "Multiplicação de números racionais", "prerequisites": [] },
-        { "skill_id": "T1.S9",  "skill_name": "Divisão de números racionais", "prerequisites": [] },
-        { "skill_id": "T1.S10", "skill_name": "Cálculo de potências de expoente natural", "prerequisites": [] },
-        { "skill_id": "T1.S11", "skill_name": "Reescrever potências de expoente natural", "prerequisites": [] },
-        { "skill_id": "T1.S12", "skill_name": "Reescrever potências na base pedida", "prerequisites": [] },
-        { "skill_id": "T1.S13", "skill_name": "Divisão de potências de expoente inteiro", "prerequisites": [] },
-        { "skill_id": "T1.S14", "skill_name": "Reescrever potências de expoente inteiro não positivo na forma de potência de expoente inteiro positivo", "prerequisites": [] },
-        { "skill_id": "T1.S15", "skill_name": "Potências com expoentes (Somar expoentes)", "prerequisites": [] },
-        { "skill_id": "T1.S16", "skill_name": "Potências com expoentes (Subtrair expoentes)", "prerequisites": [] },
-        { "skill_id": "T1.S17", "skill_name": "Potências com expoentes (Multiplicar expoentes)", "prerequisites": [] },
-        { "skill_id": "T1.S18", "skill_name": "Calcular potências com raízes (Calcular o valor da raiz)", "prerequisites": [] },
-        { "skill_id": "T1.S19", "skill_name": "Calcular potências com raízes (Reescrever a raiz em forma de potência)", "prerequisites": [] },
-        { "skill_id": "T1.S20", "skill_name": "Multiplicar com raízes de índice n", "prerequisites": [] },
-        { "skill_id": "T1.S21", "skill_name": "Dividir com raízes de índice n", "prerequisites": [] },
-        { "skill_id": "T1.S22", "skill_name": "Somar e subtrair raízes de índice n", "prerequisites": [] },
-        { "skill_id": "T1.S23", "skill_name": "Simplificar expressões com a propriedade distributiva", "prerequisites": [] },
-        { "skill_id": "T1.S24", "skill_name": "Racionalizar denominadores com raiz", "prerequisites": [] },
-        { "skill_id": "T1.S25", "skill_name": "Cancelar logaritmos com exponenciais da mesma base", "prerequisites": [] },
-        { "skill_id": "T1.S26", "skill_name": "Combinar logaritmos usando propriedades (produto)", "prerequisites": [] },
-        { "skill_id": "T1.S27", "skill_name": "Combinar logaritmos usando propriedades (quociente)", "prerequisites": [] },
-        { "skill_id": "T1.S28", "skill_name": "Combinar logaritmos usando propriedades (potência)", "prerequisites": [] },
-        { "skill_id": "T1.S29", "skill_name": "Resolver equações lineares do 1º grau", "prerequisites": [] },
-        { "skill_id": "T1.S30", "skill_name": "Resolver equações quadráticas (aplicar a fórmula resolvente)", "prerequisites": [] },
-        { "skill_id": "T1.S31", "skill_name": "Resolver equações do tipo xⁿ = k (usando raízes de índice n)", "prerequisites": [] },
-        { "skill_id": "T1.S32", "skill_name": "Aplicar a Lei do Anulamento do Produto (LAP)", "prerequisites": [] },
-        { "skill_id": "T1.S33", "skill_name": "Equações racionais", "prerequisites": [] },
-        { "skill_id": "T1.S34", "skill_name": "Resolver sistemas de duas equações lineares com duas incógnitas", "prerequisites": [] },
-        { "skill_id": "T1.S35", "skill_name": "Escrever soluções de inequações em notação de intervalos", "prerequisites": [] },
-        { "skill_id": "T1.S36", "skill_name": "Resolver inequações lineares e escrever o conjunto-solução", "prerequisites": [] },
-        { "skill_id": "T1.S37", "skill_name": "Resolver inequações quadráticas", "prerequisites": [] },
-        { "skill_id": "T1.S38", "skill_name": "Resolver inequações polinomiais e racionais usando quadro de sinal", "prerequisites": [] },
-        { "skill_id": "T1.S39", "skill_name": "Equações exponenciais", "prerequisites": [] },
-        { "skill_id": "T1.S40", "skill_name": "Inequações exponenciais", "prerequisites": [] },
-        { "skill_id": "T1.S41", "skill_name": "Equações logarítmicas", "prerequisites": [] },
-        { "skill_id": "T1.S42", "skill_name": "Inequações logarítmicas", "prerequisites": [] }
+        {
+          "skill_id": "T1.S1",
+          "skill_name": "Somas e subtrações de números inteiros",
+          "prerequisites": [],
+          "lesson_slug": "somas-subtracao-inteiros"
+        },
+        {
+          "skill_id": "T1.S2",
+          "skill_name": "Multiplicação de números inteiros",
+          "prerequisites": [],
+          "lesson_slug": "multiplicacao-inteiros"
+        },
+        {
+          "skill_id": "T1.S3",
+          "skill_name": "Transformar número racional em fração irredutível",
+          "prerequisites": [],
+          "lesson_slug": "fracao-irredutivel"
+        },
+        {
+          "skill_id": "T1.S4",
+          "skill_name": "Transformar porcentagem em fração irredutível",
+          "prerequisites": [],
+          "lesson_slug": "porcentagem-fracao-irredutivel"
+        },
+        {
+          "skill_id": "T1.S5",
+          "skill_name": "Transformar dízima finita em fração irredutível",
+          "prerequisites": [],
+          "lesson_slug": "dizima-finita-fracao"
+        },
+        {
+          "skill_id": "T1.S6",
+          "skill_name": "Transformação de número racional em dízima finita",
+          "prerequisites": [],
+          "lesson_slug": "racional-dizima-finita"
+        },
+        {
+          "skill_id": "T1.S7",
+          "skill_name": "Soma e subtração de números racionais",
+          "prerequisites": [],
+          "lesson_slug": "soma-subtracao-racionais"
+        },
+        {
+          "skill_id": "T1.S8",
+          "skill_name": "Multiplicação de números racionais",
+          "prerequisites": [],
+          "lesson_slug": "multiplicacao-racionais"
+        },
+        {
+          "skill_id": "T1.S9",
+          "skill_name": "Divisão de números racionais",
+          "prerequisites": [],
+          "lesson_slug": "divisao-racionais"
+        },
+        {
+          "skill_id": "T1.S10",
+          "skill_name": "Cálculo de potências de expoente natural",
+          "prerequisites": [],
+          "lesson_slug": "potencias-expoente-natural"
+        },
+        {
+          "skill_id": "T1.S11",
+          "skill_name": "Reescrever potências de expoente natural",
+          "prerequisites": [],
+          "lesson_slug": "reescrever-potencias-naturais"
+        },
+        {
+          "skill_id": "T1.S12",
+          "skill_name": "Reescrever potências na base pedida",
+          "prerequisites": [],
+          "lesson_slug": "potencias-base-pedida"
+        },
+        {
+          "skill_id": "T1.S13",
+          "skill_name": "Divisão de potências de expoente inteiro",
+          "prerequisites": [],
+          "lesson_slug": "divisao-potencias-inteiro"
+        },
+        {
+          "skill_id": "T1.S14",
+          "skill_name": "Reescrever potências de expoente inteiro não positivo na forma de potência de expoente inteiro positivo",
+          "prerequisites": [],
+          "lesson_slug": "potencias-expoente-positivo"
+        },
+        {
+          "skill_id": "T1.S15",
+          "skill_name": "Produtos de potências, quocientes de potências e potência de potências",
+          "prerequisites": [],
+          "lesson_slug": "potencias-somar-expoentes"
+        },
+        {
+          "skill_id": "T1.S16",
+          "skill_name": "Raíz de índice n",
+          "prerequisites": [],
+          "lesson_slug": "raiz-indice-n"
+        },
+        {
+          "skill_id": "T1.S17",
+          "skill_name": "Raíz de índice n como potência",
+          "prerequisites": [],
+          "lesson_slug": "raiz-indice-n-como-potencia"
+        },
+        {
+          "skill_id": "T1.S18",
+          "skill_name": "Multiplicar e dividir com raízes de índice n",
+          "prerequisites": [],
+          "lesson_slug": "multiplicar-dividir-raizes"
+        },
+        {
+          "skill_id": "T1.S19",
+          "skill_name": "Somar e subtrair raízes de índice n",
+          "prerequisites": [],
+          "lesson_slug": "somar-subtrair-raizes"
+        },
+        {
+          "skill_id": "T1.S20",
+          "skill_name": "Propriedade distributiva",
+          "prerequisites": [],
+          "lesson_slug": "propriedade-distributiva"
+        },
+        {
+          "skill_id": "T1.S21",
+          "skill_name": "Racionalizar denominadores",
+          "prerequisites": [],
+          "lesson_slug": "racionalizar-denominadores-v3"
+        },
+        {
+          "skill_id": "T1.S22",
+          "skill_name": "Cancelar logaritmos com exponenciais da mesma base",
+          "prerequisites": [],
+          "lesson_slug": "log-corta-exp-mesma-base"
+        },
+        {
+          "skill_id": "T1.S23",
+          "skill_name": "Combinar logaritmos usando propriedades",
+          "prerequisites": [],
+          "lesson_slug": "log-combinar-propriedades"
+        },
+        {
+          "skill_id": "T1.S24",
+          "skill_name": "Resolver equações lineares do 1º grau",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-lineares-primeiro-grau"
+        },
+        {
+          "skill_id": "T1.S25",
+          "skill_name": "Resolver equações quadráticas (aplicar a fórmula resolvente)",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-quadraticas"
+        },
+        {
+          "skill_id": "T1.S26",
+          "skill_name": "Resolver equações do tipo xⁿ = k (usando raízes de índice n)",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-xn-k"
+        },
+        {
+          "skill_id": "T1.S27",
+          "skill_name": "Aplicar a Lei do Anulamento do Produto (LAP)",
+          "prerequisites": [],
+          "lesson_slug": "lei-anulamento-produto"
+        },
+        {
+          "skill_id": "T1.S28",
+          "skill_name": "Equações racionais",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-racionais"
+        },
+        {
+          "skill_id": "T1.S29",
+          "skill_name": "Resolver sistemas de duas equações lineares com duas incógnitas",
+          "prerequisites": [],
+          "lesson_slug": "sistemas-equacoes-lineares"
+        },
+        {
+          "skill_id": "T1.S30",
+          "skill_name": "Escrever soluções de inequações em notação de intervalos",
+          "prerequisites": [],
+          "lesson_slug": "inequacoes-notacao-intervalos"
+        },
+        {
+          "skill_id": "T1.S31",
+          "skill_name": "Resolver inequações lineares e escrever o conjunto-solução",
+          "prerequisites": [],
+          "lesson_slug": "inequacoes-lineares"
+        },
+        {
+          "skill_id": "T1.S32",
+          "skill_name": "Resolver inequações quadráticas",
+          "prerequisites": [],
+          "lesson_slug": "inequacoes-quadraticas"
+        },
+        {
+          "skill_id": "T1.S33",
+          "skill_name": "Resolver inequações polinomiais e racionais usando quadro de sinal",
+          "prerequisites": [],
+          "lesson_slug": "inequacoes-polinomiais-quadro-sinal"
+        },
+        {
+          "skill_id": "T1.S34",
+          "skill_name": "Equações exponenciais",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-exponenciais"
+        },
+        {
+          "skill_id": "T1.S35",
+          "skill_name": "Inequações exponenciais",
+          "prerequisites": [],
+          "lesson_slug": "inequacoes-exponenciais"
+        },
+        {
+          "skill_id": "T1.S36",
+          "skill_name": "Equações logarítmicas",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-logaritmicas"
+        },
+        {
+          "skill_id": "T1.S37",
+          "skill_name": "Inequações logarítmicas",
+          "prerequisites": [],
+          "lesson_slug": "inequacoes-logaritmicas"
+        },
+        {
+          "skill_id": "T1.S38",
+          "skill_name": "Exercícios–Modelo: Equações e Inequações Exponenciais e Logarítmicas",
+          "prerequisites": [],
+          "lesson_slug": "exercicios-modelo-numeros-reais",
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T2",
       "domain_name": "Probabilidades e Combinatória",
+      "display_name": "Probabilidades",
       "skills": [
-        { "skill_id": "T2.S1", "skill_name": "Como contar I: \"E\" (quantas opções?)", "prerequisites": [] },
-        { "skill_id": "T2.S2", "skill_name": "Como contar II: \"Ou\"", "prerequisites": [] },
-        { "skill_id": "T2.S3", "skill_name": "Como contar III: \"Ordenar\"", "prerequisites": [] },
-        { "skill_id": "T2.S4", "skill_name": "Como contar IV: \"Escolher\"", "prerequisites": [] },
-        { "skill_id": "T2.S5", "skill_name": "Truque I: \"Contrário\"", "prerequisites": [] },
-        { "skill_id": "T2.S6", "skill_name": "Truque II: \"Caixa\"", "prerequisites": [] },
-        { "skill_id": "T2.S7", "skill_name": "Exercícios Modelo: Combinatória – Contar", "prerequisites": [] },
-        { "skill_id": "T2.S8", "skill_name": "Exercícios Modelo: Combinatória – Explicar", "prerequisites": [] },
-        { "skill_id": "T2.S9", "skill_name": "Regra de Laplace", "prerequisites": [] },
-        { "skill_id": "T2.S10", "skill_name": "Exercícios Modelo: Regra de Laplace – Calcular Probabilidades", "prerequisites": [] },
-        { "skill_id": "T2.S11", "skill_name": "Regra de Laplace: Explicar Probabilidades", "prerequisites": [] },
-        { "skill_id": "T2.S12", "skill_name": "Como usar as fórmulas das probabilidades", "prerequisites": [] }
+        {
+          "skill_id": "T2.S1",
+          "skill_name": "Como contar I: \"E\" (quantas opções?)",
+          "prerequisites": [],
+          "lesson_slug": "como-contar-e-opcoes"
+        },
+        {
+          "skill_id": "T2.S2",
+          "skill_name": "Como contar II: \"Ou\"",
+          "prerequisites": [],
+          "lesson_slug": "como-contar-ou"
+        },
+        {
+          "skill_id": "T2.S3",
+          "skill_name": "Como contar III: \"Ordenar\"",
+          "prerequisites": [],
+          "lesson_slug": "como-contar-ordenar"
+        },
+        {
+          "skill_id": "T2.S4",
+          "skill_name": "Como contar IV: \"Escolher\"",
+          "prerequisites": [],
+          "lesson_slug": "como-contar-escolher"
+        },
+        {
+          "skill_id": "T2.S5",
+          "skill_name": "Truque I: \"Contrário\"",
+          "prerequisites": [],
+          "lesson_slug": "truque-contrario"
+        },
+        {
+          "skill_id": "T2.S6",
+          "skill_name": "Truque II: \"Caixa\"",
+          "prerequisites": [],
+          "lesson_slug": "truque-caixa"
+        },
+        {
+          "skill_id": "T2.S7",
+          "skill_name": "Regra de Laplace",
+          "prerequisites": [],
+          "lesson_slug": "regra-laplace"
+        },
+        {
+          "skill_id": "T2.S8",
+          "skill_name": "Como usar as fórmulas das probabilidades",
+          "prerequisites": [],
+          "lesson_slug": "formulas-probabilidades"
+        },
+        {
+          "skill_id": "T2.S9",
+          "skill_name": "Exercícios–Modelo: Combinatória",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T2.S10",
+          "skill_name": "Exercícios–Modelo: Regra de Laplace",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T2.S11",
+          "skill_name": "Exercícios–Modelo: Calcular Probabilidades",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T2.S12",
+          "skill_name": "Exercícios–Modelo: Demonstrações com Probabilidades",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T3",
       "domain_name": "Estatística",
       "skills": [
-        { "skill_id": "T3.S1",  "skill_name": "O que é frequência absoluta? (Identificá-la numa lista de dados)", "prerequisites": [] },
-        { "skill_id": "T3.S2",  "skill_name": "O que é a tabela de frequências absolutas?", "prerequisites": [] },
-        { "skill_id": "T3.S3",  "skill_name": "O que é frequência absoluta total (resolver equações)", "prerequisites": [] },
-        { "skill_id": "T3.S4",  "skill_name": "O que é frequência relativa? (resolver equações)", "prerequisites": [] },
-        { "skill_id": "T3.S5",  "skill_name": "Como traduzir entre frequências absolutas e relativas na tabela", "prerequisites": [] },
-        { "skill_id": "T3.S6",  "skill_name": "Básico localização: Moda", "prerequisites": [] },
-        { "skill_id": "T3.S7",  "skill_name": "Básico dispersão: Amplitude (mínimo e máximo) – Para números", "prerequisites": [] },
-        { "skill_id": "T3.S8",  "skill_name": "Básico dispersão: Amplitude – Para intervalos", "prerequisites": [] },
-        { "skill_id": "T3.S9",  "skill_name": "Popular localização: Média – Para números", "prerequisites": [] },
-        { "skill_id": "T3.S10", "skill_name": "Popular localização: Média – Para intervalos", "prerequisites": [] },
-        { "skill_id": "T3.S11", "skill_name": "Alternativa localização: Percentis (incluindo mediana e quartis) – Para números", "prerequisites": [] },
-        { "skill_id": "T3.S12", "skill_name": "Alternativa dispersão: Amplitude interquartil – Para números", "prerequisites": [] },
-        { "skill_id": "T3.S13", "skill_name": "Diagrama de extremos e quartis", "prerequisites": [] },
-        { "skill_id": "T3.S14", "skill_name": "Calcular medidas na calculadora", "prerequisites": [] },
-        { "skill_id": "T3.S15", "skill_name": "Como criar o diagrama de dispersão", "prerequisites": [] },
-        { "skill_id": "T3.S16", "skill_name": "Correlação linear: há ou não há / é nula", "prerequisites": [] },
-        { "skill_id": "T3.S17", "skill_name": "Direção da correlação: positiva ou negativa", "prerequisites": [] },
-        { "skill_id": "T3.S18", "skill_name": "Força da correlação: forte ou fraca", "prerequisites": [] },
-        { "skill_id": "T3.S19", "skill_name": "Classificar correlação pelo diagrama", "prerequisites": [] },
-        { "skill_id": "T3.S20", "skill_name": "Classificar correlação pelo coeficiente", "prerequisites": [] },
-        { "skill_id": "T3.S21", "skill_name": "Calculadora: calcular coeficiente de correlação r", "prerequisites": [] },
-        { "skill_id": "T3.S22", "skill_name": "Calculadora: equação da reta de regressão", "prerequisites": [] },
-        { "skill_id": "T3.S23", "skill_name": "Estimar valores de x ou y", "prerequisites": [] },
-        { "skill_id": "T3.S24", "skill_name": "Relacionar diagrama, coeficiente e reta", "prerequisites": [] }
-      ]
+        {
+          "skill_id": "T3.S1",
+          "skill_name": "O que é frequência absoluta? (Identificá-la numa lista de dados)",
+          "prerequisites": [],
+          "lesson_slug": "frequencia-absoluta"
+        },
+        {
+          "skill_id": "T3.S2",
+          "skill_name": "O que é a tabela de frequências absolutas?",
+          "prerequisites": [],
+          "lesson_slug": "tabela-frequencias-absolutas"
+        },
+        {
+          "skill_id": "T3.S3",
+          "skill_name": "O que é frequência absoluta total (resolver equações)",
+          "prerequisites": [],
+          "lesson_slug": "frequencia-absoluta-total-equacoes"
+        },
+        {
+          "skill_id": "T3.S4",
+          "skill_name": "O que é frequência relativa? (resolver equações)",
+          "prerequisites": [],
+          "lesson_slug": "frequencia-relativa-equacoes"
+        },
+        {
+          "skill_id": "T3.S5",
+          "skill_name": "Como traduzir entre frequências absolutas e relativas na tabela",
+          "prerequisites": [],
+          "lesson_slug": "frequencias-absolutas-relativas-tabela"
+        },
+        {
+          "skill_id": "T3.S6",
+          "skill_name": "Básico localização: Moda",
+          "prerequisites": [],
+          "lesson_slug": "moda-localizacao"
+        },
+        {
+          "skill_id": "T3.S7",
+          "skill_name": "Básico dispersão: Amplitude (mínimo e máximo) – Para números",
+          "prerequisites": [],
+          "lesson_slug": "amplitude-minimo-maximo-numeros"
+        },
+        {
+          "skill_id": "T3.S8",
+          "skill_name": "Básico dispersão: Amplitude – Para intervalos",
+          "prerequisites": [],
+          "lesson_slug": "amplitude-intervalos"
+        },
+        {
+          "skill_id": "T3.S9",
+          "skill_name": "Popular localização: Média – Para números",
+          "prerequisites": [],
+          "lesson_slug": "media-numeros"
+        },
+        {
+          "skill_id": "T3.S10",
+          "skill_name": "Popular localização: Média – Para intervalos",
+          "prerequisites": [],
+          "lesson_slug": "media-intervalos"
+        },
+        {
+          "skill_id": "T3.S12",
+          "skill_name": "Alternativa localização: Percentis (incluindo mediana e quartis) – Para números",
+          "prerequisites": [],
+          "lesson_slug": "percentis-mediana-quartis"
+        },
+        {
+          "skill_id": "T3.S13",
+          "skill_name": "Alternativa dispersão: Amplitude interquartil – Para números",
+          "prerequisites": [],
+          "lesson_slug": "amplitude-interquartil"
+        },
+        {
+          "skill_id": "T3.S14",
+          "skill_name": "Diagrama de extremos e quartis",
+          "prerequisites": [],
+          "lesson_slug": "diagrama-extremos-quartis"
+        },
+        {
+          "skill_id": "T3.S15",
+          "skill_name": "Calcular medidas na calculadora",
+          "prerequisites": [],
+          "lesson_slug": "calculadora-medidas"
+        },
+        {
+          "skill_id": "T3.S16",
+          "skill_name": "Ler o diagrama de dispersão",
+          "prerequisites": [],
+          "lesson_slug": "diagrama-dispersao"
+        },
+        {
+          "skill_id": "T3.S17",
+          "skill_name": "Correlação linear: há ou não há / é nula",
+          "prerequisites": [],
+          "lesson_slug": "correlacao-linear-nula"
+        },
+        {
+          "skill_id": "T3.S18",
+          "skill_name": "Direção da correlação: positiva ou negativa",
+          "prerequisites": [],
+          "lesson_slug": "correlacao-positiva-negativa"
+        },
+        {
+          "skill_id": "T3.S19",
+          "skill_name": "Força da correlação: forte ou fraca",
+          "prerequisites": [],
+          "lesson_slug": "correlacao-forte-fraca"
+        },
+        {
+          "skill_id": "T3.S20",
+          "skill_name": "Classificar correlação pelo diagrama",
+          "prerequisites": [],
+          "lesson_slug": "correlacao-classificar-diagrama"
+        },
+        {
+          "skill_id": "T3.S21",
+          "skill_name": "Classificar correlação pelo coeficiente",
+          "prerequisites": [],
+          "lesson_slug": "correlacao-classificar-coeficiente"
+        },
+        {
+          "skill_id": "T3.S22",
+          "skill_name": "Calculadora: calcular coeficiente de correlação r",
+          "prerequisites": [],
+          "lesson_slug": "calculadora-coeficiente-correlacao"
+        },
+        {
+          "skill_id": "T3.S23",
+          "skill_name": "Calculadora: equação da reta de regressão",
+          "prerequisites": [],
+          "lesson_slug": "calculadora-reta-regressao"
+        },
+        {
+          "skill_id": "T3.S24",
+          "skill_name": "Estimar valores de x ou y",
+          "prerequisites": [],
+          "lesson_slug": "estimar-valores-x-y"
+        },
+        {
+          "skill_id": "T3.S26",
+          "skill_name": "Exercícios–Modelo 1: Sem Calculadora (Resolver Sistema de Equações)",
+          "prerequisites": [],
+          "lesson_slug": "exercicios-modelo-sem-calculadora",
+          "is_model": true
+        },
+        {
+          "skill_id": "T3.S27",
+          "skill_name": "Exercícios–Modelo 2: Com Calculadora",
+          "prerequisites": [],
+          "lesson_slug": "exercicios-modelo-com-calculadora",
+          "is_model": true
+        },
+        {
+          "skill_id": "T3.S28",
+          "skill_name": "Exercícios–Modelo: Estatística Bivariada (Diagrama, Coeficiente e Reta)",
+          "prerequisites": [],
+          "is_model": true
+        }
+      ],
+      "display_name": "Estatística"
     },
     {
       "domain_id": "T4",
       "domain_name": "Geometria e Espaço",
+      "display_name": "Geometria",
       "skills": [
-        { "skill_id": "T4.S1",  "skill_name": "Determinar coordenadas de pontos no espaço tridimensional", "prerequisites": [] },
-        { "skill_id": "T4.S2",  "skill_name": "Calcular ponto médio no espaço", "prerequisites": [] },
-        { "skill_id": "T4.S3",  "skill_name": "Determinar coordenadas de vetores", "prerequisites": [] },
-        { "skill_id": "T4.S4",  "skill_name": "Calcular norma de um vetor (Teorema de Pitágoras em 3D)", "prerequisites": [] },
-        { "skill_id": "T4.S5",  "skill_name": "Identificar centro e raio de uma esfera", "prerequisites": [] },
-        { "skill_id": "T4.S6",  "skill_name": "Verificar se um ponto pertence a uma esfera", "prerequisites": [] },
-        { "skill_id": "T4.S7",  "skill_name": "Determinar equação de uma esfera", "prerequisites": [] },
-        { "skill_id": "T4.S8",  "skill_name": "Identificar ponto e vetor diretor da reta", "prerequisites": [] },
-        { "skill_id": "T4.S9",  "skill_name": "Verificar se ponto pertence a uma reta", "prerequisites": [] },
-        { "skill_id": "T4.S10", "skill_name": "Determinar equação vetorial da reta", "prerequisites": [] },
-        { "skill_id": "T4.S11", "skill_name": "Determinar vetor normal de um plano", "prerequisites": [] },
-        { "skill_id": "T4.S12", "skill_name": "Verificar se ponto pertence a um plano", "prerequisites": [] },
-        { "skill_id": "T4.S13", "skill_name": "Determinar equação de um plano", "prerequisites": [] },
-        { "skill_id": "T4.S14", "skill_name": "Construir equações de planos em diferentes situações geométricas", "prerequisites": [] },
-        { "skill_id": "T4.S15", "skill_name": "Calcular o produto escalar de vetores", "prerequisites": [] },
-        { "skill_id": "T4.S16", "skill_name": "Determinar se vetores são perpendiculares", "prerequisites": [] },
-        { "skill_id": "T4.S17", "skill_name": "Calcular produto escalar usando normas e ângulo", "prerequisites": [] },
-        { "skill_id": "T4.S18", "skill_name": "Determinar o ângulo entre vetores", "prerequisites": [] },
-        { "skill_id": "T4.S19", "skill_name": "Determinar ângulos no espaço", "prerequisites": [] },
-        { "skill_id": "T4.S20", "skill_name": "Determinar relações entre retas e planos", "prerequisites": [] },
-        { "skill_id": "T4.S21", "skill_name": "Determinar equações com paralelismo ou perpendicularidade", "prerequisites": [] },
-        { "skill_id": "T4.S22", "skill_name": "Determinar ponto de interseção reta-plano", "prerequisites": [] },
-        { "skill_id": "T4.S23", "skill_name": "Resolver problemas geométricos envolvendo interseção reta-plano e distâncias", "prerequisites": [] }
+        {
+          "skill_id": "T4.S1",
+          "skill_name": "Determinar coordenadas de pontos no espaço tridimensional",
+          "prerequisites": [],
+          "lesson_slug": "coordenadas-pontos-espaco-3d"
+        },
+        {
+          "skill_id": "T4.S2",
+          "skill_name": "Calcular ponto médio no espaço",
+          "prerequisites": [],
+          "lesson_slug": "ponto-medio-espaco"
+        },
+        {
+          "skill_id": "T4.S3",
+          "skill_name": "Determinar coordenadas de vetores",
+          "prerequisites": [],
+          "lesson_slug": "coordenadas-vetores"
+        },
+        {
+          "skill_id": "T4.S4",
+          "skill_name": "Calcular norma de um vetor (Teorema de Pitágoras em 3D)",
+          "prerequisites": [],
+          "lesson_slug": "norma-vetor"
+        },
+        {
+          "skill_id": "T4.S5",
+          "skill_name": "Identificar centro e raio de uma esfera",
+          "prerequisites": [],
+          "lesson_slug": "centro-raio-esfera"
+        },
+        {
+          "skill_id": "T4.S6",
+          "skill_name": "Verificar se um ponto pertence a uma esfera",
+          "prerequisites": [],
+          "lesson_slug": "ponto-pertence-esfera"
+        },
+        {
+          "skill_id": "T4.S7",
+          "skill_name": "Determinar equação de uma esfera",
+          "prerequisites": [],
+          "lesson_slug": "equacao-esfera"
+        },
+        {
+          "skill_id": "T4.S8",
+          "skill_name": "Identificar ponto e vetor diretor da reta",
+          "prerequisites": [],
+          "lesson_slug": "ponto-vetor-diretor-reta"
+        },
+        {
+          "skill_id": "T4.S9",
+          "skill_name": "Verificar se ponto pertence a uma reta",
+          "prerequisites": [],
+          "lesson_slug": "ponto-pertence-reta"
+        },
+        {
+          "skill_id": "T4.S10",
+          "skill_name": "Determinar equação vetorial da reta",
+          "prerequisites": [],
+          "lesson_slug": "equacao-vetorial-reta"
+        },
+        {
+          "skill_id": "T4.S11",
+          "skill_name": "Determinar vetor normal de um plano",
+          "prerequisites": [],
+          "lesson_slug": "vetor-normal-plano"
+        },
+        {
+          "skill_id": "T4.S12",
+          "skill_name": "Verificar se ponto pertence a um plano",
+          "prerequisites": [],
+          "lesson_slug": "ponto-pertence-plano"
+        },
+        {
+          "skill_id": "T4.S13",
+          "skill_name": "Determinar equação de um plano",
+          "prerequisites": [],
+          "lesson_slug": "equacao-plano"
+        },
+        {
+          "skill_id": "T4.S14",
+          "skill_name": "Calcular o produto escalar de vetores",
+          "prerequisites": [],
+          "lesson_slug": "produto-escalar-vetores"
+        },
+        {
+          "skill_id": "T4.S15",
+          "skill_name": "Determinar se vetores são perpendiculares",
+          "prerequisites": [],
+          "lesson_slug": "vetores-perpendiculares"
+        },
+        {
+          "skill_id": "T4.S16",
+          "skill_name": "Calcular produto escalar usando normas e ângulo",
+          "prerequisites": [],
+          "lesson_slug": "produto-escalar-normas-angulo"
+        },
+        {
+          "skill_id": "T4.S17",
+          "skill_name": "Determinar o ângulo entre vetores",
+          "prerequisites": [],
+          "lesson_slug": "angulo-entre-vetores"
+        },
+        {
+          "skill_id": "T4.S18",
+          "skill_name": "Determinar relações entre retas e planos",
+          "prerequisites": [],
+          "lesson_slug": "relacoes-retas-planos"
+        },
+        {
+          "skill_id": "T4.S19",
+          "skill_name": "Determinar ponto de interseção reta-plano",
+          "prerequisites": [],
+          "lesson_slug": "ponto-intersecao-reta-plano"
+        },
+        {
+          "skill_id": "T4.S20",
+          "skill_name": "Exercícios–Modelo: Geometria no Espaço",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T5",
       "domain_name": "Trigonometria e Geometria no Plano",
+      "display_name": "Trigonometria",
       "skills": [
-        { "skill_id": "T5.S1",  "skill_name": "Converter graus para radianos", "prerequisites": [] },
-        { "skill_id": "T5.S2",  "skill_name": "Localizar ângulos na circunferência trigonométrica", "prerequisites": [] },
-        { "skill_id": "T5.S3",  "skill_name": "Determinar valores de cosseno", "prerequisites": [] },
-        { "skill_id": "T5.S4",  "skill_name": "Determinar valores de seno", "prerequisites": [] },
-        { "skill_id": "T5.S5",  "skill_name": "Utilizar valores notáveis (π/6, π/4, π/3)", "prerequisites": [] },
-        { "skill_id": "T5.S6",  "skill_name": "Aplicar reduções ao primeiro quadrante", "prerequisites": [] },
-        { "skill_id": "T5.S7",  "skill_name": "Simplificar expressões trigonométricas", "prerequisites": [] },
-        { "skill_id": "T5.S8",  "skill_name": "Reescrever funções trigonométricas", "prerequisites": [] },
-        { "skill_id": "T5.S9",  "skill_name": "Combinar reduções trigonométricas", "prerequisites": [] },
-        { "skill_id": "T5.S10", "skill_name": "Resolver equações trigonométricas básicas", "prerequisites": [] },
-        { "skill_id": "T5.S11", "skill_name": "Resolver equações trigonométricas com identidades", "prerequisites": [] },
-        { "skill_id": "T5.S12", "skill_name": "Determinar coordenadas de pontos usando (r cosα, r senα)", "prerequisites": [] },
-        { "skill_id": "T5.S13", "skill_name": "Aplicar coordenadas trigonométricas em problemas geométricos", "prerequisites": [] },
-        { "skill_id": "T5.S14", "skill_name": "Determinar equação da reta", "prerequisites": [] },
-        { "skill_id": "T5.S15", "skill_name": "Relacionar tangente com declive", "prerequisites": [] },
-        { "skill_id": "T5.S16", "skill_name": "Calcular tangentes especiais", "prerequisites": [] },
-        { "skill_id": "T5.S17", "skill_name": "Aplicar reduções envolvendo tangente", "prerequisites": [] },
-        { "skill_id": "T5.S18", "skill_name": "Determinar declives de retas", "prerequisites": [] },
-        { "skill_id": "T5.S19", "skill_name": "Determinar inclinação com arctan", "prerequisites": [] },
-        { "skill_id": "T5.S20", "skill_name": "Determinar equações de retas em diferentes condições geométricas", "prerequisites": [] },
-        { "skill_id": "T5.S21", "skill_name": "Aplicar identidade fundamental sin²α + cos²α = 1", "prerequisites": [] },
-        { "skill_id": "T5.S22", "skill_name": "Relacionar tangente, seno e cosseno através de identidades", "prerequisites": [] },
-        { "skill_id": "T5.S23", "skill_name": "Aplicar fórmulas de ângulo duplo e soma", "prerequisites": [] }
+        {
+          "skill_id": "T5.S1",
+          "skill_name": "Converter graus para radianos",
+          "prerequisites": [],
+          "lesson_slug": "converter-graus-radianos"
+        },
+        {
+          "skill_id": "T5.S2",
+          "skill_name": "Determinar valores de cosseno",
+          "prerequisites": [],
+          "lesson_slug": "determinar-valores-cosseno"
+        },
+        {
+          "skill_id": "T5.S3",
+          "skill_name": "Determinar valores de seno",
+          "prerequisites": [],
+          "lesson_slug": "determinar-valores-seno"
+        },
+        {
+          "skill_id": "T5.S4",
+          "skill_name": "Seno e cossenos especiais na circunferência trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "valores-notaveis-pi6-pi4-pi3"
+        },
+        {
+          "skill_id": "T5.S5",
+          "skill_name": "Aplicar reduções ao primeiro quadrante",
+          "prerequisites": [],
+          "lesson_slug": "reducoes-primeiro-quadrante"
+        },
+        {
+          "skill_id": "T5.S6",
+          "skill_name": "Equações Trigonométricas",
+          "prerequisites": [],
+          "lesson_slug": "simplificar-expressoes-trigonometricas"
+        },
+        {
+          "skill_id": "T5.S7",
+          "skill_name": "Coordenadas Trigonométricas",
+          "prerequisites": [],
+          "lesson_slug": "reescrever-funcoes-trigonometricas"
+        },
+        {
+          "skill_id": "T5.S8",
+          "skill_name": "Tangente: equação reduzida da reta",
+          "prerequisites": [],
+          "lesson_slug": "determinar-equacao-reta"
+        },
+        {
+          "skill_id": "T5.S9",
+          "skill_name": "Relacionar tangente com declive",
+          "prerequisites": [],
+          "lesson_slug": "tangente-declive"
+        },
+        {
+          "skill_id": "T5.S10",
+          "skill_name": "Reduções ao Primeiro Quadrante com Tangente",
+          "prerequisites": [],
+          "lesson_slug": "reducoes-envolvendo-tangente"
+        },
+        {
+          "skill_id": "T5.S11",
+          "skill_name": "Tangente: a ponte entre a inclinação e o declive",
+          "prerequisites": [],
+          "lesson_slug": "declives-retas"
+        },
+        {
+          "skill_id": "T5.S12",
+          "skill_name": "Equação reduzida da reta (2)",
+          "prerequisites": [],
+          "lesson_slug": "inclinacao-arctan"
+        },
+        {
+          "skill_id": "T5.S13",
+          "skill_name": "Fórmula fundamental: Ponte entre seno e cosseno",
+          "prerequisites": [],
+          "lesson_slug": "identidade-fundamental-trigonometrica"
+        },
+        {
+          "skill_id": "T5.S14",
+          "skill_name": "Fórmula fundamental: Pontes entre tangente e cosseno e entre tangente e seno",
+          "prerequisites": [],
+          "lesson_slug": "tangente-seno-cosseno-identidades"
+        },
+        {
+          "skill_id": "T5.S15",
+          "skill_name": "Fórmulas da soma e da duplicação: Pontes entre ângulos maiores e ângulos mais pequenos",
+          "prerequisites": [],
+          "lesson_slug": "formulas-angulo-duplo-soma"
+        },
+        {
+          "skill_id": "T5.S16",
+          "skill_name": "Exercícios–Modelo: Trigonometria e Geometria no Plano",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T6",
       "domain_name": "Números Complexos",
+      "display_name": "Números Complexos",
       "skills": [
-        { "skill_id": "T6.S1",  "skill_name": "Coordenadas nos complexos", "prerequisites": [] },
-        { "skill_id": "T6.S2",  "skill_name": "Parte real e parte imaginária", "prerequisites": [] },
-        { "skill_id": "T6.S3",  "skill_name": "Somar números complexos", "prerequisites": [] },
-        { "skill_id": "T6.S4",  "skill_name": "Multiplicar números complexos", "prerequisites": [] },
-        { "skill_id": "T6.S5",  "skill_name": "Potências de i", "prerequisites": [] },
-        { "skill_id": "T6.S6",  "skill_name": "Dividir números complexos", "prerequisites": [] },
-        { "skill_id": "T6.S7",  "skill_name": "Recapitulando a forma algébrica", "prerequisites": [] },
-        { "skill_id": "T6.S8",  "skill_name": "Forma trigonométrica", "prerequisites": [] },
-        { "skill_id": "T6.S9",  "skill_name": "Módulo e argumento", "prerequisites": [] },
-        { "skill_id": "T6.S10", "skill_name": "Multiplicar na forma trigonométrica", "prerequisites": [] },
-        { "skill_id": "T6.S11", "skill_name": "Dividir na forma trigonométrica", "prerequisites": [] },
-        { "skill_id": "T6.S12", "skill_name": "Potências na forma trigonométrica", "prerequisites": [] },
-        { "skill_id": "T6.S13", "skill_name": "Recapitulando a forma trigonométrica", "prerequisites": [] },
-        { "skill_id": "T6.S14", "skill_name": "Mudar de forma trigonométrica para algébrica", "prerequisites": [] },
-        { "skill_id": "T6.S15", "skill_name": "Mudar de forma algébrica para trigonométrica", "prerequisites": [] },
-        { "skill_id": "T6.S16", "skill_name": "Conjugado", "prerequisites": [] },
-        { "skill_id": "T6.S17", "skill_name": "Equações pela forma algébrica", "prerequisites": [] },
-        { "skill_id": "T6.S18", "skill_name": "Equações pela forma trigonométrica (básico)", "prerequisites": [] },
-        { "skill_id": "T6.S19", "skill_name": "Equações pela forma trigonométrica", "prerequisites": [] }
+        {
+          "skill_id": "T6.S1",
+          "skill_name": "Coordenadas nos complexos",
+          "prerequisites": [],
+          "lesson_slug": "coordenadas-nos-complexos"
+        },
+        {
+          "skill_id": "T6.S2",
+          "skill_name": "Parte real e parte imaginária",
+          "prerequisites": [],
+          "lesson_slug": "parte-real-imaginaria"
+        },
+        {
+          "skill_id": "T6.S3",
+          "skill_name": "Somar números complexos",
+          "prerequisites": [],
+          "lesson_slug": "somar-numeros-complexos"
+        },
+        {
+          "skill_id": "T6.S4",
+          "skill_name": "Multiplicar números complexos",
+          "prerequisites": [],
+          "lesson_slug": "multiplicar-numeros-complexos"
+        },
+        {
+          "skill_id": "T6.S5",
+          "skill_name": "Potências de i",
+          "prerequisites": [],
+          "lesson_slug": "potencias-i"
+        },
+        {
+          "skill_id": "T6.S6",
+          "skill_name": "Dividir números complexos",
+          "prerequisites": [],
+          "lesson_slug": "dividir-numeros-complexos"
+        },
+        {
+          "skill_id": "T6.S7",
+          "skill_name": "Recapitulando a forma algébrica",
+          "prerequisites": [],
+          "lesson_slug": "recapitulando-forma-algebrica"
+        },
+        {
+          "skill_id": "T6.S8",
+          "skill_name": "Forma trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "forma-trigonometrica"
+        },
+        {
+          "skill_id": "T6.S9",
+          "skill_name": "Módulo e argumento",
+          "prerequisites": [],
+          "lesson_slug": "modulo-argumento"
+        },
+        {
+          "skill_id": "T6.S10",
+          "skill_name": "Multiplicar na forma trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "multiplicar-forma-trigonometrica"
+        },
+        {
+          "skill_id": "T6.S11",
+          "skill_name": "Dividir na forma trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "dividir-forma-trigonometrica"
+        },
+        {
+          "skill_id": "T6.S12",
+          "skill_name": "Potências na forma trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "potencias-forma-trigonometrica"
+        },
+        {
+          "skill_id": "T6.S13",
+          "skill_name": "Recapitulando a forma trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "recapitulando-forma-trigonometrica"
+        },
+        {
+          "skill_id": "T6.S14",
+          "skill_name": "Mudar de forma trigonométrica para algébrica",
+          "prerequisites": [],
+          "lesson_slug": "forma-trigonometrica-algebrica"
+        },
+        {
+          "skill_id": "T6.S15",
+          "skill_name": "Mudar de forma algébrica para trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "forma-algebrica-trigonometrica"
+        },
+        {
+          "skill_id": "T6.S16",
+          "skill_name": "Conjugado",
+          "prerequisites": [],
+          "lesson_slug": "conjugado"
+        },
+        {
+          "skill_id": "T6.S17",
+          "skill_name": "Equações pela forma algébrica",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-forma-algebrica"
+        },
+        {
+          "skill_id": "T6.S18",
+          "skill_name": "Equações pela forma trigonométrica",
+          "prerequisites": [],
+          "lesson_slug": "equacoes-forma-trigonometrica-basico"
+        },
+        {
+          "skill_id": "T6.S20",
+          "skill_name": "Exercícios–Modelo: Escolha Múltipla",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T6.S21",
+          "skill_name": "Exercícios–Modelo: Resposta Aberta",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T7",
       "domain_name": "Limites",
+      "display_name": "Limites",
       "skills": [
-        { "skill_id": "T7.S1",  "skill_name": "Limites básicos", "prerequisites": [] },
-        { "skill_id": "T7.S2",  "skill_name": "Calcular com k⁺ e k⁻", "prerequisites": [] },
-        { "skill_id": "T7.S3",  "skill_name": "Calcular com ±∞", "prerequisites": [] },
-        { "skill_id": "T7.S4",  "skill_name": "Limites notáveis de eˣ e ln x", "prerequisites": [] },
-        { "skill_id": "T7.S5",  "skill_name": "Truques essenciais", "prerequisites": [] },
-        { "skill_id": "T7.S6",  "skill_name": "Estratégia geral ±∞", "prerequisites": [] },
-        { "skill_id": "T7.S7",  "skill_name": "Limites racionais", "prerequisites": [] },
-        { "skill_id": "T7.S8",  "skill_name": "Limites notáveis de eˣ e sen x", "prerequisites": [] },
-        { "skill_id": "T7.S9",  "skill_name": "Estratégia geral x→a", "prerequisites": [] },
-        { "skill_id": "T7.S10", "skill_name": "Casos especiais: indeterminação 0×∞", "prerequisites": [] },
-        { "skill_id": "T7.S11", "skill_name": "Existência de limite", "prerequisites": [] },
-        { "skill_id": "T7.S12", "skill_name": "Continuidade", "prerequisites": [] },
-        { "skill_id": "T7.S13", "skill_name": "Assíntotas verticais", "prerequisites": [] },
-        { "skill_id": "T7.S14", "skill_name": "Assíntotas horizontais", "prerequisites": [] },
-        { "skill_id": "T7.S15", "skill_name": "Assíntotas oblíquas", "prerequisites": [] }
+        {
+          "skill_id": "T7.S1",
+          "skill_name": "Limites básicos",
+          "prerequisites": [],
+          "lesson_slug": "limites-basicos"
+        },
+        {
+          "skill_id": "T7.S2",
+          "skill_name": "Calcular com k⁺ e k⁻",
+          "prerequisites": [],
+          "lesson_slug": "calcular-k-mais-menos"
+        },
+        {
+          "skill_id": "T7.S3",
+          "skill_name": "Calcular com ±∞",
+          "prerequisites": [],
+          "lesson_slug": "calcular-infinito"
+        },
+        {
+          "skill_id": "T7.S4",
+          "skill_name": "Estratégia geral x→±∞",
+          "prerequisites": [],
+          "lesson_slug": "estrategia-geral-infinito"
+        },
+        {
+          "skill_id": "T7.S5",
+          "skill_name": "Limites notáveis de eˣ e ln x",
+          "prerequisites": [],
+          "lesson_slug": "limites-notaveis-ex-lnx"
+        },
+        {
+          "skill_id": "T7.S6",
+          "skill_name": "Truques essenciais",
+          "prerequisites": [],
+          "lesson_slug": "truques-essenciais"
+        },
+        {
+          "skill_id": "T7.S7",
+          "skill_name": "Limites Tipo–Exame: Estratégia Geral ±∞",
+          "prerequisites": [],
+          "lesson_slug": "limites-estrategia-geral-infinito"
+        },
+        {
+          "skill_id": "T7.S8",
+          "skill_name": "Limites racionais",
+          "prerequisites": [],
+          "lesson_slug": "limites-racionais"
+        },
+        {
+          "skill_id": "T7.S9",
+          "skill_name": "Limites notáveis de eˣ e sen x",
+          "prerequisites": [],
+          "lesson_slug": "limites-notaveis-ex-senx"
+        },
+        {
+          "skill_id": "T7.S10",
+          "skill_name": "Ideia–Chave e Truques Essenciais",
+          "prerequisites": [],
+          "lesson_slug": "ideia-chave-truques-essenciais"
+        },
+        {
+          "skill_id": "T7.S11",
+          "skill_name": "Estratégia geral x→a",
+          "prerequisites": [],
+          "lesson_slug": "estrategia-geral-x-a"
+        },
+        {
+          "skill_id": "T7.S12",
+          "skill_name": "Casos especiais: indeterminação 0×∞",
+          "prerequisites": [],
+          "lesson_slug": "indeterminacao-0-infinito"
+        },
+        {
+          "skill_id": "T7.S13",
+          "skill_name": "Exercícios–Modelo: Existência de Limite",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T7.S14",
+          "skill_name": "Exercícios–Modelo: Continuidade",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T7.S15",
+          "skill_name": "Exercícios–Modelo: Assíntotas Verticais",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T7.S16",
+          "skill_name": "Exercícios–Modelo: Assíntotas Não Verticais (em ±∞)",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T8",
       "domain_name": "Sucessões",
+      "display_name": "Sucessões",
       "skills": [
-        { "skill_id": "T8.S1",  "skill_name": "Aplicar o teorema de Heine", "prerequisites": [] },
-        { "skill_id": "T8.S2",  "skill_name": "Determinar limite de uma sucessão", "prerequisites": [] },
-        { "skill_id": "T8.S3",  "skill_name": "Relacionar limite de sucessão com função trigonométrica", "prerequisites": [] },
-        { "skill_id": "T8.S4",  "skill_name": "Analisar sucessões que convergem para 0", "prerequisites": [] },
-        { "skill_id": "T8.S5",  "skill_name": "Transformar sucessões", "prerequisites": [] },
-        { "skill_id": "T8.S6",  "skill_name": "Interpretar gráfico para determinar limites", "prerequisites": [] },
-        { "skill_id": "T8.S7",  "skill_name": "Estudar monotonia de uma sucessão", "prerequisites": [] },
-        { "skill_id": "T8.S8",  "skill_name": "Resolver inequações com termos de sucessões", "prerequisites": [] },
-        { "skill_id": "T8.S9",  "skill_name": "Analisar sucessões alternadas", "prerequisites": [] },
-        { "skill_id": "T8.S10", "skill_name": "Interpretar sucessões por recorrência", "prerequisites": [] },
-        { "skill_id": "T8.S11", "skill_name": "Estudar sucessões definidas por ramos", "prerequisites": [] },
-        { "skill_id": "T8.S12", "skill_name": "Calcular termos numa progressão aritmética", "prerequisites": [] },
-        { "skill_id": "T8.S13", "skill_name": "Determinar termo geral de progressão aritmética", "prerequisites": [] },
-        { "skill_id": "T8.S14", "skill_name": "Resolver problemas de soma em progressão aritmética", "prerequisites": [] },
-        { "skill_id": "T8.S15", "skill_name": "Calcular termos numa progressão geométrica", "prerequisites": [] },
-        { "skill_id": "T8.S16", "skill_name": "Determinar termo geral de progressão geométrica", "prerequisites": [] },
-        { "skill_id": "T8.S17", "skill_name": "Resolver problemas com progressões geométricas", "prerequisites": [] },
-        { "skill_id": "T8.S18", "skill_name": "Determinar termos desconhecidos", "prerequisites": [] },
-        { "skill_id": "T8.S19", "skill_name": "Verificar pertença a progressões", "prerequisites": [] },
-        { "skill_id": "T8.S20", "skill_name": "Combinar progressões aritméticas e geométricas", "prerequisites": [] },
-        { "skill_id": "T8.S21", "skill_name": "Verificar se número é termo de PA", "prerequisites": [] },
-        { "skill_id": "T8.S22", "skill_name": "Resolver problemas que combinam PA e PG", "prerequisites": [] },
-        { "skill_id": "T8.S23", "skill_name": "Determinar parâmetros de PA usando termos consecutivos e somas", "prerequisites": [] }
+        {
+          "skill_id": "T8.S1",
+          "skill_name": "Ler e gerar termos de uma P.A.",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781995194858-v2kfj"
+        },
+        {
+          "skill_id": "T8.S2",
+          "skill_name": "É ou não é termo da progressão aritmética?",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781991093087-6co89"
+        },
+        {
+          "skill_id": "T8.S3",
+          "skill_name": "Somar os primeiros termos da progressão aritmética",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781995297371-7ze68"
+        },
+        {
+          "skill_id": "T8.S4",
+          "skill_name": "Reconstruir o termo geral da progressão aritmética a partir de dados",
+          "prerequisites": [],
+          "lesson_slug": "lc-1782165019348-05vpn"
+        },
+        {
+          "skill_id": "T8.S5",
+          "skill_name": "Ler e gerar termos de uma progressão geométrica",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781995201261-4f1kn"
+        },
+        {
+          "skill_id": "T8.S6",
+          "skill_name": "É ou não é termo da progressão geométrica?",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781994380894-6hp4s"
+        },
+        {
+          "skill_id": "T8.S7",
+          "skill_name": "Somar os primeiros termos da progressão geométrica",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781995375484-4z9xr"
+        },
+        {
+          "skill_id": "T8.S8",
+          "skill_name": "Reconstruir o termo geral da progressão geométrica a partir de dados",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781995360624-q6q0q"
+        },
+        {
+          "skill_id": "T8.S11",
+          "skill_name": "Estudar monotonia de uma sucessão",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781994179460-upynl"
+        },
+        {
+          "skill_id": "T8.S12",
+          "skill_name": "Resolver inequações com termos de sucessões",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781994224318-e16s0"
+        },
+        {
+          "skill_id": "T8.S13",
+          "skill_name": "Interpretar sucessões por recorrência e por ramos",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781995278394-vn0x7"
+        },
+        {
+          "skill_id": "T8.S14",
+          "skill_name": "Combinar PA e PG",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781995401802-725ia"
+        },
+        {
+          "skill_id": "T8.S15",
+          "skill_name": "Determinar o limite de uma sucessão (critério de Heine)",
+          "prerequisites": [],
+          "lesson_slug": "lc-1781994343283-gh5lg"
+        },
+        {
+          "skill_id": "T8.S16",
+          "skill_name": "Aplicar o teorema de Heine",
+          "prerequisites": [
+            "T8.S15"
+          ],
+          "lesson_slug": "lc-1781991124766-r1410"
+        },
+        {
+          "skill_id": "T8.S17",
+          "skill_name": "Relacionar limite de sucessão com função trigonométrica",
+          "prerequisites": [
+            "T8.S16"
+          ],
+          "lesson_slug": "lc-1781991296519-pun2y"
+        },
+        {
+          "skill_id": "T8.S18",
+          "skill_name": "Transformar sucessões",
+          "prerequisites": [
+            "T8.S16"
+          ],
+          "lesson_slug": "lc-1781994127907-yeyvb"
+        },
+        {
+          "skill_id": "T8.S19",
+          "skill_name": "Exercícios–Modelo: Progressões",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T8.S20",
+          "skill_name": "Exercícios–Modelo: Generalidades sobre Sucessões",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T8.S21",
+          "skill_name": "Exercícios–Modelo: Limites segundo Heine",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T9",
       "domain_name": "Derivadas",
+      "display_name": "Derivadas",
       "skills": [
-        { "skill_id": "T9.S1",  "skill_name": "Derivada da constante", "prerequisites": [] },
-        { "skill_id": "T9.S2",  "skill_name": "Derivada do monómio", "prerequisites": [] },
-        { "skill_id": "T9.S3",  "skill_name": "Derivada do produto por uma constante", "prerequisites": [] },
-        { "skill_id": "T9.S4",  "skill_name": "Derivada da soma", "prerequisites": [] },
-        { "skill_id": "T9.S5",  "skill_name": "Derivadas trigonométricas (seno e cosseno)", "prerequisites": [] },
-        { "skill_id": "T9.S6",  "skill_name": "Derivada do produto", "prerequisites": [] },
-        { "skill_id": "T9.S7",  "skill_name": "Derivada do quociente", "prerequisites": [] },
-        { "skill_id": "T9.S8",  "skill_name": "Derivada da tangente", "prerequisites": [] },
-        { "skill_id": "T9.S9",  "skill_name": "Derivada da composta", "prerequisites": [] },
-        { "skill_id": "T9.S10", "skill_name": "Derivadas exponenciais e logarítmicas", "prerequisites": [] },
-        { "skill_id": "T9.S11", "skill_name": "Declive da reta tangente", "prerequisites": [] },
-        { "skill_id": "T9.S12", "skill_name": "Monotonia e concavidade", "prerequisites": [] }
+        {
+          "skill_id": "T9.S1",
+          "skill_name": "Derivada da constante",
+          "prerequisites": [],
+          "lesson_slug": "definicao-derivada"
+        },
+        {
+          "skill_id": "T9.S2",
+          "skill_name": "Derivada do monómio",
+          "prerequisites": [],
+          "lesson_slug": "derivada-constante"
+        },
+        {
+          "skill_id": "T9.S3",
+          "skill_name": "Derivada do produto por uma constante",
+          "prerequisites": [],
+          "lesson_slug": "derivada-monomio"
+        },
+        {
+          "skill_id": "T9.S4",
+          "skill_name": "Derivada da soma",
+          "prerequisites": [],
+          "lesson_slug": "derivada-produto-constante"
+        },
+        {
+          "skill_id": "T9.S5",
+          "skill_name": "Derivadas trigonométricas (seno e cosseno)",
+          "prerequisites": [],
+          "lesson_slug": "derivada-da-soma"
+        },
+        {
+          "skill_id": "T9.S6",
+          "skill_name": "Derivada do produto",
+          "prerequisites": [],
+          "lesson_slug": "derivadas-trigonometricas-seno-cosseno"
+        },
+        {
+          "skill_id": "T9.S7",
+          "skill_name": "Derivada do quociente",
+          "prerequisites": [],
+          "lesson_slug": "derivada-do-produto"
+        },
+        {
+          "skill_id": "T9.S8",
+          "skill_name": "Derivada da tangente",
+          "prerequisites": [],
+          "lesson_slug": "derivada-do-quociente"
+        },
+        {
+          "skill_id": "T9.S9",
+          "skill_name": "Derivada da composta",
+          "prerequisites": [],
+          "lesson_slug": "derivada-da-tangente"
+        },
+        {
+          "skill_id": "T9.S10",
+          "skill_name": "Derivadas exponenciais e logarítmicas",
+          "prerequisites": [],
+          "lesson_slug": "derivada-da-composta"
+        },
+        {
+          "skill_id": "T9.S13",
+          "skill_name": "Exercícios–Modelo: Declive da Reta Tangente",
+          "prerequisites": [],
+          "is_model": true
+        },
+        {
+          "skill_id": "T9.S14",
+          "skill_name": "Exercícios–Modelo: Monotonia e Concavidade",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     },
     {
       "domain_id": "T10",
       "domain_name": "Teorema de Bolzano",
+      "display_name": "Bolzano",
       "skills": [
-        { "skill_id": "T10.S1", "skill_name": "Aplicar Bolzano–Cauchy para demonstrar que f(x)=0 tem solução", "prerequisites": [] },
-        { "skill_id": "T10.S2", "skill_name": "Transformar equação para h(x)=0", "prerequisites": [] },
-        { "skill_id": "T10.S3", "skill_name": "Demonstrar interseção de funções", "prerequisites": [] },
-        { "skill_id": "T10.S4", "skill_name": "Determinar existência de pontos de interseção", "prerequisites": [] },
-        { "skill_id": "T10.S5", "skill_name": "Provar existência de zeros da função derivada", "prerequisites": [] },
-        { "skill_id": "T10.S6", "skill_name": "Demonstrar existência de determinado declive", "prerequisites": [] }
-      ]
-    },
-    {
-      "domain_id": "T11",
-      "domain_name": "Calculadora",
-      "skills": [
-        { "skill_id": "T11.S1", "skill_name": "Modelar situação com função exponencial e resolver interseções", "prerequisites": [] },
-        { "skill_id": "T11.S2", "skill_name": "Modelar problema com função logarítmica e resolver equações", "prerequisites": [] },
-        { "skill_id": "T11.S3", "skill_name": "Analisar modelo trigonométrico", "prerequisites": [] },
-        { "skill_id": "T11.S4", "skill_name": "Resolver equações associadas à taxa média de variação", "prerequisites": [] }
+        {
+          "skill_id": "T10.S1",
+          "skill_name": "Aplicação direta de Bolzano–Cauchy (f(x)=0)",
+          "prerequisites": [],
+          "lesson_slug": "bolzano-cauchy-aplicacao-direta"
+        },
+        {
+          "skill_id": "T10.S2",
+          "skill_name": "Transformar para h(x)=0 (equações e interseções)",
+          "prerequisites": [
+            "T10.S1"
+          ],
+          "lesson_slug": "bolzano-cauchy-transformar-hx-zero"
+        },
+        {
+          "skill_id": "T10.S4",
+          "skill_name": "Exercícios–Modelo: Teorema de Bolzano–Cauchy",
+          "prerequisites": [],
+          "is_model": true
+        }
       ]
     }
   ]

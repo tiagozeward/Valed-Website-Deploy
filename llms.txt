@@ -17,7 +17,7 @@
 - Alunos do 12.º ano que preparam o Exame Nacional de Matemática A em Portugal.
 - Explicadores e professores de Matemática A que querem dar aulas com dados reais sobre cada aluno.
 
-## Matéria coberta (11 tópicos, 203 competências)
+## Matéria coberta (10 tópicos)
 
 - Números Reais e Equações
 - Probabilidades e Combinatória
@@ -29,7 +29,6 @@
 - Sucessões
 - Derivadas
 - Teorema de Bolzano
-- Calculadora
 
 ## Páginas principais
 

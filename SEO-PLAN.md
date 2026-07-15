@@ -52,7 +52,9 @@ title/description/robots.
 
 - [x] **Guia do Exame hub** (`/guia-exame-matematica-a.html`) — the pillar page, links
       to every topic.
-- [x] **Topic pages** generated from `data/mat_a_knowledge_graph.json` (11 domains),
+- [x] **Topic pages** generated from `data/mat_a_knowledge_graph.json` (10 domains,
+      synced from the app's canonical knowledge graph; lists only skills that have a
+      lesson in the app),
       each targeting a real topic query, each with `Article`/`LearningResource` +
       breadcrumb schema, all linked from the hub and listed in the sitemap.
 - [x] **`llms.txt`** — plain-text summary of what Valed is, for AI crawlers.
@@ -73,7 +75,7 @@ matemática a, limites 12º ano, trigonometria exame, probabilidades e combinat�
 
 **New files:** `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html`,
 `para-tutores.html`, `guia-exame-matematica-a.html`, `assets/og-image.png`
-(+ `assets/og-image.html` source), and 11 topic pages under `exame-matematica-a/`.
+(+ `assets/og-image.html` source), and 10 topic pages under `exame-matematica-a/`.
 
 **Edited:** `index.html` (title/desc/canonical/OG/Twitter + Organization,
 EducationalOrganization, WebSite, Course & FAQPage JSON-LD + visible FAQ section +
