@@ -1,0 +1,46 @@
+# Valed
+
+> Valed é uma plataforma portuguesa de preparação para o Exame Nacional de
+> Matemática A (12.º ano). Combina lições interativas, prática adaptada ao nível
+> de cada aluno e um tutor de inteligência artificial disponível 24 horas por dia.
+> Cobre todo o programa do exame. Atualmente em beta aberta e totalmente grátis.
+
+## O que o Valed oferece
+
+- Lições interativas de toda a matéria de Matemática A do ensino secundário.
+- Prática adaptativa ao nível de cada aluno.
+- Um tutor de IA que, em vez de dar a resposta, guia o aluno passo a passo até compreender (método socrático).
+- Sessões com tutores e explicadores (área para tutores a abrir em breve).
+
+## Público
+
+- Alunos do 12.º ano que preparam o Exame Nacional de Matemática A em Portugal.
+- Explicadores e professores de Matemática A que querem dar aulas com dados reais sobre cada aluno.
+
+## Matéria coberta (11 tópicos, 203 competências)
+
+- Números Reais e Equações
+- Probabilidades e Combinatória
+- Estatística
+- Geometria e Espaço
+- Trigonometria e Geometria no Plano
+- Números Complexos
+- Limites
+- Sucessões
+- Derivadas
+- Teorema de Bolzano
+- Calculadora
+
+## Páginas principais
+
+- Página inicial (alunos): https://valed.ai/
+- Guia do Exame de Matemática A (todos os tópicos): https://valed.ai/guia-exame-matematica-a.html
+- Para tutores: https://valed.ai/para-tutores.html
+- Criar conta (beta grátis): https://valed.ai/auth/register
+
+## Factos
+
+- Preço: grátis (beta aberta).
+- Língua: português de Portugal (pt-PT).
+- País servido: Portugal.
+- Contacto: hello@valed.ai

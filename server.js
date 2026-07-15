@@ -21,7 +21,7 @@ const contentTypes = {
   ".woff2": "font/woff2"
 };
 
-function sendFile(res, filePath) {
+function sendFile(res, filePath, statusCode = 200) {
   const ext = path.extname(filePath).toLowerCase();
   const contentType = contentTypes[ext] || "application/octet-stream";
 
@@ -32,11 +32,26 @@ function sendFile(res, filePath) {
       return;
     }
 
-    res.writeHead(200, {
+    res.writeHead(statusCode, {
       "Content-Type": contentType,
       "Cache-Control": "public, max-age=3600"
     });
     res.end(data);
+  });
+}
+
+// Serve a real 404 for unknown paths so search engines don't index infinite
+// duplicate URLs (previously every unknown path returned index.html with a 200,
+// creating soft-404s). Falls back to a plain body if 404.html is absent.
+function send404(res) {
+  const notFoundPage = path.join(rootDir, "404.html");
+  fs.stat(notFoundPage, (error, stats) => {
+    if (!error && stats.isFile()) {
+      sendFile(res, notFoundPage, 404);
+      return;
+    }
+    res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end("Not found");
   });
 }
 
@@ -58,7 +73,26 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    sendFile(res, path.join(rootDir, "index.html"));
+    // Directory request (e.g. "/") → serve its index.html.
+    if (!error && stats.isDirectory()) {
+      sendFile(res, path.join(filePath, "index.html"));
+      return;
+    }
+
+    // Extensionless path that maps to a real .html file (e.g. /para-tutores).
+    if (!path.extname(safePath)) {
+      const htmlPath = path.join(rootDir, safePath.replace(/\/$/, "") + ".html");
+      fs.stat(htmlPath, (htmlError, htmlStats) => {
+        if (!htmlError && htmlStats.isFile()) {
+          sendFile(res, htmlPath);
+          return;
+        }
+        send404(res);
+      });
+      return;
+    }
+
+    send404(res);
   });
 });
 

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<!-- Build source for assets/og-image.png (1200x630 social share). Not a real page. -->
+<meta name="robots" content="noindex, nofollow">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=DM+Sans:wght@400;500;600&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; }
+  body {
+    font-family:'DM Sans',sans-serif;
+    background:#F5F5F2;
+    color:#111110;
+    position:relative;
+    overflow:hidden;
+  }
+  /* subtle paper grid */
+  .grid {
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(17,17,16,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17,17,16,.035) 1px, transparent 1px);
+    background-size:48px 48px;
+  }
+  .lime-blob {
+    position:absolute; right:-120px; top:-120px;
+    width:520px; height:520px; border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #BDFD50, #BDFD50 40%, rgba(189,253,80,0) 72%);
+    filter:blur(6px);
+  }
+  .wrap { position:absolute; inset:0; padding:76px 88px; display:flex; flex-direction:column; justify-content:space-between; }
+  .logo { display:flex; align-items:center; gap:16px; font-family:'Domine',serif; font-weight:600; font-size:40px; letter-spacing:-.5px; }
+  .v {
+    width:56px; height:56px; border-radius:14px; background:#111110; color:#BDFD50;
+    display:flex; align-items:center; justify-content:center; font-family:'Domine',serif; font-weight:700; font-size:36px;
+  }
+  h1 {
+    font-family:'Domine',serif; font-weight:600; font-size:88px; line-height:1.02; letter-spacing:-1.5px; max-width:900px;
+  }
+  h1 em { font-style:italic; color:#5A8200; }
+  .sub { font-size:30px; color:#6B6B67; margin-top:26px; max-width:760px; line-height:1.35; }
+  .foot { display:flex; align-items:center; gap:18px; }
+  .pill {
+    background:#BDFD50; color:#111110; font-weight:600; font-size:26px;
+    padding:14px 28px; border-radius:999px;
+  }
+  .url { font-size:28px; color:#111110; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="lime-blob"></div>
+  <div class="wrap">
+    <div class="logo"><span class="v">V</span> Valed</div>
+    <div>
+      <h1>Arrasa no exame de <em>Matemática&nbsp;A.</em></h1>
+      <p class="sub">Lições interativas, prática ao teu nível e um tutor de IA sempre disponível. Toda a matéria do exame nacional.</p>
+    </div>
+    <div class="foot">
+      <span class="pill">Beta grátis</span>
+      <span class="url">valed.ai</span>
+    </div>
+  </div>
+</body>
+</html>
