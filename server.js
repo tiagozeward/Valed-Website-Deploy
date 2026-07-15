@@ -4,6 +4,7 @@ const path = require("path");
 
 const port = Number(process.env.PORT) || 3000;
 const rootDir = __dirname;
+const APP_ORIGIN = "https://app.valed.ai";
 
 const contentTypes = {
   ".html": "text/html; charset=utf-8",
@@ -19,6 +20,37 @@ const contentTypes = {
   ".ico": "image/x-icon",
   ".woff": "font/woff",
   ".woff2": "font/woff2"
+};
+
+// Product SPA paths that used to live on valed.ai — send them to app.valed.ai
+// so bookmarks and old emails keep working after marketing owns the apex.
+const APP_PREFIXES = [
+  "/auth",
+  "/valed",
+  "/admin",
+  "/session",
+  "/tutor",
+  "/my-sessions",
+  "/tutor-sessions",
+  "/tutor-profile",
+  "/user-profile",
+  "/session-request",
+  "/sessoes",
+  "/marketplace",
+  "/dashboard",
+  "/change-email",
+  "/forgot-password",
+  "/verify-email",
+  "/reset-password",
+  "/settings"
+];
+
+const APP_EXACT = new Set(["/index", "/login", "/register"]);
+
+const APP_PATH_REWRITE = {
+  "/login": "/auth/login",
+  "/register": "/auth/register",
+  "/index": "/"
 };
 
 function sendFile(res, filePath, statusCode = 200) {
@@ -55,8 +87,34 @@ function send404(res) {
   });
 }
 
+function shouldRedirectToApp(pathname) {
+  if (APP_EXACT.has(pathname)) return true;
+  return APP_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(prefix + "/")
+  );
+}
+
+function redirectToApp(res, pathname, search) {
+  const rewritten = APP_PATH_REWRITE[pathname] || pathname;
+  const location = APP_ORIGIN + rewritten + (search || "");
+  res.writeHead(302, {
+    Location: location,
+    "Cache-Control": "no-store"
+  });
+  res.end();
+}
+
 const server = http.createServer((req, res) => {
-  const reqPath = decodeURIComponent((req.url || "/").split("?")[0]);
+  const rawUrl = req.url || "/";
+  const qIndex = rawUrl.indexOf("?");
+  const reqPath = decodeURIComponent(qIndex === -1 ? rawUrl : rawUrl.slice(0, qIndex));
+  const search = qIndex === -1 ? "" : rawUrl.slice(qIndex);
+
+  if (shouldRedirectToApp(reqPath)) {
+    redirectToApp(res, reqPath, search);
+    return;
+  }
+
   const normalizedPath = reqPath === "/" ? "/index.html" : reqPath;
   const safePath = path.normalize(normalizedPath).replace(/^(\.\.[/\\])+/, "");
   const filePath = path.join(rootDir, safePath);
