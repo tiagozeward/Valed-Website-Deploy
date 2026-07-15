@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valed — 2.ª Fase · Matemática A</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════
+   Valed — Ad landing (2.ª Fase · Matemática A)
+   Standalone, self-contained page built to be screen-recorded.
+   Reuses the Valed brand tokens (lime / paper / ink, Domine + DM Sans).
+   Not wired into the site — open directly in a browser and scroll.
+══════════════════════════════════════════════════════════════ */
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --lime:#BDFD50; --limed:#5A8200; --limebg:#F2FBDC;
+  --teal:#0ABFB0; --tealbg:#E8FAF8;
+  --orange:#FF6B2B; --orangebg:#FFF0EA;
+  --bg:#F5F5F2; --white:#FFFFFF;
+  --s2:#F0F0ED; --border:#E8E8E4; --borderlt:#EFEFEB;
+  --text:#111110; --t2:#6B6B67; --t3:#A8A8A4;
+  --sh:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.03);
+  --sh-md:0 4px 20px rgba(0,0,0,.07),0 1px 6px rgba(0,0,0,.04);
+  --sh-lg:0 16px 56px rgba(0,0,0,.1),0 4px 16px rgba(0,0,0,.05);
+}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+em{font-style:normal;}
+a{text-decoration:none;color:inherit;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:66px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(20px,5vw,56px);
+  background:rgba(245,245,242,.72);
+  backdrop-filter:saturate(1.4) blur(14px);
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease, background .3s ease;
+}
+nav.scrolled{border-bottom-color:var(--border);}
+.nav-logo{display:inline-flex;align-items:center;}
+.nav-logo svg{height:30px;width:auto;display:block;}
+.nav-cta{
+  background:var(--text);color:var(--white);font-size:14px;font-weight:600;
+  padding:10px 20px;border-radius:8px;transition:all .2s;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.nav-cta:hover{background:#2a2a28;transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.15);}
+
+/* ── shared layout ── */
+.section{padding:clamp(72px,11vh,128px) clamp(20px,5vw,56px);position:relative;}
+.wrap{max-width:1080px;margin:0 auto;}
+.eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--t3);margin-bottom:16px;display:flex;align-items:center;gap:9px;
+}
+.eyebrow.lime{color:var(--limed);}
+.eyebrow.teal{color:var(--teal);}
+.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+.h2{
+  font-family:'Domine',serif;font-weight:400;
+  font-size:clamp(30px,4.4vw,54px);line-height:1.08;letter-spacing:-.03em;
+}
+.h2 em{color:var(--limed);}
+.lead{
+  font-size:clamp(16px,1.9vw,20px);line-height:1.55;color:var(--t2);
+  max-width:52ch;margin-top:18px;letter-spacing:-.01em;
+}
+
+/* ── reveal on scroll ── */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+.rv.in{opacity:1;transform:none;}
+.rv-d1{transition-delay:.08s;} .rv-d2{transition-delay:.16s;} .rv-d3{transition-delay:.24s;}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1 !important;transform:none !important;}}
+
+/* ══════ HERO ══════ */
+#hero{
+  min-height:100vh;min-height:100dvh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:110px clamp(20px,5vw,56px) 80px;
+  position:relative;overflow:hidden;
+}
+.hero-aurora{position:absolute;inset:0;z-index:0;pointer-events:none;filter:blur(64px);opacity:.5;}
+.hero-aurora span{position:absolute;border-radius:50%;}
+.hero-aurora .a1{width:440px;height:440px;background:var(--lime);top:-120px;right:-60px;opacity:.55;animation:float1 14s ease-in-out infinite;}
+.hero-aurora .a2{width:360px;height:360px;background:var(--teal);bottom:-120px;left:-80px;opacity:.28;animation:float2 17s ease-in-out infinite;}
+.hero-aurora .a3{width:300px;height:300px;background:var(--orange);bottom:40px;right:10%;opacity:.16;animation:float1 20s ease-in-out infinite reverse;}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-30px,26px) scale(1.08);}}
+@keyframes float2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(34px,-22px) scale(1.1);}}
+.hero-inner{position:relative;z-index:2;max-width:760px;margin:0 auto;text-align:center;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:13px;font-weight:600;letter-spacing:-.005em;
+  color:var(--limed);background:var(--limebg);
+  border:1px solid rgba(90,130,0,.2);
+  padding:8px 16px;border-radius:999px;margin-bottom:26px;
+}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--limed);
+  box-shadow:0 0 0 0 rgba(90,130,0,.45);animation:pulse 2.4s ease-out infinite;flex:none;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(90,130,0,.45);}70%{box-shadow:0 0 0 8px rgba(90,130,0,0);}100%{box-shadow:0 0 0 0 rgba(90,130,0,0);}}
+.hero-h1{
+  font-family:'Domine',serif;font-weight:400;
+  font-size:clamp(40px,6.4vw,80px);line-height:1.04;letter-spacing:-.035em;
+}
+.hero-h1 em{color:var(--limed);}
+.hero-sub{
+  font-size:clamp(17px,2vw,21px);line-height:1.5;color:var(--t2);
+  max-width:60ch;margin:24px auto 0;letter-spacing:-.01em;
+}
+/* countdown */
+.countdown{margin:38px auto 0;display:flex;flex-direction:column;align-items:center;gap:12px;}
+.cd-label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);}
+.cd-clock{display:inline-flex;align-items:flex-end;gap:clamp(10px,1.6vw,20px);}
+.cd-unit{display:inline-flex;flex-direction:column;align-items:center;gap:4px;min-width:clamp(56px,7vw,78px);
+  background:var(--white);border:1px solid var(--border);border-radius:14px;padding:14px 8px 10px;box-shadow:var(--sh);}
+.cd-num{font-family:'Domine',serif;font-size:clamp(30px,4vw,50px);font-weight:400;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+.cd-lbl{font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--t3);}
+.cd-done{display:none;font-size:clamp(17px,2vw,20px);font-weight:500;color:var(--text);max-width:44ch;}
+.countdown.is-done .cd-clock,.countdown.is-done .cd-label{display:none;}
+.countdown.is-done .cd-done{display:block;}
+.hero-ctas{margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-ink{background:var(--text);color:var(--white);font-size:15px;font-weight:600;
+  padding:15px 32px;border-radius:9px;display:inline-flex;align-items:center;gap:9px;transition:all .25s;}
+.btn-ink:hover{background:#2a2a28;transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.16);}
+.btn-lime{background:var(--lime);color:var(--text);font-size:15px;font-weight:700;
+  padding:15px 34px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;transition:all .2s;box-shadow:0 4px 20px rgba(189,253,80,.3);}
+.btn-lime:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(189,253,80,.42);}
+.scroll-hint{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--t3);font-size:11px;letter-spacing:.12em;text-transform:uppercase;}
+.scroll-hint svg{width:20px;height:20px;animation:bob 1.8s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+
+/* ══════ generic feature grid ══════ */
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;}
+.feature.rev .feat-copy{order:2;}
+@media (max-width:820px){.feature{grid-template-columns:1fr;}.feature.rev .feat-copy{order:0;}}
+
+/* stage card shared */
+.stage{position:relative;background:var(--white);border:1px solid var(--border);border-radius:22px;
+  box-shadow:var(--sh-lg);overflow:hidden;min-height:340px;}
+.stage-aurora{position:absolute;inset:0;filter:blur(52px);opacity:.34;pointer-events:none;}
+.stage-aurora span{position:absolute;border-radius:50%;}
+.stage-aurora .b1{width:220px;height:220px;background:var(--lime);top:-70px;right:-40px;}
+.stage-aurora .b2{width:180px;height:180px;background:var(--teal);bottom:-60px;left:-30px;opacity:.6;}
+
+/* ── Cobertura: exam topic list ── */
+.cov-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--borderlt);position:relative;z-index:2;}
+.cov-title{font-size:13px;font-weight:600;color:var(--t2);}
+.cov-pct{font-family:'Domine',serif;font-size:15px;color:var(--limed);}
+.cov-scroll{position:relative;height:300px;overflow:hidden;z-index:2;-webkit-mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(180deg,transparent,#000 14%,#000 86%,transparent);}
+.cov-track{display:flex;flex-direction:column;gap:10px;padding:16px 22px;animation:covScroll 26s linear infinite;}
+.stage:hover .cov-track{animation-play-state:paused;}
+@keyframes covScroll{0%{transform:translateY(0);}100%{transform:translateY(-50%);}}
+.cov-item{display:flex;align-items:center;gap:12px;padding:11px 14px;background:var(--bg);border:1px solid var(--borderlt);border-radius:11px;}
+.cov-check{flex:none;width:22px;height:22px;border-radius:6px;background:var(--limebg);display:flex;align-items:center;justify-content:center;}
+.cov-check svg{width:13px;height:13px;stroke:var(--limed);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.cov-name{font-size:14.5px;font-weight:500;}
+.cov-tag{margin-left:auto;font-size:11px;font-weight:600;color:var(--t3);letter-spacing:.03em;}
+
+/* ── Tutor IA chat ── */
+.chat{position:relative;z-index:2;padding:22px;display:flex;flex-direction:column;gap:14px;min-height:340px;}
+.chat-q{align-self:flex-end;max-width:80%;background:var(--text);color:#fff;padding:12px 16px;border-radius:14px 14px 4px 14px;font-size:14.5px;line-height:1.4;box-shadow:var(--sh);}
+.chat-a{align-self:flex-start;max-width:92%;background:var(--white);border:1px solid var(--border);border-radius:14px 14px 14px 4px;padding:16px 18px;box-shadow:var(--sh);opacity:0;transform:translateY(10px);transition:.5s;}
+.chat-a.show{opacity:1;transform:none;}
+.chat-a-head{display:flex;align-items:center;gap:9px;margin-bottom:12px;}
+.chat-badge{width:26px;height:26px;border-radius:8px;background:var(--limebg);display:flex;align-items:center;justify-content:center;}
+.chat-badge svg{width:15px;height:15px;fill:var(--limed);}
+.chat-a-title{font-size:13px;font-weight:700;letter-spacing:-.01em;}
+.step{display:flex;gap:12px;padding:9px 0;opacity:0;transform:translateX(-8px);transition:.45s;}
+.step.show{opacity:1;transform:none;}
+.step-n{flex:none;width:22px;height:22px;border-radius:50%;background:var(--bg);border:1px solid var(--border);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;color:var(--t2);}
+.step-t{font-size:14px;line-height:1.45;color:var(--text);}
+.step-t b{color:var(--limed);}
+.math{font-family:'Domine',serif;font-style:italic;}
+.typing{display:inline-flex;gap:4px;align-self:flex-start;padding:12px 16px;background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:var(--sh);}
+.typing span{width:7px;height:7px;border-radius:50%;background:var(--t3);animation:blink 1.2s infinite;}
+.typing span:nth-child(2){animation-delay:.2s;}.typing span:nth-child(3){animation-delay:.4s;}
+@keyframes blink{0%,60%,100%{opacity:.25;transform:translateY(0);}30%{opacity:1;transform:translateY(-4px);}}
+
+/* ── interactive derivative graph ── */
+.graph-stage{padding:20px;position:relative;z-index:2;}
+.graph-svg{width:100%;height:auto;display:block;touch-action:none;cursor:ew-resize;}
+.g-axis{stroke:var(--border);stroke-width:1.5;}
+.g-grid{stroke:var(--borderlt);stroke-width:1;}
+.g-curve{fill:none;stroke:var(--text);stroke-width:3;stroke-linecap:round;}
+.g-tangent{stroke:var(--limed);stroke-width:2.5;stroke-linecap:round;}
+.g-dot{fill:var(--lime);stroke:var(--text);stroke-width:2.5;}
+.g-drop{stroke:var(--t3);stroke-width:1.2;stroke-dasharray:4 4;}
+.graph-readout{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;}
+.ro{flex:1;min-width:120px;background:var(--bg);border:1px solid var(--borderlt);border-radius:12px;padding:12px 14px;}
+.ro-l{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);}
+.ro-v{font-family:'Domine',serif;font-size:24px;letter-spacing:-.02em;margin-top:3px;}
+.ro-v em{color:var(--limed);}
+.graph-hint{text-align:center;font-size:12px;color:var(--t3);margin-top:12px;}
+.graph-hint b{color:var(--limed);}
+
+/* ── progresso ── */
+.prog{position:relative;z-index:2;padding:24px;}
+.prog-kpis{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px;}
+.kpi{background:var(--bg);border:1px solid var(--borderlt);border-radius:14px;padding:16px 18px;}
+.kpi-l{font-size:12px;font-weight:600;color:var(--t2);}
+.kpi-n{font-family:'Domine',serif;font-size:clamp(28px,3.4vw,40px);line-height:1;margin-top:8px;letter-spacing:-.02em;}
+.kpi-n small{font-size:.5em;color:var(--t3);}
+.bar{height:8px;border-radius:99px;background:var(--s2);overflow:hidden;margin-top:12px;}
+.bar-fill{height:100%;border-radius:99px;background:var(--lime);width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1);}
+.bar-fill.teal{background:var(--teal);}
+.prog-list{display:flex;flex-direction:column;gap:13px;}
+.prog-sect{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);margin-bottom:2px;}
+.pd{}
+.pd-top{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;}
+.pd-top span:last-child{font-weight:600;color:var(--t2);font-variant-numeric:tabular-nums;}
+.bar-sm{height:6px;}
+
+/* ── stats strip ── */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,40px);text-align:center;}
+@media (max-width:640px){.stats{grid-template-columns:1fr;gap:28px;}}
+.stat-n{font-family:'Domine',serif;font-size:clamp(38px,6vw,64px);line-height:1;letter-spacing:-.03em;}
+.stat-n em{color:var(--limed);}
+.stat-l{font-size:14px;color:var(--t2);margin-top:8px;letter-spacing:-.01em;}
+
+/* ── final CTA ── */
+#cta{background:var(--text);color:#fff;text-align:center;overflow:hidden;position:relative;}
+#cta .cta-aurora{position:absolute;inset:0;filter:blur(70px);opacity:.3;pointer-events:none;}
+#cta .cta-aurora span{position:absolute;border-radius:50%;}
+#cta .cta-aurora .c1{width:380px;height:380px;background:var(--lime);top:-100px;left:10%;}
+#cta .cta-aurora .c2{width:300px;height:300px;background:var(--teal);bottom:-120px;right:12%;opacity:.5;}
+.cta-h{font-family:'Domine',serif;font-weight:400;font-size:clamp(34px,5vw,62px);line-height:1.06;letter-spacing:-.03em;position:relative;z-index:2;}
+.cta-h em{color:var(--lime);}
+.cta-sub{color:rgba(255,255,255,.72);font-size:clamp(16px,1.9vw,20px);margin:20px auto 0;max-width:46ch;position:relative;z-index:2;}
+.cta-free{margin-top:16px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--lime);position:relative;z-index:2;}
+#cta .hero-ctas{position:relative;z-index:2;}
+
+/* footer */
+footer{background:var(--text);border-top:1px solid rgba(255,255,255,.08);padding:34px 40px;text-align:center;}
+.footer-logo svg{height:26px;width:auto;}
+.footer-logo svg path{fill:#fff;}
+.footer-note{color:rgba(255,255,255,.4);font-size:12.5px;margin-top:12px;}
+</style>
+</head>
+<body>
+
+<!-- inline Valed wordmark (from assets/valed-logo.svg) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="valed-mark" viewBox="0 0 1024 544">
+    <path d="M823.012207,376.359314 C819.350525,376.351410 816.181702,376.444000 813.022217,376.313324 C807.958557,376.103821 805.084717,373.254913 804.714294,368.220276 C804.616760,366.893982 804.658325,365.556488 804.657959,364.224121 C804.643860,315.754730 804.626465,267.285339 804.625610,218.815933 C804.625427,209.314056 807.259216,206.706711 816.794556,206.707764 C840.446228,206.710373 864.111450,206.234177 887.745972,206.878387 C912.848938,207.562576 935.070374,215.855225 952.024536,235.310364 C963.092102,248.010605 968.907166,263.106476 970.779602,279.698730 C973.414001,303.042786 969.409973,324.901245 954.799866,343.926270 C938.486755,365.168884 916.176392,375.207733 889.961243,376.152893 C867.836853,376.950592 845.661926,376.344482 823.012207,376.359314 M925.949829,308.435944 C928.269958,300.000854 928.858337,291.518616 927.725281,282.772278 C925.118408,262.648407 912.605591,248.518982 892.967163,244.712860 C878.955566,241.997269 864.731018,243.776382 850.605225,243.440598 C847.160461,243.358719 847.290405,246.012634 847.290405,248.402267 C847.290405,277.220428 847.344971,306.038757 847.233826,334.856476 C847.219543,338.565277 848.459351,339.818970 852.146912,339.755920 C862.971436,339.570923 873.806702,339.897156 884.627319,339.617401 C905.013916,339.090363 919.116943,328.520935 925.949829,308.435944 z"/>
+    <path d="M177.005157,371.172485 C165.749588,365.157013 158.630432,355.776917 153.490631,344.930756 C141.653580,319.951965 130.149475,294.815247 118.543053,269.727417 C114.375359,260.718781 109.259232,252.738739 98.825317,249.963516 C96.685440,249.394333 94.559082,249.301971 92.397385,249.298889 C83.067482,249.285599 73.736031,249.390411 64.408165,249.250443 C58.060131,249.155197 54.827023,245.921234 54.724392,239.662186 C54.596027,231.833801 54.598980,224.000381 54.718166,216.171783 C54.803326,210.578384 57.433044,206.912766 62.470924,206.917389 C79.599525,206.933075 96.817963,205.223221 113.838448,208.087967 C131.916763,211.130768 143.211548,222.852936 150.625427,238.777725 C161.307510,261.722534 171.714996,284.795074 182.304138,307.783417 C184.392380,312.316833 186.500748,316.879852 189.073517,321.143372 C194.880280,330.766144 203.569122,334.856415 214.790421,334.005005 C218.478683,333.725159 218.480927,331.597687 218.482681,328.896423 C218.502884,297.741974 218.576645,266.587555 218.627991,235.433121 C218.638428,229.102142 218.552719,222.770401 218.624069,216.440292 C218.697662,209.913422 221.544937,206.895615 228.028946,206.757431 C235.522842,206.597748 243.024109,206.625885 250.519455,206.744217 C256.669220,206.841309 259.577881,209.741577 260.087616,215.925812 C260.169525,216.919617 260.137756,217.923843 260.137482,218.923248 C260.123291,266.739227 260.107819,314.555176 260.086395,362.371155 C260.085663,364.036530 260.115601,365.709839 259.973389,367.365906 C259.438660,373.593079 257.253906,376.109650 250.957260,376.500549 C237.483475,377.336945 223.984283,376.890198 210.495041,376.720032 C206.666092,376.671753 202.836792,376.367615 199.010910,376.419678 C191.346725,376.524017 184.176102,374.689270 177.005157,371.172485 z"/>
+    <path d="M415.148865,239.941315 C432.537201,281.260406 449.785645,322.226898 467.016418,363.200806 C467.595459,364.577820 468.079254,366.007751 468.464111,367.451202 C469.750000,372.274078 467.432373,376.076416 462.539948,376.201080 C452.552277,376.455597 442.551483,376.378113 432.559967,376.209229 C428.580322,376.141968 426.373413,373.362671 424.953552,369.907959 C422.042389,362.824585 419.005280,355.789368 416.274414,348.637177 C415.097656,345.555298 413.405731,344.238464 410.011963,344.252869 C384.190948,344.362671 358.369049,344.365021 332.548004,344.260101 C329.365234,344.247192 327.682312,345.389771 326.603882,348.304474 C324.120300,355.016602 321.455933,361.662872 318.797699,368.308990 C316.212555,374.772614 313.997955,376.294250 307.175232,376.329346 C299.345673,376.369659 291.515686,376.371368 283.686096,376.336548 C274.730347,376.296692 272.205627,372.782257 275.630096,364.360229 C283.467957,345.084076 291.536835,325.901642 299.549438,306.696808 C309.742157,282.266479 320.347076,258.000061 330.088654,233.391571 C341.670105,204.135300 375.693848,201.979370 393.917877,212.078308 C400.643890,215.805588 405.962646,220.984665 409.509796,227.826248 C411.500244,231.665375 413.184174,235.663422 415.148865,239.941315 M395.537445,297.894958 C391.106445,287.139465 386.696167,276.375336 382.234222,265.632690 C380.450684,261.338623 378.882660,256.907928 376.627228,252.868439 C373.567108,247.387833 368.749847,247.475967 365.327209,252.756332 C364.610260,253.862381 364.062500,255.097794 363.571014,256.327271 C357.526184,271.449860 351.478668,286.571564 345.517487,301.727203 C344.827972,303.480194 343.502747,305.243500 344.444855,307.296967 C362.469635,307.296967 380.393311,307.296967 398.396515,307.296967 C398.292328,303.679840 396.701691,301.255920 395.537445,297.894958 z"/>
+    <path d="M715.999878,309.383118 C707.834351,309.382233 700.165222,309.520325 692.504883,309.320221 C688.693909,309.220673 687.046631,310.428528 687.187439,314.446259 C687.420715,321.103760 687.462524,327.784241 687.179382,334.437744 C686.998047,338.699554 688.696655,339.800018 692.712280,339.777405 C717.874390,339.635742 743.037659,339.690094 768.200500,339.699554 C777.442871,339.703033 780.164429,342.372314 780.219666,351.494263 C780.252014,356.826263 780.348267,362.165649 780.124023,367.489441 C779.867859,373.569489 777.046570,376.299408 771.002441,376.307373 C732.008484,376.358887 693.014404,376.360535 654.020325,376.322327 C647.720337,376.316162 644.681946,373.425201 644.674011,367.223419 C644.609680,316.897827 644.601868,266.572113 644.647522,216.246506 C644.653259,209.912170 647.849731,206.747772 654.294006,206.737122 C692.788025,206.673538 731.282288,206.678864 769.776306,206.740997 C776.647522,206.752090 779.549194,209.444962 779.940308,216.352341 C780.269348,222.165619 780.214172,228.018890 779.984375,233.840851 C779.710388,240.784378 776.922363,243.345688 769.940002,243.355515 C744.610596,243.391205 719.281006,243.359253 693.951538,243.364243 C687.346985,243.365555 687.295837,243.425079 687.273682,250.091125 C687.255981,255.423553 687.262878,260.756104 687.269897,266.088593 C687.278687,272.792175 687.283508,272.807312 693.799866,272.806061 C713.463562,272.802307 733.127197,272.773926 752.790894,272.778717 C764.016052,272.781464 766.248169,275.022156 766.268555,286.193268 C766.277039,290.859222 766.358582,295.527069 766.255066,300.190674 C766.115662,306.472778 763.262512,309.334595 756.993286,309.365021 C743.495850,309.430481 729.997742,309.383545 715.999878,309.383118 z"/>
+    <path d="M621.924805,357.048035 C621.763672,361.518402 621.811951,365.528931 621.378723,369.486755 C620.890076,373.950836 618.083923,376.228943 613.590454,376.303345 C609.926636,376.364014 606.261414,376.356537 602.596863,376.356995 C567.282776,376.361389 531.968750,376.370056 496.654694,376.355682 C488.046173,376.352173 485.632538,373.991882 485.624237,365.400970 C485.582642,322.268829 485.560608,279.136719 485.589874,236.004593 C485.594513,229.186996 484.593048,222.386612 485.529724,215.547012 C486.351227,209.547989 488.887329,206.842606 494.873413,206.736801 C502.699982,206.598450 510.532196,206.616394 518.359497,206.732788 C524.979858,206.831223 528.162170,209.987518 528.213928,216.638947 C528.316284,229.797607 528.238892,242.957657 528.239014,256.117126 C528.239258,281.936340 528.351440,307.756470 528.144287,333.574005 C528.106018,338.337769 529.434631,339.860291 534.298401,339.815704 C558.783020,339.591248 583.270752,339.712677 607.757385,339.707825 C619.586731,339.705475 621.796326,341.862366 621.916626,353.566528 C621.926880,354.565887 621.920410,355.565460 621.924805,357.048035 z"/>
+  </symbol>
+</svg>
+
+<!-- ══════ NAV ══════ -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo" aria-label="Valed"><svg><use href="#valed-mark"/></svg></a>
+  <a href="https://valed.ai/auth/register" class="nav-cta">Começar grátis</a>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section id="hero">
+  <div class="hero-aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  <div class="hero-inner">
+    <span class="hero-badge rv in"><span class="hero-badge-dot"></span>Exame Nacional · <strong>2.ª Fase</strong> · Matemática A</span>
+    <h1 class="hero-h1 rv in rv-d1">Recupera tudo<br>na <em>2.ª fase.</em></h1>
+    <p class="hero-sub rv in rv-d2">
+      Poucos dias para virar a nota. Toda a matéria de Matemática A,
+      prática ao teu nível e um tutor de IA que te explica cada passo —
+      de graça, na semana que mais conta.
+    </p>
+
+    <div class="countdown rv in rv-d2" id="countdown">
+      <span class="cd-label">Faltam para o exame · 2.ª fase</span>
+      <div class="cd-clock">
+        <span class="cd-unit"><b class="cd-num" data-cd="days">–</b><span class="cd-lbl">dias</span></span>
+        <span class="cd-unit"><b class="cd-num" data-cd="hours">–</b><span class="cd-lbl">horas</span></span>
+        <span class="cd-unit"><b class="cd-num" data-cd="mins">–</b><span class="cd-lbl">min</span></span>
+        <span class="cd-unit"><b class="cd-num" data-cd="secs">–</b><span class="cd-lbl">seg</span></span>
+      </div>
+      <span class="cd-done">Boa sorte no exame. 🍀 O Valed fica aberto — e grátis.</span>
+    </div>
+
+    <div class="hero-ctas rv in rv-d3">
+      <a href="https://valed.ai/auth/register" class="btn-ink">Entrar na beta grátis
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">Desliza
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14m-7-7 7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ══════ COBERTURA TOTAL ══════ -->
+<section class="section" style="background:var(--white);">
+  <div class="wrap feature">
+    <div class="feat-copy">
+      <div class="eyebrow lime rv"><span class="eyebrow-dot"></span>Cobertura total</div>
+      <h2 class="h2 rv rv-d1"><em>Tudo</em> o que sai na 2.ª fase.</h2>
+      <p class="lead rv rv-d2">
+        Do zero ao preparado. Cada domínio do programa de Matemática A com
+        lições, exercícios e tutoria — construído a partir dos exames
+        nacionais, pergunta a pergunta.
+      </p>
+    </div>
+    <div class="rv rv-d2">
+      <div class="stage">
+        <div class="stage-aurora" aria-hidden="true"><span class="b1"></span><span class="b2"></span></div>
+        <div class="cov-head"><span class="cov-title">Programa · Matemática A (12.º)</span><span class="cov-pct">100% coberto</span></div>
+        <div class="cov-scroll"><div class="cov-track" id="cov-track"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TUTOR IA ══════ -->
+<section class="section">
+  <div class="wrap feature rev">
+    <div class="feat-copy">
+      <div class="eyebrow lime rv"><span class="eyebrow-dot"></span>Tutor de IA</div>
+      <h2 class="h2 rv rv-d1">Um tutor que <em>nunca dorme.</em></h2>
+      <p class="lead rv rv-d2">
+        Treinado especificamente em Matemática A. Explica como o melhor
+        professor que já tiveste — e nunca te dá só a resposta: guia-te
+        passo a passo até seres tu a chegar lá.
+      </p>
+    </div>
+    <div class="rv rv-d2">
+      <div class="stage" id="chat-stage">
+        <div class="stage-aurora" aria-hidden="true"><span class="b1"></span><span class="b2"></span></div>
+        <div class="chat" id="chat"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MATEMÁTICA QUE SE VÊ (interactive graph) ══════ -->
+<section class="section" style="background:var(--white);">
+  <div class="wrap feature">
+    <div class="feat-copy">
+      <div class="eyebrow teal rv"><span class="eyebrow-dot"></span>Aprende a ver</div>
+      <h2 class="h2 rv rv-d1">Matemática que se vê <em>e entende.</em></h2>
+      <p class="lead rv rv-d2">
+        Arrasta a tangente ao longo da curva e vê o declive mudar em tempo
+        real. As derivadas deixam de ser fórmulas — passam a fazer sentido.
+      </p>
+    </div>
+    <div class="rv rv-d2">
+      <div class="stage">
+        <div class="stage-aurora" aria-hidden="true"><span class="b1"></span><span class="b2"></span></div>
+        <div class="graph-stage">
+          <svg class="graph-svg" id="graph" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
+            <g id="grid"></g>
+            <line class="g-axis" x1="30" y1="230" x2="384" y2="230"/>
+            <line class="g-axis" x1="40" y1="20" x2="40" y2="240"/>
+            <path class="g-curve" id="curve"/>
+            <line class="g-drop" id="drop" x1="0" y1="0" x2="0" y2="230"/>
+            <line class="g-tangent" id="tangent" x1="0" y1="0" x2="0" y2="0"/>
+            <circle class="g-dot" id="dot" r="7" cx="0" cy="0"/>
+          </svg>
+          <div class="graph-readout">
+            <div class="ro"><div class="ro-l">Ponto&nbsp;·&nbsp;x</div><div class="ro-v"><span id="ro-x">1.0</span></div></div>
+            <div class="ro"><div class="ro-l">f(x) = x²</div><div class="ro-v"><span id="ro-fx">1.0</span></div></div>
+            <div class="ro"><div class="ro-l">Declive · f'(x)=2x</div><div class="ro-v"><em id="ro-slope">2.0</em></div></div>
+          </div>
+          <div class="graph-hint">Arrasta o ponto <b>lime</b> ao longo da curva</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PROGRESSO ══════ -->
+<section class="section">
+  <div class="wrap feature rev">
+    <div class="feat-copy">
+      <div class="eyebrow lime rv"><span class="eyebrow-dot"></span>Progresso</div>
+      <h2 class="h2 rv rv-d1">Sabe quando estás <em>pronto.</em></h2>
+      <p class="lead rv rv-d2">
+        Domínio por competência, cobertura do exame e uma nota esperada que
+        sobe contigo. Chegas ao dia 2.ª fase sem surpresas.
+      </p>
+    </div>
+    <div class="rv rv-d2">
+      <div class="stage" id="prog-stage">
+        <div class="stage-aurora" aria-hidden="true"><span class="b1"></span><span class="b2"></span></div>
+        <div class="prog">
+          <div class="prog-kpis">
+            <div class="kpi">
+              <div class="kpi-l">Progresso global</div>
+              <div class="kpi-n"><span data-count="68">0</span>%</div>
+              <div class="bar"><div class="bar-fill" data-target="68"></div></div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-l">Nota esperada</div>
+              <div class="kpi-n"><span data-count="18">0</span><small>&nbsp;/ 20</small></div>
+              <div class="bar"><div class="bar-fill teal" data-target="90"></div></div>
+            </div>
+          </div>
+          <div class="prog-sect">Progresso por domínio</div>
+          <div class="prog-list" id="prog-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ STATS ══════ -->
+<section class="section" style="background:var(--white);">
+  <div class="wrap stats">
+    <div class="rv"><div class="stat-n"><em>100%</em></div><div class="stat-l">do programa de Matemática A</div></div>
+    <div class="rv rv-d1"><div class="stat-n"><em>24/7</em></div><div class="stat-l">tutor de IA sempre disponível</div></div>
+    <div class="rv rv-d2"><div class="stat-n"><em>0€</em></div><div class="stat-l">beta aberta, totalmente grátis</div></div>
+  </div>
+</section>
+
+<!-- ══════ CTA FINAL ══════ -->
+<section id="cta" class="section">
+  <div class="cta-aurora" aria-hidden="true"><span class="c1"></span><span class="c2"></span></div>
+  <div class="wrap">
+    <h2 class="cta-h rv">Ainda dá tempo<br>de <em>arrasar.</em></h2>
+    <p class="cta-sub rv rv-d1">Cria conta em segundos e começa a preparar a 2.ª fase agora — com toda a matéria e o teu tutor de IA.</p>
+    <div class="cta-free rv rv-d1">Beta aberta · totalmente grátis</div>
+    <div class="hero-ctas rv rv-d2" style="margin-top:32px;">
+      <a href="https://valed.ai/auth/register" class="btn-lime">Começar grátis
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><svg><use href="#valed-mark"/></svg></div>
+  <div class="footer-note">valed.ai · Matemática A para o ensino secundário português.</div>
+</footer>
+
+<script>
+/* ══════════════ config ══════════════ */
+// 2.ª fase — Exame Nacional de Matemática A. Ajusta a data se necessário.
+var EXAM_DATE = new Date('2026-07-22T09:30:00');
+
+/* ── nav shadow on scroll ── */
+var nav = document.getElementById('nav');
+addEventListener('scroll', function(){ nav.classList.toggle('scrolled', scrollY > 20); }, {passive:true});
+
+/* ── countdown ── */
+(function(){
+  var el = document.getElementById('countdown');
+  function pad(n){ return (n<10?'0':'')+n; }
+  function set(k,v){ var n=el.querySelector('[data-cd="'+k+'"]'); if(n) n.textContent=v; }
+  function tick(){
+    var diff = EXAM_DATE - new Date();
+    if(diff <= 0){ el.classList.add('is-done'); return; }
+    var s=Math.floor(diff/1000);
+    set('days', Math.floor(s/86400));
+    set('hours', pad(Math.floor(s%86400/3600)));
+    set('mins', pad(Math.floor(s%3600/60)));
+    set('secs', pad(s%60));
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ── scroll reveal ── */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:0.18});
+document.querySelectorAll('.rv:not(.in)').forEach(function(el){ io.observe(el); });
+
+/* ── cobertura: exam topics (duplicated for seamless marquee) ── */
+(function(){
+  var topics = [
+    ['Números Reais e Equações','Álgebra'],
+    ['Probabilidades e Combinatória','P & C'],
+    ['Estatística','Dados'],
+    ['Geometria e Espaço','Geometria'],
+    ['Trigonometria e Geometria no Plano','Trig'],
+    ['Números Complexos','ℂ'],
+    ['Funções e Limites','Análise'],
+    ['Sucessões','Análise'],
+    ['Derivadas e Aplicações','Análise'],
+    ['Teorema de Bolzano','Análise'],
+    ['Uso da Calculadora Gráfica','Exame']
+  ];
+  var check = '<span class="cov-check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></span>';
+  function row(t){ return '<div class="cov-item">'+check+'<span class="cov-name">'+t[0]+'</span><span class="cov-tag">'+t[1]+'</span></div>'; }
+  var html = topics.map(row).join('');
+  document.getElementById('cov-track').innerHTML = html + html; // duplicate → loop
+})();
+
+/* ── tutor IA chat: reveal steps once in view ── */
+(function(){
+  var chat = document.getElementById('chat');
+  var built = false;
+  var stepData = [
+    'A pergunta é o <b>declive da tangente</b>. Isso é a derivada no ponto.',
+    'Deriva: se <span class="math">f(x)=x²</span> então <span class="math">f\'(x)=2x</span>.',
+    'Substitui <span class="math">x=1</span>: <span class="math">f\'(1)=2·1=</span> <b>2</b>.'
+  ];
+  function build(){
+    if(built) return; built = true;
+    chat.innerHTML =
+      '<div class="chat-q">Qual é o declive da tangente a <span class="math">f(x)=x²</span> no ponto <span class="math">x=1</span>?</div>'+
+      '<div class="typing" id="typing"><span></span><span></span><span></span></div>';
+    setTimeout(function(){
+      var t = document.getElementById('typing'); if(t) t.remove();
+      var a = document.createElement('div');
+      a.className = 'chat-a';
+      a.innerHTML =
+        '<div class="chat-a-head"><span class="chat-badge"><svg viewBox="0 0 24 24"><path d="M12 2l1.9 5.6L20 9l-5.1 2.2L12 17l-1.9-5.8L5 9l6.1-1.4z"/></svg></span><span class="chat-a-title">Tutor Valed · passo a passo</span></div>'+
+        stepData.map(function(s,i){ return '<div class="step" data-i="'+i+'"><span class="step-n">'+(i+1)+'</span><span class="step-t">'+s+'</span></div>'; }).join('');
+      chat.appendChild(a);
+      requestAnimationFrame(function(){ a.classList.add('show'); });
+      a.querySelectorAll('.step').forEach(function(st,i){
+        setTimeout(function(){ st.classList.add('show'); }, 500 + i*750);
+      });
+    }, 1400);
+  }
+  new IntersectionObserver(function(en){
+    en.forEach(function(e){ if(e.isIntersecting){ build(); } });
+  }, {threshold:0.4}).observe(document.getElementById('chat-stage'));
+})();
+
+/* ── interactive derivative graph: f(x) = x² on [-2.4, 2.4] ── */
+(function(){
+  var svg = document.getElementById('graph');
+  var curve = document.getElementById('curve');
+  var tangent = document.getElementById('tangent');
+  var dot = document.getElementById('dot');
+  var drop = document.getElementById('drop');
+  var grid = document.getElementById('grid');
+  var roX = document.getElementById('ro-x'), roFx = document.getElementById('ro-fx'), roSlope = document.getElementById('ro-slope');
+
+  // world -> screen mapping
+  var X0=40, Y0=230, SX=62, SY=42; // origin px, scale px per unit
+  function px(x){ return X0 + x*SX; }
+  function py(y){ return Y0 - y*SY; }
+  function f(x){ return x*x; }
+  function df(x){ return 2*x; }
+  var XMIN=-0.15, XMAX=4.4; // domain in units shown (right side of parabola arm range)
+
+  // gridlines
+  var g='';
+  for(var gx=0; gx<=4; gx++){ g += '<line class="g-grid" x1="'+px(gx)+'" y1="20" x2="'+px(gx)+'" y2="230"/>'; }
+  for(var gy=1; gy<=5; gy++){ g += '<line class="g-grid" x1="40" y1="'+py(gy)+'" x2="384" y2="'+py(gy)+'"/>'; }
+  grid.innerHTML = g;
+
+  // parabola path (clamped to viewbox height)
+  var d='';
+  for(var i=0;i<=120;i++){
+    var x = XMIN + (XMAX-XMIN)*i/120;
+    var y = f(x);
+    if(py(y) < 18) continue;
+    d += (d?' L':'M') + px(x).toFixed(1) + ' ' + py(y).toFixed(1);
+  }
+  curve.setAttribute('d', d);
+
+  var curX = 1.0, dragging=false, auto=true, dir=1;
+
+  function render(x){
+    x = Math.max(0.2, Math.min(2.35, x));
+    curX = x;
+    var y=f(x), m=df(x);
+    var cx=px(x), cy=py(y);
+    dot.setAttribute('cx',cx); dot.setAttribute('cy',cy);
+    drop.setAttribute('x1',cx); drop.setAttribute('y1',cy); drop.setAttribute('x2',cx); drop.setAttribute('y2',230);
+    // tangent segment
+    var dx=1.1;
+    var x1=x-dx, x2=x+dx;
+    tangent.setAttribute('x1',px(x1)); tangent.setAttribute('y1',py(y-m*dx));
+    tangent.setAttribute('x2',px(x2)); tangent.setAttribute('y2',py(y+m*dx));
+    roX.textContent = x.toFixed(1);
+    roFx.textContent = y.toFixed(1);
+    roSlope.textContent = m.toFixed(1);
+  }
+  render(curX);
+
+  // auto sweep until user interacts; ping-pong
+  function loop(){
+    if(auto){
+      curX += dir*0.012;
+      if(curX>2.25){ dir=-1; } if(curX<0.35){ dir=1; }
+      render(curX);
+    }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  function pointerX(evt){
+    var r = svg.getBoundingClientRect();
+    var cx = (evt.touches?evt.touches[0].clientX:evt.clientX);
+    var vx = (cx - r.left) / r.width * 400; // to viewBox units
+    return (vx - X0) / SX;
+  }
+  function start(e){ auto=false; dragging=true; render(pointerX(e)); e.preventDefault(); }
+  function move(e){ if(dragging){ render(pointerX(e)); e.preventDefault(); } }
+  function end(){ dragging=false; }
+  svg.addEventListener('mousedown', start);
+  addEventListener('mousemove', move);
+  addEventListener('mouseup', end);
+  svg.addEventListener('touchstart', start, {passive:false});
+  svg.addEventListener('touchmove', move, {passive:false});
+  addEventListener('touchend', end);
+})();
+
+/* ── progresso: domains + animated bars/counters on view ── */
+(function(){
+  var domains = [
+    ['Trigonometria e Geometria no Plano', 100, false],
+    ['Números Reais e Equações', 82, true],
+    ['Probabilidades e Combinatória', 74, true],
+    ['Derivadas e Aplicações', 66, true],
+    ['Sucessões', 58, true],
+    ['Números Complexos', 41, true]
+  ];
+  document.getElementById('prog-list').innerHTML = domains.map(function(d){
+    return '<div class="pd"><div class="pd-top"><span>'+d[0]+'</span><span>'+d[1]+'%</span></div>'+
+           '<div class="bar bar-sm"><div class="bar-fill'+(d[2]?' teal':'')+'" data-target="'+d[1]+'"></div></div></div>';
+  }).join('');
+
+  var stage = document.getElementById('prog-stage');
+  new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(!e.isIntersecting) return;
+      stage.querySelectorAll('.bar-fill').forEach(function(b){ b.style.width = b.dataset.target+'%'; });
+      stage.querySelectorAll('[data-count]').forEach(function(c){
+        var target=+c.dataset.count, t0=null, dur=1300;
+        function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1);
+          c.textContent = Math.round(target*(p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2));
+          if(p<1) requestAnimationFrame(step); }
+        requestAnimationFrame(step);
+      });
+      this.disconnect();
+    }.bind(this));
+  }, {threshold:0.4}).observe(stage);
+})();
+</script>
+</body>
+</html>
